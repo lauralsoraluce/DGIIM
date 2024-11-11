@@ -1,0 +1,7 @@
+1) Colocar estos ficheros dentro de la carpeta de Metric-FF, en donde se encuentran todos los ficheros. 
+
+2) Para el archivo main.c habría que ejecutar "patch main.c main.patch" 
+
+3) Para el archivo relax.c "patch relax.c relax.patch". H
+
+3) Hecho esto, el software debería compilas sin problemas haciendo "make". 

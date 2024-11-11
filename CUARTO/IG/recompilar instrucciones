@@ -1,0 +1,4 @@
+cd builds/linux/cmake
+cmake ..
+make
+./../bin/debug_exe

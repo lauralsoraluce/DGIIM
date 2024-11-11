@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a kind of association that has one of its end marked shared as kind of aggregation" type="Aggregation"/>
+	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
+	<Element description="specifies a semantic relationship that can occur between typed instances" type="Association"/>
+	<Element description="specifies a view (or projection) of a set of cooperating classifiers" type="Collaboration2"/>
+	<Element description="represents the application of the pattern described by a collaboration to a specific situation" type="CollaborationOccurrence"/>
+	<Element description="a strong form of aggregation that requires a part instance be included in at most one composite at a time" type="Composition"/>
+	<Element description="condition under which a behavior will be executed" type="Constraint"/>
+	<Element description="a relationship that represents a 'part-of' relationship between the source and target elements" type="Containment"/>
+	<Element description="a relationship between two model elements where changes in one of them will similarly affect the other" type="Dependency"/>
+	<Element description="a taxonomic relationship between a more general classifier and a more specific classifier" type="Generalization"/>
+	<Element description="a text area to put in remarks" type="NOTE"/>
+	<Element description="a kind of dependency which shows a occurrence relationship between two elements" type="Occurrence"/>
+	<Element description="specifies that a set of instances may exist" type="Part"/>
+	<Element description="a property of a classifier that specifies a distinct interaction point between that classifier and its environment" type="Port"/>
+	<Element description="represents a set of instances that are owned by a containing classifier instance" type="Property"/>
+	<Element description="a specialized abstraction relationship between two sets of model elements" type="Realization"/>
+	<Element description="a kind of dependency which shows a represents relationship between two elements" type="Represents"/>
+	<Element description="a mapping between features of the collaboration type and features of the owning classifier" type="RoleBinding"/>
+	<Element description="a set of objects that share the same specifications of features, constraints, and semantics" type="StructuredClass"/>
+	<Element description="specifies a link that enables communication between two or more instances" type="StructuredConnector"/>
+	<Element description="represents a declaration of a set of coherent public features and obligations" type="StructuredInterface"/>
+</Diagram>

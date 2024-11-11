@@ -1,0 +1,4 @@
+Se crea un cauce sin nombre con fd para guardar los descriptores. 
+Se crea un proceso hijo. Si no se puede, se muestra el error.
+Si el PID del proceso es 0, estamos en el proceso hijo y se cierra el descriptor de lectura. Se escribe el mensaje en el cauce con el descriptor de escritura. Se hace exit(0) del proceso.
+Si el PID del proceso es otro, estamos en el proceso padre y se cierra el descriptor de lectura. Se lee lo que hay en el cauce con el descriptor de lectura y se guarda el mensaje en el buffer. La longitud es devuelta y se muestra junto con el mensaje. 

@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 5. Juego de las Letras - Árbol para Diccionario"
+OUTPUT_DIRECTORY       = /home/lauralazaro/Escritorio/ED/practica6/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/lauralazaro/Escritorio/ED/practica6/estudiante/include /home/lauralazaro/Escritorio/ED/practica6/estudiante/src /home/lauralazaro/Escritorio/ED/practica6/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/lauralazaro/Escritorio/ED/practica6/estudiante/doc
+EXTRACT_PRIVATE	       = NO

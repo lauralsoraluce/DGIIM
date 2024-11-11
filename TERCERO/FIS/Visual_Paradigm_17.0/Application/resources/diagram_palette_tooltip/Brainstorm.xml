@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="stick a note on the cork board" type="BlueBrainstormNote"/>
+	<Element description="stick a note on the cork board" type="GreenBrainstormNote"/>
+	<Element description="Image" type="ImageShape"/>
+	<Element description="stick a note on the cork board" type="OrangeBrainstormNote"/>
+	<Element description="stick a note on the cork board" type="PurpleBrainstormNote"/>
+	<Element description="stick a note on the cork board" type="RedBrainstormNote"/>
+	<Element description="stick a note on the cork board" type="YellowBrainstormNote"/>
+</Diagram>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a directed relationship between an importing namespace and a packageable element" type="Access"/>
+	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
+	<Element description="condition under which a behavior will be executed" type="Constraint"/>
+	<Element description="a relationship that represents a 'part-of' relationship between the source and target elements" type="Containment"/>
+	<Element description="a relationship between two model elements where changes in one of them will similarly affect the other" type="Dependency"/>
+	<Element description="a taxonomic relationship between a more general classifier and a more specific classifier" type="Generalization"/>
+	<Element description="a directed relationship that identifies a package whose members are to be imported by a namespace" type="Import"/>
+	<Element description="a directed relationship between two packages that indicates that the contents of the two packages are to be combined" type="Merge"/>
+	<Element description="a text area to put in remarks" type="NOTE"/>
+	<Element description="draw a package to group elements" type="Package"/>
+	<Element description="a specialized abstraction relationship between two sets of model elements" type="Realization"/>
+	<Element description="a part of a complete system" type="Subsystem"/>
+	<Element description="group various members" type="SysMLElementGroup"/>
+</Diagram>

@@ -1,0 +1,211 @@
+#macro( classDetail $object )
+<a name="$object.name"></a>
+<div class="classname">
+	$esc.html($object.name)
+	#if ($object.generalizes || $object.realizes)
+	(
+	#if ($object.generalizes)
+	Generalizes
+		#foreach ($generalize in $object.generalizes)
+			#if ($velocityCount > 1), #end
+			<a href="#$generalize">$esc.html($generalize)</a>
+		#end
+		#if ($object.realizes), #end
+	#end
+	#if ($object.realizes)
+	Realizes
+		#foreach ($realize in $object.realizes)
+			#if ($velocityCount > 1), #end
+			<a href="#$realize">$esc.html($realize)</a>
+		#end
+	#end
+	)
+	#end
+</div>
+<div class="attributes">
+	<table>
+		<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+		#foreach ($attribute in $object.attributes)
+		<tr>
+		<td>$esc.html($attribute.name)</td><td>
+		#if ($attribute.isAssociation())
+		<a href="#$attribute.type">$esc.html($attribute.type)$esc.html($attribute.typeModifier)</a>
+		#else
+		$esc.html($attribute.type)$esc.html($attribute.typeModifier)
+		#end
+		</td><td>$esc.inlineStyle($attribute.description)</td>
+		</tr>
+		#end
+	</table>
+</div>
+#end
+
+#macro( response $status $responseObjects $responseDescription $responseImage)
+<header class="section">Response
+#if ("$status" != "")
+- Status $status
+#end
+</header>
+#if ($responseObjects)
+<div class="description">$esc.inlineStyle($responseDescription)</div>
+<div class="image"><img src="img/$responseImage"></div>
+	#foreach ($object in $responseObjects)
+	#if ($velocityCount == 2)
+		<header class="section">Related classes</header>
+	#end
+	#classDetail($object)
+	#end
+#else
+<div class="empty-section">No Response Defined</div>
+#end
+#end
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REST API</title>
+<link type="text/css" rel="stylesheet" href="restapi.css">
+<script>
+function copyToClipboard(id) {
+	text = document.getElementById(id).textContent.replace(/\s+/g, " ").trim();;
+	window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+}
+</script>
+</head>
+<body>
+	<header class="company">$esc.html($companyName)</header>
+	<div class="container">
+		<div class="toc">
+			<div class="toc-top"></div>
+#foreach( $res in $allRestResources )
+#if ($res.name == $rest.name)
+<div class="current item">$esc.html($res.name)</div>
+#else
+<div class="item"><a href="$res.filename">$esc.html($res.name)</a></div>
+#end
+#end
+		</div>
+		<div class="main">
+			<div class="background"></div>
+			<div class="content">
+				<header>$esc.html($rest.name)</header>
+				<div class="basic-info">
+					#if ($!rest.description && $rest.description != "")
+					<div>$esc.inlineStyle($rest.description)</div>
+					#end
+					<div class="title">Resource URL</div>
+					<div>$baseUrl$rest.url</div>
+
+					#if (!$rest.parameters.isEmpty())
+					<div class="title">Parameters</div>
+					<table class="parameters">
+						#foreach ($param in $rest.parameters)
+						<tr>
+						<td><div class="name">$esc.html($param.name) ($esc.html($param.inStr))</div><div>
+						#if ($param.isRequired())
+						required
+						#else
+						optional
+						#end
+						</div>
+						</td><td><div class="description">$esc.inlineStyle($param.description)</div>
+						#if ($!param.type && $param.type != "")
+						<div><span class="example-title">Type: </span><span class="example-value">$esc.html($param.type)</span></div>
+						#end
+						#if ($!param.example && $param.example != "")
+						<div><span class="example-title">Example Values: </span><span class="example-value">$esc.html($param.example)</span></div>
+						#end
+						</td>
+						</tr>
+						#end
+					</table>
+					#end
+					</div>
+				</div>
+
+				<div class="sidebar">
+					<div class="code-block">
+						<header>Curl Example</header>
+						<a class="copy" href="javascript:copyToClipboard('curl-example')"></a>
+						<code id='curl-example'>
+						$ curl -X $rest.method
+						#if ( $rest.method == "POST" || $rest.method == "PATCH" )
+						-d '$esc.html($rest.singleLineRequestExample)'
+						#end
+						$rest.headerExample"$baseUrl$rest.url$rest.parameterExample"
+						</code>
+					</div>
+				</div>
+
+				<div class="content">
+					<header class="section">Request</header>
+					#if ($rest.requestObjects)
+					<div class="description">$esc.inlineStyle($rest.requestDescription)</div>
+					<div class="image"><img src="img/$rest.requestImage"></div>
+						#foreach ($object in $rest.requestObjects)
+						#if ($velocityCount == 2)
+							<header class="section">Related classes</header>
+						#end
+						#classDetail($object)
+						#end
+					#else
+					<div class="empty-section">No Request Defined</div>
+					#end
+				</div>
+
+				<div class="sidebar">
+					#if ($!rest.requestHeader)
+					<div class="code-block">
+						<header>Request Header</header>
+						<a class="copy" href="javascript:copyToClipboard('request-header')"></a>
+						<code id='request-header' class="header">$rest.requestHeader</code>
+					</div>
+					#end
+
+					#if ($!rest.formattedRequestExample)
+					<div class="code-block">
+						<header>Request Body</header>
+						<a class="copy" href="javascript:copyToClipboard('request-body')"></a>
+						<code id='request-body' class="json">$rest.formattedRequestExample</code>
+					</div>
+					#end
+				</div>
+
+				<div class="content">
+					#if ($rest.responseObjects)
+						#response("" $rest.responseObjects $rest.responseDescription $rest.responseImage)
+					#end
+					#foreach ($status in $rest.statuses)
+						#response($status $rest.getResponseObjects($status) "" $rest.getResponseImage($status))
+					#end
+				</div>
+
+				<div class="sidebar">
+					#if ($!rest.responseHeader)
+					<div class="code-block">
+						<header>Response Header</header>
+						<a class="copy" href="javascript:copyToClipboard('response-header')"></a>
+						<code id='response-header' class="header">$rest.responseHeader</code>
+					</div>
+					#end
+
+					#if ($!rest.formattedResponseExample)
+					<div class="code-block">
+						<header>Response Body</header>
+						<a class="copy" href="javascript:copyToClipboard('response-body')"></a>
+						<code id='response-body' class="json">$rest.formattedResponseExample</code>
+					</div>
+					#end
+				</div>
+
+				<div class="content" style="clear:both">
+					<footer class="download">For client development, you can download <a href="xml/$rest.xmlFile" target="_blank">$rest.xmlFile</a></footer>
+					<footer class="powered-by"><a href="http://www.visual-paradigm.com" target="_blank">Powered by Visual Paradigm</a></footer>
+				</div>
+
+				<div style="clear:both"></div>
+		</div>
+	</div>
+</body>
+</html>

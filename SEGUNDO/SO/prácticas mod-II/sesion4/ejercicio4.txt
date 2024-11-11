@@ -1,0 +1,21 @@
+No hay diferencia entre el resultado de la ejecución de los programas tarea7.c y tarea8.c.
+
+El primer programa (tarea7.c):
+	- Crea un pipe
+	- Crea un proceso hijo con fork(). Muestra error si no se puede crear.
+	- Si estamos en el proceso hijo, se cierra el descriptor de lectura. 
+	- Se cierra la salida estándar del hijo.
+	- Se duplica el descriptor de escritura del cauce para que en lugar de la salida estándar, salga lo del cauce. 
+	- Se ejecuta la orden ls, pero en lugar de mandarse a salida normal, se manda al cauce.
+	- Si estamos en proceso padre, se cierra el descriptor de escritura ya que solo se van a leer datos del cauce. 
+	- Se cierra la entrada estandar del proceso padre.
+	- Se duplica el descriptor de lectura del cauce para que en lugar de leer de la salida estándar, lea lo del cauce. 
+	- Se ejecuta la orden sort seguida de la orden ls que ya estaba en el cauce. 
+	
+En el segundo programa (tarea8.c):
+	- Crea un pipe
+	- Crea un proceso hijo con fork(). Muestra error si no se puede crear. 
+	- Si estamos en el proceso hijo, se cierra el descriptor de lectura.
+	- Se usa dup2 que directamente duplica el descriptor de escritura y cierra la salida normal. 
+	De resto igual que el programa anterior. 
+	

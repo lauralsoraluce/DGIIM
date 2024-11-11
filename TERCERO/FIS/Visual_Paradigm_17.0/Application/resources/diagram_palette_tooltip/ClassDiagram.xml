@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="captures common attributes from sub-ORM-Persistable classes" type="AbstractPersistableClass"/>
+	<Element description="relates two elements or sets of elements that represent the same concept at different levels of abstraction" type="Abstraction"/>
+	<Element description="an importing relationship with private visibility" type="Access"/>
+	<Element description="a type of association that represents a part-whole relationship in which one element lives on even the other dies" type="Aggregation"/>
+	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
+	<Element description="a relationship between two classes" type="Association"/>
+	<Element description="a form of class that connects to an association between two model elements to model additional attributes" type="AssociationClass"/>
+	<Element description="connects to the template signature of the target template" type="BindingDependency"/>
+	<Element description="represents an entity within a system" type="Class"/>
+	<Element description="a container for grouping model elements that collaboratively accomplish some desired functionality" type="Collaboration"/>
+	<Element description="a type of association that represents a part-whole relationship in which one element dies too when the other dies" type="Composition"/>
+	<Element description="condition under which a behavior will be executed" type="Constraint"/>
+	<Element description="a relationship that represents a 'part-of' relationship between the source and target elements" type="Containment"/>
+	<Element description="a relationship between two model elements where changes in one of them will similarly affect the other" type="Dependency"/>
+	<Element description="specifies a derivation relationship among model elements that are usually, but not necessarily, of the same type" type="Derive"/>
+	<Element description="a special form of class for modeling EJB entity bean" type="EntityBeanClass"/>
+	<Element description="a form of class that acts as a container for element lists (e.g. color \u2013 red, blue, green)" type="Enumeration"/>
+	<Element description="exists between two related classes where one is a specialized form of the other" type="Generalization"/>
+	<Element description="identifies a package whose members are to be imported by a namespace" type="Import"/>
+	<Element description="a usage dependency among classifiers indicating that operations on the client create instances of the supplier" type="Instantiation"/>
+	<Element description="a collection of behavior signatures or definitions for model elements to be implemented/realized" type="InterfaceClass"/>
+	<Element description="combines the contents of two packages to produce a new package" type="Merge"/>
+	<Element description="a container for storing model elements" type="Model"/>
+	<Element description="to model relationship that involves several classes" type="NARY"/>
+	<Element description="a text area to put in remarks" type="NOTE"/>
+	<Element description="contains the implementation of correctness checking to enforce the correctness of data" type="ORMParameterizedTypeClass"/>
+	<Element description="capable of manipulating the persistent data with relational database" type="ORMPersistableClass"/>
+	<Element description="can persist in database as a column instead of a table" type="ORMUserTypeClass"/>
+	<Element description="a kind of dependency which grants a model element permission to access elements in another namespace" type="Permission"/>
+	<Element description="a form of class that represents a predefined data type (e.g. a boolean class type)" type="Primitive"/>
+	<Element description="a relationship between two classes where one realizes (implements or executes) the behavior specified by the other" type="Realization"/>
+	<Element description="specifies a refinement relationship between model elements at different semantic levels, such as analysis and design" type="Refine"/>
+	<Element description="represents a fundamental unit of a REST service" type="RestResource"/>
+	<Element description="a relationship where the substituting classifier complies with the contract specified by the contract classifier" type="Substitution"/>
+	<Element description="a relationship between model elements or sets of model elements that represent the same concept in different models" type="Trace"/>
+	<Element description="a relationship in which one element requires another element (or set of elements) for its full implementation or operation" type="Usage"/>
+</Diagram>

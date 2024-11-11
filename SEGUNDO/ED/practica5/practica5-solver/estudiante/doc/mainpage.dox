@@ -1,0 +1,222 @@
+/*! \mainpage María Cribillés y Laura Lázaro
+
+# Introducción
+
+@image html cifrasyletras.jpg
+
+Esta es la segunda de varias prácticas para crear el juego de cifras y letras. Nos volvemos a centrar en el juego de las letras, el cual ya hemos podido resolver. 
+
+El objetivo del juego es formar la mejor palabra posible (depende de si se juega por longitud o por puntuación). Se extraen varias letras al azar, de las cuales algunas (las más comunes) tienen más probabilidades de salir, pues están más repetidas. Con esas letras deberemos formar la palabra más larga o de mayor puntuación. 
+
+En esta práctica, hemos utilizado los TDAs creados en la práctica anterior y hemos creado una clase Solver con la cual hemos sido capaces de resolver el juego de las letras de manera eficiente. En concreto, vamos a usar el TDA Dictionary para saber el conjunto de palabras
+que consideramos soluciones posibles de nuestro juego; el TDA LettersSet para saber cuántas letras de cada tipo disponemos y la puntuación que nos da cada una al usarla en la solución; y el TDA LettersBag (que por debajo utiliza el TDA Bag) con las letras concretas con las que jugaremos una partida. Nuestro Solver tiene que ofrecer la mejor solución para una partida y modo de juego determinado. Como esta solución no tiene por qué ser única (puede haber varias palabras con una misma puntuación o longitud), necesitamos poder ofrecer un conjunto de palabras con una misma puntuación.
+
+Ejemplo del juego de las letras:
+
+       o r s a p e t
+       
+       
+ La palabra que usaría todas las letras sería: esparto
+ 
+ 
+# Ejecutables
+
+## partida_letras.cpp
+Este ejecutable está asociado al solver.cpp. Es un pequeño programa que recibe cuatro argumentos:
+
+1. Ruta al archivo que contiene las letras y la puntuación
+2. Ruta al archivo que contiene el diccionario
+3. Modo de juego (L para modo de juego con la longitud y P para modo de juego con la puntuación)
+4. Cantidad de letras para la partida
+
+Explicación de los pasos que seguimos en el ejecutable:
+1. Comprobamos que el número de argumentos dados sea el correcto, en este caso debe haber 4 argumentos.
+2. A partir de los archivos del diccionario y de las letras, creamos el diccionario y el LettersSet para la partida. Los leemos mediante el flujo ifstream. 
+3. A partir del lettersSet, creamos la bolsa de la que se irán sacando las letras.
+4. Creamos el solver con el diccionario y el lettersSet anteriores.
+5. Establecemos el modo de juego y sacamos un número n de letras aleatorias de la bolsa para jugar el turno.
+6. Mostramos las letras disponibles para formar palabras en el turno.
+7. Obtenemos las mejores palabras posibles en el turno y las mostramos.
+
+
+El resultado de ejecutar este programa es 
+
+### Ejemplo de ejecucción:
+
+#### Modo de juego por longitud:
+Con los siguientes argumentos:data/letras.txt data/diccionario.txt L 9
+
+LETRAS DISPONIBLES:
+S O A R D N N I B 
+
+SOLUCIONES:
+andrino
+binador
+brandis
+disonar
+nardino
+sabidor
+sordina
+
+PUNTUACION:
+7
+
+
+#### Modo de juego por puntuación: 
+Con los siguientes argumentos: data/letras.txt data/diccionario.txt P 9
+
+LETRAS DISPONIBLES:
+O R C D A A O O M 
+
+SOLUCIONES:
+acomodar
+acromado
+morocada
+
+PUNTUACION:
+13
+
+
+# Complejidad computacional O-grande
+El constructor sin parámetros del Solver, tiene complejidad O(1), pues simplemente llama a los constructores sin parámetros del Diccionario y del LetterSet. Ambos llaman al clear del set y del map respectivamente. En este caso, ambos clear tienen complejidad O(1), pues no tienen que recorrer las estructuras, pues ambas están vacías. 
+
+El constructor con parámetros del Solver tiene complejidad O(n) ya que llama al operator= del LettersSet y del Dictionary, que ambos llaman respectivamente al operator= del set y del map. Estos dos métodos tienen complejidad O(n) (en el primer caso O(letters.size()) y en el segundo O(words.size())). Por lo tanto el constructor con parámetros tiene O(2n) que es lo mismo que O(n). 
+
+El método privado getSolsLength tiene complejidad O(n^3):
+
+	bucle for interior (depende de j):
+	
+		O(Ini(n)) = O(1)
+		
+		O(Con(n)) = O(1)
+		
+		O(Ite(n)) = O(copy.size()) = O(n)
+		
+		O(Cu(n)) = O(1) condicion + O(1) bool + O(1) igualación + O(1) pop_back = O(4) = O(1)
+		
+		O(Inc(n)) = O(1)
+		
+	
+		O(1)+O(1)+O(n)*[O(1)+O(1)+O(1)] = O(n)
+		
+
+	bucle for medio interior (depende de i):
+	
+		O(Ini(n)) = O(1)
+		
+		O(Con(n)) = O(1)
+		
+		O(Ite(n)) = O(words.at(k).size()) = O(n)
+		
+		O(Cu(n)) = O(n)
+		
+		O(Inc(n)) = O(1)
+		
+		
+		O(1)+O(1)+O(n)*[O(n)+O(1)+O(1)] = O(n*n) = O(n^2)
+		
+	
+	bucle for medio exterior (depende de k):
+	
+		O(Ini(n)) = O(1)
+		
+		O(Con(n)) = O(1)
+		
+		O(Ite(n)) = O(words.size()) = O(n)
+		
+		O(Cu(n)) = O(n^2)
+		
+		O(Inc(n)) = O(1)
+		
+		
+		O(1)+O(1)+O(n)*[O(n^2)+O(1)+O(1)] = O(n*n*n) = O(n^3)
+		
+	
+	bucle for exterior:
+	
+		O(Ini(n)) = O(1)
+		
+		O(Con(n)) = O(1)
+		
+		O(Ite(n)) = O(size) = O(n)
+		
+		O(Cu(n)) = O(n*n*n) = O(n^3)
+		
+		O(Inc(n)) = O(1)
+		
+		
+		O(1)+O(1)+O(n)*[O(n^3)+O(1)+O(1)] = O(n*n*n*n) = O(n^4)
+		
+
+	wordsOfLength es un método del TDA Dictionary usado en el bucle for exterior del método getSolsLength y tiene una complejidad de O(words.size()) = O(n).
+	
+
+El método privado getSolsScore tiene complejidad O(n^3):
+
+	bucle for interior:
+	
+		O(Ini(n)) = O(1)
+		
+		O(Con(n)) = O(1)
+		
+		O(Ite(n)) = O(copy.size()) = O(n)
+		
+		O(Cu(n)) = O(1) condicion + O(1) bool + O(1) igualación + O(1) pop_back = O(4) = O(1)
+		
+		O(Inc(n)) = O(1)
+		
+	
+		O(1)+O(1)+O(n)*[O(1)+O(1)+O(1)] = O(n)
+		
+
+	bucle for medio:
+	
+		O(Ini(n)) = O(1)
+		
+		O(Con(n)) = O(1)
+		
+		O(Ite(n)) = O((*it).size()) = O(n)
+		
+		O(Cu(n)) = O(n)
+		
+		O(Inc(n)) = O(1)
+		
+		
+		O(1)+O(1)+O(n)*[O(n)+O(1)+O(1)] = O(n*n) = O(n^2)
+		
+	
+	bucle for exterior:
+	
+		O(Ini(n)) = O(1)
+		
+		O(Con(n)) = O(1)
+		
+		O(Ite(n)) = O(dict.size()) = O(n)
+		
+		O(Cu(n)) = O(n*n) = O(n^2)
+		
+		O(Inc(n)) = O(1)
+		
+		
+		O(1)+O(1)+O(n)*[O(n^2)+O(1)+O(1)] = O(n*n*n) = O(n^3)
+		
+
+	getScore es un método del TDA LettersSet usado en el bucle for exterior del método getSolsScore y tiene una complejidad de O(n^2), pues se trata de dos bucles for anidados, el interior con un cuerpo de O(1) y n iteraciones, y el exterior con un cuerpo de O(words.length()) = O(n) y n iteraciones. 
+	
+	
+El método público getSolutions tiene una complejidad O(n^3):
+
+	Tanto el if como el else tienen condición O(1) y cuerpo O(n^3). 
+	
+	
+	
+En el archivo partida_letras.cpp usamos varios métodos de los TDAs de la práctica 4:
+
+	El exists del Dictionary tiene complejidad O(log(n)), pues llama al find del set words, que tiene O(log(n)).
+	
+	El insert del Dictionary tiene complejidad O(log(n)), pues llama al insert del set words, que tiene O(log(n)).
+	
+	El constructor con parámetros del LettersBag tiene complejidad O(n^2), pues se trata de dos bucles for anidados. El interior con cuerpo O(1) (ya que llama al insertLetter del LettersBag, que a su vez llama al add del Bag, que a su vez llama al push_back del vector, que es O(1)) y (*it).second.repetitions iteraciones, es decir, n iteraciones; y el segundo con cuerpo O(n) y lettersSet.size() iteraciones, es decir, n iteraciones. 
+	
+	El extractLetters del LettersBag tiene complejidad O(n) pues se trata de un bucle for con num iteraciones (es decir, n iteraciones) y cuerpo O(1) (pues llama al extractLetter del Bag, que a su vez llama al get del Bag, que es O(1)).
+*/

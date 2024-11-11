@@ -1,0 +1,152 @@
+Como abrir el entorno de SO (root)
+
+/tmp
+
+cp Fedora14-x86-root_fs.gz kernel32-3.0.gz /tmp
+
+gunzip Fedora14-x86-root_fs.gz
+
+gunzip kernel32-3.0.gz
+
+chmod u+x Fedora14-x86-root_fs.gz
+
+chmod u+x kernel32-3.0.gz
+
+./kernel32-3.0.4 ubda=./Fedora14-x86-root_fs mem=1024m
+
+Nombre de usuario: root
+Contraseña: ninguna
+
+Para salir: shutdown -h now
+
+para leer datos de archivos y mostrar su contenido usar la orden cat
+
+Para crear usuarios utilizando información introducida en un archivo de texto, usamos el comando newusers [file]
+El archivo de texto debe tener la información en el siguiente formato: pw_name:pw_passwd:pw_uid:pw_gid:pw_gecos:pw_dir:pw_shell
+
+
+
+---------------------------------
+
+PRACTICA 2
+
+mknod /dev/loop0 b 7 0
+mknod /dev/loop1 b 7 1
+dd if=/dev/zero of=/root/archivo_SA20 bs=2k count=10000
+dd if=/dev/zero of=/root/archivo_SA30 bs=3k count=10000
+
+losetup /dev/loop0 /root/archivo_SA20
+losetup /dev/loop1 /root/archivo_SA30
+fdisk -l /dev/loop0 /dev/loop1
+
+mke2fs -t ext3 /dev/loop0
+mke2fs -L LABEL_ext3 /dev/loop0
+mke2fs -t ext4 /dev/loop1
+mke2fs -L LABEL_ext4 /dev/loop1
+
+
+PARA CREAR LA TABLA DE PARTICIONES DE FORMA AUTOMÁTICA:
+$ fdisk /dev/loop0
+Command (m for help): m
+	a   toggle a bootable flag
+   	b   edit bsd disklabel
+    c   toggle the dos compatibility flag
+    d   delete a partition
+    l   list known partition types
+    m   print this menu
+    n   add a new partition
+    o   create a new empty DOS partition table
+    p   print the partition table
+    q   quit without saving changes
+    s   create a new empty Sun disklabel
+    t   change a partition's system id
+    u   change display/entry units
+    v   verify the partition table
+    w   write table to disk and exit
+    x   extra functionality (experts only)
+
+Command: n
+Command action
+   e   extended
+   p   primary partition (1-4)
+p
+# Le damos a Enter para que se haga automático
+Partition number (1-4, default 1): 
+Using default value 1
+First sector (2048-39999, default 2048): 
+Using default value 2048
+Last sector, +sectors or +size{K,M,G} (2048-39999, default 39999): 
+Using default value 39999
+Command: w
+
+$ fdisk -l /dev/loop0
+Disk /dev/loop0: 20 MB, 20480000 bytes
+125 heads, 58 sectors/track, 5 cylinders, total 40000 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0xd5a06c53
+
+      Device Boot      Start         End      Blocks   Id  System
+/dev/loop0p1            2048       39999       18976   83  Linux
+
+# Análogo para el segundo
+
+fdisk -l /dev/loop0
+
+
+Haciendo "tune2fs -c 0" o "tune2fs -c -1", conseguimos que en el siguiente arranque, se ejecute automáticamente e2fsck sin importar el número máximo de montajes
+Haciendo "tune2fs -r number-of-reserved-blocks -u name-of-user-for-reservation", podemos reservar para uso exclusivo de un usuario un número de bloques del sistema de archivos
+
+el comando "vi nombre_archivo" sirve para abrir un archivo y poder modificarlo/editarlo
+para salir del modo edición de vi, hacemos ESC muchas veces
+
+Para montar el SA hacemos: mount -L LABEL_ext4
+y luego para ver la información: df -h | grep /dev/loop1
+
+
+mk
+
+Para montar el SA etiquetado como xxx en el directorio yyy, hacemos: mount -L xxx -r /yyy
+
+Para montar el SA etiquetado como LABEL_ext4 con operaciones de E/S sincronizadas, hacemos: mount -L LABEL_ext4 /mnt/LABEL_ext4 sync
+
+
+Para listar todos los paquetes instalados con YUM, hacemos: yum list installed
+Para eliminar un paquete instalado: yum remove <nombre-paquete>
+Para volver a añadirlo: yum install <nombre-paquete>
+---------------------------------
+
+PRACTICA 3
+
+Para ver cuanto tiempo lleva en marcha el sistema, hacemos uptime y miramos lo que pone después de up
+Para ver cuantos usuarios hay conectados, hacemos uptime y miramos lo que pone antes de user
+La carga media es lo que pone después de load average
+
+Creamos un script y lo editamos directamente en el terminal: 
+$ touch prueba_procesos
+$ vi prueba_procesos
+
+Le damos permisos y lo ejecutamos:
+$ chmod +x prueba_procesos
+$ ./prueba procesos 10
+
+Les cambiamos la prioridad:
+$ nice --adjustment=-3 ./prueba_procesos 100002 &
+$ nice --adjustment=3 ./prueba_procesos 100001 &
+
+El & al final de un comando hace que se ejecute en background
+
+Para obtener los tiempor de finalización de cada guión
+$ time nice --adjustment=3 ./prueba_procesos 100001
+$ time nice --adjustment=-3 ./prueba_procesos 100002
+
+
+La orden pstree muestra el árbol de procesos que hay en ejecución 
+Si en el campo TTY hay una interrogación, te dice que no hay una terminal asociada al proceso
+
+La orden top muestra una visión continuada de la actividad de un proceso en tiempo  real
+En top, hi significa hardware interruptions y si software interruptions
+
+
+

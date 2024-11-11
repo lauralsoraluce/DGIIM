@@ -1,0 +1,6 @@
+/home/lauralazaro/Escritorio/ED/practica6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lauralazaro/Escritorio/ED/practica6/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lauralazaro/Escritorio/ED/practica6/cmake-build-debug/CMakeFiles/cantidad_letras.dir
+/home/lauralazaro/Escritorio/ED/practica6/cmake-build-debug/CMakeFiles/diccionario.dir
+/home/lauralazaro/Escritorio/ED/practica6/cmake-build-debug/CMakeFiles/partida_letras.dir
+/home/lauralazaro/Escritorio/ED/practica6/cmake-build-debug/CMakeFiles/doc_doxygen.dir

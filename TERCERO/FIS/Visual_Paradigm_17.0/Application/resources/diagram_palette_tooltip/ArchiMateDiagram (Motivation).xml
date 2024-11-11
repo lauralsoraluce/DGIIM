@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="the outcome of some analysis of some driver" type="ArchiMateAssessment"/>
+	<Element description="a restriction on the way in which a system is realized" type="ArchiMateConstraint"/>
+	<Element description="something that creates, motivates, and fuels the change in an organization" type="ArchiMateDriver"/>
+	<Element description="an end state that a stakeholder intends to achieve" type="ArchiMateGoal"/>
+	<Element description="models that some motivational element has a positive or negative influence on the realization of another motivational element" type="ArchiMateInfluence"/>
+	<Element description="the knowledge present in the representation of a business object, given a particular context" type="ArchiMateMeaning"/>
+	<Element description="represents an end result that has been achieved" type="ArchiMateOutcome"/>
+	<Element description="a normative property of all systems in a given context, or the way in which they are realized" type="ArchiMatePrinciple"/>
+	<Element description="a statement of need that must be realized by a system" type="ArchiMateRequirement"/>
+	<Element description="the role of an individual, team, or organization that represents their interests in, or concerns relative to, the outcome of the architecture" type="ArchiMateStakeholder"/>
+	<Element description="what makes some party appreciate a service or product" type="ArchiMateValue"/>
+</Diagram>

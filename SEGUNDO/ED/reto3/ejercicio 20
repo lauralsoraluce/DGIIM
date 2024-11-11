@@ -1,0 +1,22 @@
+#include <queue>
+#include <iostream>
+using namespace std;
+
+void rotacion(queue <int> &p);
+
+
+
+#include "veinte.h"
+
+void veinte::rotacion(queue <int> &p) {
+    int size = p.size();
+    int counter = 0; 
+    /* Contador para que si se recorre la cola entera sin encontrar un número 
+    	par, se deja la cola como la original. */
+    	
+    while ((p.front()%2)!=0 && counter<size) {
+        p.push(p.front());
+        p.pop();
+        counter++;
+    }
+}

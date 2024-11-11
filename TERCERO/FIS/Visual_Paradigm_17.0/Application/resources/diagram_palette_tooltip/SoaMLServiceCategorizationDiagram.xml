@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a named collection of related elements, including other catalogs characterized by a specific set of categories" type="SoaMLCatalog"/>
+	<Element description="connects an element to a Category or Category Value in order to categorize or classify that element" type="SoaMLCategorization"/>
+	<Element description="a classification or division used to characterize the elements of a catalog and to categorize model elements" type="SoaMLCategory"/>
+	<Element description="provides specific values for a Category to further categorize model elements" type="SoaMLCategoryValue"/>
+</Diagram>

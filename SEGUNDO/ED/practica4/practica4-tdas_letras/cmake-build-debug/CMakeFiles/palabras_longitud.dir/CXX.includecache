@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../estudiante/include/dictionary.h
+set
+-
+cstdlib
+-
+cassert
+-
+iostream
+-
+vector
+-
+
+/home/lauralazaro/Escritorio/ED/practica4/practica4-tdas_letras/estudiante/src/dictionary.cpp
+dictionary.h
+/home/lauralazaro/Escritorio/ED/practica4/practica4-tdas_letras/estudiante/src/dictionary.h
+cstdlib
+-
+cassert
+-
+iostream
+-
+set
+-
+
+/home/lauralazaro/Escritorio/ED/practica4/practica4-tdas_letras/estudiante/src/palabras_longitud.cpp
+dictionary.h
+/home/lauralazaro/Escritorio/ED/practica4/practica4-tdas_letras/estudiante/src/dictionary.h
+iostream
+-
+fstream
+-
+

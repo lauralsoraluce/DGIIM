@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="used to link information and Artifacts with CMMN graphical elements" type="CMMNAssociation"/>
+	<Element description="represent a piece of information of any nature" type="CMMNCaseFileItem"/>
+	<Element description="specifies the event on the source Case File Item that serves as trigger" type="CMMNCaseFileItemOnPart"/>
+	<Element description="case and the plan model of the Case" type="CMMNCasePlanModel"/>
+	<Element description="a Discretionary Item whose definition is a Case Task" type="CMMNCaseTaskDiscretionaryItem"/>
+	<Element description="a Plan Item whose definition is a Case Task" type="CMMNCaseTaskPlanItem"/>
+	<Element description="a Discretionary Item whose definition is a Decision Task" type="CMMNDecisionTaskDiscretionaryItem"/>
+	<Element description="a Plan Item whose definition is a Decision Task" type="CMMNDecisionTaskPlanItem"/>
+	<Element description="visualizes the dependency between a Human Task and a Discretionary Item" type="CMMNDiscretionaryAssociation"/>
+	<Element description="represents the condition for a Plan Item to become available" type="CMMNEntryCriterion"/>
+	<Element description="represents the condition for a Plan Item to terminate" type="CMMNExitCriterion"/>
+	<Element description="a Plan Item whose definition is an Event Listener" type="CMMNGeneralEventListenerPlanItem"/>
+	<Element description="a Discretionary Item whose definition is a Task" type="CMMNGeneralTaskDiscretionaryItem"/>
+	<Element description="a Plan Item whose definition is a Task" type="CMMNGeneralTaskPlanItem"/>
+	<Element description="a Discretionary Item whose definition is a Human Task" type="CMMNHumanTaskDiscretionaryItem"/>
+	<Element description="a Plan Item whose definition is a Human Task" type="CMMNHumanTaskPlanItem"/>
+	<Element description="a Plan Item whose definition is a Milestone" type="CMMNMilestonePlanItem"/>
+	<Element description="a set of Plan Items, possibly dependent on each other, and that often occur in Case plans in combination, representing a pattern" type="CMMNPlanFragment"/>
+	<Element description="a Discretionary Item whose definition is a Plan Fragment" type="CMMNPlanFragmentDiscretionaryItem"/>
+	<Element description="specifies the event on the source Plan Item that serves as trigger" type="CMMNPlanItemOnPart"/>
+	<Element description="defines the scope of planning by identifying a sub-set of Plan Item Definitions that can be considered for planning in a certain context" type="CMMNPlanningTable"/>
+	<Element description="a Discretionary Item whose definition is a Process Task" type="CMMNProcessTaskDiscretionaryItem"/>
+	<Element description="a Plan Item whose definition is a Process Task" type="CMMNProcessTaskPlanItem"/>
+	<Element description="a Discretionary Item whose definition is a Stage" type="CMMNStageDiscretionaryItem"/>
+	<Element description="a Plan Item whose definition is a Stage" type="CMMNStagePlanItem"/>
+	<Element description="a mechanism for a modeler to provide additional text information for the reader of a CMMN Diagram" type="CMMNTextAnnotation"/>
+	<Element description="a Plan Item whose definition is a Timer Event Listener" type="CMMNTimerEventListenerPlanItem"/>
+	<Element description="a Plan Item whose definition is a User Event Listener" type="CMMNUserEventListenerPlanItem"/>
+</Diagram>

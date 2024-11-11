@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="untitled"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej16">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej16" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej16"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej16/fast">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej16" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej16/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej19">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej19" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej19"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej19/fast">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej19" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej19/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej26">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej26" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej26"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej26/fast">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej26" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej26/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej21">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej21" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej21"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej21/fast">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej21" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej21/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej20">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej20" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej20"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ej20/fast">
+				<Option output="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/ej20" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 ej20/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/lauralazaro/Escritorio/ED/untitled/ej16.cpp">
+			<Option target="ej16"/>
+		</Unit>
+		<Unit filename="/home/lauralazaro/Escritorio/ED/untitled/ej19.cpp">
+			<Option target="ej19"/>
+		</Unit>
+		<Unit filename="/home/lauralazaro/Escritorio/ED/untitled/ej20.cpp">
+			<Option target="ej20"/>
+		</Unit>
+		<Unit filename="/home/lauralazaro/Escritorio/ED/untitled/ej21.cpp">
+			<Option target="ej21"/>
+		</Unit>
+		<Unit filename="/home/lauralazaro/Escritorio/ED/untitled/ej26.cpp">
+			<Option target="ej26"/>
+		</Unit>
+		<Unit filename="/home/lauralazaro/Escritorio/ED/untitled/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

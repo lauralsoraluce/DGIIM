@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ej18.dir/ej18.cpp.o -o ej18 

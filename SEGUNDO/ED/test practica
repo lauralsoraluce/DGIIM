@@ -1,0 +1,10 @@
+1. ------> FALSO en la pila con prioridad puedes acceder a todas las posiciones, en la normal solo al front
+2. FALSO ------> VERDADERO el orden relativo de las hojas es el mismo en inorden, preorde y postorden
+3. VERDADERO ------> FALSO puede haber mas de un AVL con el mismo inorden
+4. ------> VERDADERO un árbol no puede ser a la vez APO y AVL ya que tienen condiciones incompatibles
+5. FALSO 
+6. FALSO
+7. VERDADERO ------> FALSO
+8. FALSO***
+9. FALSO ------> VERDADERO
+10. ------> FALSO porq una funcion h0 no se puede anular NUNCA

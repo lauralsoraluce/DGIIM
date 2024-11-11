@@ -1,0 +1,3 @@
+/home/lauralazaro/Escritorio/ED/Advent/day1/dia1_p2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lauralazaro/Escritorio/ED/Advent/day1/dia1_p2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lauralazaro/Escritorio/ED/Advent/day1/dia1_p2/cmake-build-debug/CMakeFiles/dia1_p2.dir

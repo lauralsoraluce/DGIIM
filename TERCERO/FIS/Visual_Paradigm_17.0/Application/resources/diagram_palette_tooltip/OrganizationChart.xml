@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="shows relationship and relative rank of the part or position/job" type="OCLine"/>
+	<Element description="part or position/job within an organization" type="OCUnit"/>
+</Diagram>

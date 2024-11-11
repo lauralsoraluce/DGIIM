@@ -1,0 +1,7 @@
+/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/CMakeFiles/ej16.dir
+/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/CMakeFiles/ej19.dir
+/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/CMakeFiles/ej26.dir
+/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/CMakeFiles/ej21.dir
+/home/lauralazaro/Escritorio/ED/untitled/cmake-build-debug/CMakeFiles/ej20.dir

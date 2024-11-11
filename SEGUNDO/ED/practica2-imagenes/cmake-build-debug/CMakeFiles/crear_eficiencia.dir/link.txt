@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/crear_eficiencia.dir/estudiante/src/crear_eficiencia.cpp.o -o crear_eficiencia  libimage.a 

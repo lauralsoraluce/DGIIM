@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="an action that waits for the occurrence of an event meeting a specified condition" type="AcceptEventAction"/>
+	<Element description="if it is a time event occurrence, the result value contains the time at which the occurrence transpired" type="AcceptTimeEventAction"/>
+	<Element description="specifies the coordination of executions of subordinate behaviors, using a control and data flow model" type="Activity"/>
+	<Element description="represents a single step within an activity which cannot be further decomposed" type="ActivityAction"/>
+	<Element description="(among the final nodes) the first one reached that stops all flows in the activity" type="ActivityFinalNode"/>
+	<Element description="an activity edge that can have objects or data passing along it" type="ActivityObjectFlow"/>
+	<Element description="provides a means to accept inputs to an activity and provides outputs from the activity" type="ActivityParameterNode"/>
+	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
+	<Element description="accepts tokens from upstream object nodes and passes them along to downstream object nodes" type="CentralBufferNode"/>
+	<Element description="a structured activity node that represents an exclusive choice among some number of alternatives" type="ConditionalNode"/>
+	<Element description="a structured activity node that represents an exclusive choice among some number of alternatives" type="ConditionalNodeWithRegions"/>
+	<Element description="condition under which a behavior will be executed" type="Constraint"/>
+	<Element description="a relationship that represents a 'part-of' relationship between the source and target elements" type="Containment"/>
+	<Element description="an edge that starts an activity node after the previous one is finished" type="ControlFlow"/>
+	<Element description="a central buffer node for non-transient information" type="DataStoreNode"/>
+	<Element description="accepts tokens on an incoming edge and presents them to multiple outgoing edges" type="DecisionNode"/>
+	<Element description="an element that specifies a body to execute in case the specified exception occurs" type="ExceptionHandler"/>
+	<Element description="an object node used to indicate a flow across the boundary of an expansion region" type="ExpansionNode"/>
+	<Element description="a strictly nested region of an activity with explicit inputs and outputs" type="ExpansionRegion"/>
+	<Element description="destroys all tokens that arrive at it. It has no effect on other flows in the activity" type="FlowFinalNode"/>
+	<Element description="a control node that splits a flow into multiple concurrent flows" type="ForkNode"/>
+	<Element description="used for partitioning the children in an activity diagram horizontally" type="HorizontalSwimlane"/>
+	<Element description="a control node at which flow starts when the activity is invoked" type="InitialNode"/>
+	<Element description="object nodes that receive values from other actions through object flows" type="InputPin"/>
+	<Element description="an activity group that supports termination of tokens flowing in the portions of an activity" type="InterruptibleActivityRegion"/>
+	<Element description="a control node that synchronizes multiple flows" type="JoinNode"/>
+	<Element description="a structured activity node that represents a loop" type="LoopNode"/>
+	<Element description="a structured activity node that represents a loop with setup, test, and body sections" type="LoopNodeWithRegions"/>
+	<Element description="a control node that brings together multiple alternate flows" type="MergeNode"/>
+	<Element description="a text area to put in remarks" type="NOTE"/>
+	<Element description="an activity node that indicates an instance of a particular classifier" type="ObjectNode"/>
+	<Element description="object nodes that deliver values to other actions through object flows" type="OutputPin"/>
+	<Element description="creates a signal instance from its inputs, and transmits it to the target object" type="SendSignalAction"/>
+	<Element description="a placeholder before choicing kind of action" type="OpaqueAction"/>
+	<Element description="a structured activity node that executes its actions in order" type="SequenceNode"/>
+	<Element description="a structured activity node that executes its actions in order" type="StructuredActivityNode"/>
+	<Element description="group various members" type="SysMLElementGroup"/>
+	<Element description="an input pin that provides a value to an action that does not come from an incoming object flow edge" type="ValuePin"/>
+	<Element description="used for partitioning the children in an activity diagram vertically" type="VerticalSwimlane"/>
+</Diagram>

@@ -1,0 +1,3 @@
+$parameter.t_prepare()##
+## ===== Output =====
+$space:($parameter.t_getTypeName()$parameter.t_getTypeModifier()) $parameter.t_getParameterName()

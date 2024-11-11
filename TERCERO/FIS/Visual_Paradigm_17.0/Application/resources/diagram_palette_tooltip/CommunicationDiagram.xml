@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
+	<Element description="represents a user interface object instance that involves in the interactions modeled" type="BoundaryCommunicationLifeLine"/>
+	<Element description="a message that represents an invocation of operation of the target lifeline" type="CallCommunicationMessage"/>
+	<Element description="a reverse message that represents an invocation of operation of the target lifeline" type="CallCommunicationReverseMessage"/>
+	<Element description="used for partitioning the children in a communication diagram. Each swimlane represents a role" type="CollaborationSwimLane"/>
+	<Element description="models a type of role played by an entity that interacts with the subject (e.g., by exchanging signals and data)" type="CommunicationActor"/>
+	<Element description="represents a role or object instance that participates in the interactions modeled" type="CommunicationLifeLine"/>
+	<Element description="defines a particular communication between Lifelines of an Interaction" type="CommunicationMessage"/>
+	<Element description="a particular communication between Lifelines of an Interaction in opposite direction" type="CommunicationReverseMessage"/>
+	<Element description="condition under which a behavior will be executed" type="Constraint"/>
+	<Element description="a relationship that represents a 'part-of' relationship between the source and target elements" type="Containment"/>
+	<Element description="represents a controller object instance that involves in the interactions modeled" type="ControlCommunicationLifeLine"/>
+	<Element description="a relationship between two model elements where changes in one of them will similarly affect the other" type="Dependency"/>
+	<Element description="a message requesting to destroy the lifecycle of the target lifeline" type="DestroyCommunicationMessage"/>
+	<Element description="a reverse message requesting to destroy the lifecycle of the target lifeline" type="DestroyCommunicationReverseMessage"/>
+	<Element description="represents a model object instance that involves in the interactions modeled" type="EntityCommunicationLifeLine"/>
+	<Element description="exists between two related classes where one is a specialized form of the other" type="Generalization"/>
+	<Element description="a tuple with one value for each end of the association, where each value is an instance of the type of the end" type="InteractionLifeLineLink"/>
+	<Element description="a text area to put in remarks" type="NOTE"/>
+	<Element description="a message being passed back to the caller in response to a message received earlier" type="ReturnCommunicationMessage"/>
+	<Element description="a reverse message being passed back to the caller in response to a message received earlier" type="ReturnCommunicationReverseMessage"/>
+	<Element description="a message that represents the start of an execution" type="SendCommunicationMessage"/>
+	<Element description="a reverse message that represents the start of an execution" type="SendCommunicationReverseMessage"/>
+	<Element description="a message that represents the need of performing actions in sequence" type="SequenceCommunicationMessage"/>
+	<Element description="a reverse message that represents the need of performing actions in sequence" type="SequenceCommunicationReverseMessage"/>
+	<Element description="a message that represents the termination of an execution" type="TerminateCommunicationMessage"/>
+	<Element description="a reverse message that represents the termination of an execution" type="TerminateCommunicationReverseMessage"/>
+	<Element description="a message that represents an uninterpreted call" type="UninterpretedCommunicationMessage"/>
+	<Element description="a reverse message that represents an uninterpreted call" type="UninterpretedCommunicationReverseMessage"/>
+</Diagram>

@@ -1,0 +1,4 @@
+148c148
+< int gbracket_count;
+---
+> extern int gbracket_count;

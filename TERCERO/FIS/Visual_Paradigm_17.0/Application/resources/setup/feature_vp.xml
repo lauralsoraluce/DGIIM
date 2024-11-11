@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Features edition="Professional" version="13-2-0">
+	<Feature link="https://www.visual-paradigm.com/features/uml-and-sysml-tools/" name="UML">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+		<Edition name="Standard"/>
+		<Edition name="Modeler"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/bpmn-diagram-and-tools/" name="Business Process Mapping">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+		<Edition name="Standard"/>
+		<Edition name="Modeler"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/database-design-with-erd-tools/" name="ERD &amp; DFD">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+		<Edition name="Standard"/>
+		<Edition name="Modeler"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/document-generation-tools/" name="Document Generation">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+		<Edition name="Standard"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/code-engineering-tools/" name="Code Engineering">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+		<Edition name="Standard"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/database-engineering-tools/" name="Database Engineering">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+		<Edition name="Standard"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/agile-development-tools/#user-story-map" name="User Story Map">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/advanced-user-story-tools/" name="Advanced User Story Editing">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/ux-design-and-wireframe-tools/" name="Wireframe and Storyboard">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/impact-analysis-tools/" name="Impact Analysis">
+		<Edition name="Enterprise"/>
+		<Edition name="Professional"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/archimate-tools/" name="ArchiMate 3.0">
+		<Edition name="Enterprise"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/togaf-adm-tools/" name="TOGAF® ADM Process Guide-Through">
+		<Edition name="Enterprise"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/project-management-lifecycle-guide-through/" name="Project Management Lifecycle Guide-Through">
+		<Edition name="Enterprise"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/just-in-time-process-composer/" name="Just-in-Time Process Composer">
+		<Edition name="Enterprise"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/just-in-time-togaf-templates/" name="Just-in-Time TOGAF® Templates">
+		<Edition name="Enterprise"/>
+	</Feature>
+	<Feature link="https://www.visual-paradigm.com/features/just-in-time-pmbok-templates/" name="Just-in-Time PMBOK® Templates">
+		<Edition name="Enterprise"/>
+	</Feature>
+</Features>

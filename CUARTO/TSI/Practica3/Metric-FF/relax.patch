@@ -1,0 +1,6 @@
+103,104c103,104
+< int *lF;
+< int lnum_F;
+---
+> extern int *lF;
+> extern int lnum_F;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="the first one reached that stops all flows in the activity" type="ActivityFinalNode"/>
+	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
+	<Element description="condition under which a behavior will be executed" type="Constraint"/>
+	<Element description="an edge that starts an activity node after the previous one is finished" type="ControlFlow"/>
+	<Element description="accepts tokens on an incoming edge and presents them to multiple outgoing edges" type="DecisionNode"/>
+	<Element description="a control node that splits a flow into multiple concurrent flows" type="ForkNode"/>
+	<Element description="a control node at which flow starts when the activity is invoked" type="InitialNode"/>
+	<Element description="a unit of behavior that focuses on the observable exchange of information between ConnectableElements" type="Interaction"/>
+	<Element description="a shorthand for copying the contents of the referred Interaction where the InteractionUse is" type="InteractionOccurrence"/>
+	<Element description="a control node that synchronizes multiple flows" type="JoinNode"/>
+	<Element description="a control node that brings together multiple alternate flows" type="MergeNode"/>
+	<Element description="a text area to put in remarks" type="NOTE"/>
+</Diagram>

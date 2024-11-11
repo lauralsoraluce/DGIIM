@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a component user can click to trigger a function (e.g. Save) or make selection (e.g. OK/Yes) on web form" type="UIWebButtonInput"/>
+	<Element description="a component for selection in form. Grouped checkboxes enables multiple selection" type="UIWebCheckBoxInput"/>
+	<Element description="a component that combines a button and a drop-down list on web form" type="UIWebComboBox"/>
+	<Element description="a component on web form for selecting file for file submission" type="UIWebFileInput"/>
+	<Element description="a text component that appears on web form" type="UIWebLabel"/>
+	<Element description="list out (on web form) all available selections in rows, and allow the selection of values in it" type="UIWebList"/>
+	<Element description="a container for lightweight components that appears on web form" type="UIWebPanel"/>
+	<Element description="a component that allows the entering of password on web form. Value is masked with asterisks" type="UIWebPasswordInput"/>
+	<Element description="a component for single selection on web form" type="UIWebRadioInput"/>
+	<Element description="a component user clicks to clear all entered fields on web form" type="UIWebResetInput"/>
+	<Element description="a component user clicks to submit the data filled on web form" type="UIWebSubmitInput"/>
+	<Element description="a component that allows the editing of multiple lines of text on web form" type="UIWebTextArea"/>
+	<Element description="a component that allows the entering of a single line of text on web form" type="UIWebTextInput"/>
+</Diagram>

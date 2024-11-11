@@ -1,0 +1,17 @@
+PROD-CONS:
+
+mpicxx -std=c++11 -o hola prodcons2_mu.cpp
+mpirun -oversubscribe -np 10 ./hola
+
+
+FILOSOFOS CON INTERBLOQUEO:
+
+mpicxx -std=c++11 -o fil_interb filosofos-interb.cpp 
+mpirun -oversubscribe -np 10 ./fil_interb
+
+
+FILOSOFOS SIN INTERBLOQUEO:
+
+mpicxx -std=c++11 -o filosofos2 filosofos.cpp
+mpirun -oversubscribe -np 11 ./filosofos2
+

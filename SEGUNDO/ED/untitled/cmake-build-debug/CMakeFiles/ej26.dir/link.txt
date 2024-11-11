@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ej26.dir/ej26.cpp.o -o ej26 

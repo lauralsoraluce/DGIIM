@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a generalization between a view and a viewpoint where the view conforms to the specified rules and conventions detailed in the viewpoint" type="SysMLConform2"/>
+	<Element description="a representation of a whole system or subsystem from the perspective of a single viewpoint that allows import of other elements that conform to the viewpont" type="SysMLView"/>
+	<Element description="a specification of the conventions and rules for constructing and using a view to address a set of stakeholder concerns" type="SysMLViewpoint"/>
+</Diagram>

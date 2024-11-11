@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ej21.dir/ej21.cpp.o -o ej21 

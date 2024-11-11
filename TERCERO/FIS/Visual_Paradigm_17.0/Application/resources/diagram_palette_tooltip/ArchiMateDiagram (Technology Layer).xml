@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a physical piece of information used or produced in a software development process or system deployment/operation" type="ArchiMateArtifact"/>
+	<Element description="models the logical communication relations between nodes as Connection" type="ArchiMateCommunicationPath"/>
+	<Element description="models the logical communication relations between nodes as Box" type="ArchiMateCommunicationPathBox"/>
+	<Element description="a physical computational resource upon which artifacts may be deployed for execution" type="ArchiMateDevice"/>
+	<Element description="a behavior element that groups infrastructural behavior that can be performed by a node" type="ArchiMateInfrastructureFunction"/>
+	<Element description="where the functionality offered by a node can be accessed by other nodes and application components" type="ArchiMateInfrastructureInterface"/>
+	<Element description="provided by one or more nodes as an externally visible unit of functionality through well-defined interfaces" type="ArchiMateInfrastructureService"/>
+	<Element description="a physical communication medium between two or more devices as Connection" type="ArchiMateNetwork"/>
+	<Element description="a physical communication medium between two or more devices as Box" type="ArchiMateNetworkBox"/>
+	<Element description="a computational resource upon which artifacts may be deployed for execution" type="ArchiMateNode"/>
+	<Element description="a specialization of a node that is used to model the software environment in which artifacts run" type="ArchiMateSystemSoftware"/>
+	<Element description="represents an aggregate of two or more nodes that work together to perform collective technology behavior" type="ArchiMateTechnologyCollaboration"/>
+	<Element description="is a technology behavior element that denotes a state change" type="ArchiMateTechnologyEvent"/>
+	<Element description="represents a unit of collective technology behavior performed by (a collaboration of) two or more nodes" type="ArchiMateTechnologyInteraction"/>
+	<Element description="represents a sequence of technology behaviors that achieves a specific outcome" type="ArchiMateTechnologyProcess"/>
+</Diagram>

@@ -1,0 +1,38 @@
+## ===== Global =====
+#if( $indentationLevel == "0" )
+	#set( $indentationLevel = 0 )
+#end
+#set( $baseIndentation = $utilities.getIndentation($indentation, $indentationLevel) )
+## ===== Output =====
+/**
+ * "Visual Paradigm: DO NOT MODIFY THIS FILE!"
+ * 
+ * This is an automatic generated file. It will be regenerated every time 
+ * you generate persistence class.
+ * 
+ * Modifying its content may cause the program not work, or your work may lost.
+ */
+
+/**
+ * Licensee: $licensee
+ * License Type: $licenseType
+ */
+$class.package##
+$class.getDescription("${baseIndentation}")##
+${baseIndentation}public class $class.name $class.generalization$class.realization{
+#foreach( $attribute in $class.attributes )
+$attribute.getDescription("${baseIndentation}${indentation}")##
+${baseIndentation}${indentation}$attribute.visibility$attribute.modifiers $attribute.type $attribute.name$attribute.initialValue;
+#if (!$attribute.final)
+
+${baseIndentation}${indentation}public $attribute.type get$attribute.getPropertyName()() {
+${baseIndentation}${indentation}${indentation}return $attribute.name;
+${baseIndentation}${indentation}}
+
+${baseIndentation}${indentation}public void set$attribute.getPropertyName()($attribute.type value) {
+${baseIndentation}${indentation}${indentation}this.$attribute.name = value;
+${baseIndentation}${indentation}}
+#end
+
+#end
+$utilities.getIndentation($indentation, $indentationLevel)}

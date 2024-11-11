@@ -1,0 +1,4 @@
+$operation.getReference().prepare()##
+## ===== Output =====
+${indentation}${indentation}$this->$operation.getReference().getAttributeName() = $$operation.getReference().getParameterName();
+

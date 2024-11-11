@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="A link that connects two elements, representing the containment relationship among project activities." type="BSConnector"/>
+	<Element description="A major project element. When presenting a WBS, the elements at the lowest leve of its WBS branch are known as work packages." type="BSElement"/>
+</Diagram>

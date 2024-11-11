@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20231118-1158-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.16.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="VivoBook-ASUSLaptop-X421FL-S433FL"
+	OSRelease="5.15.0-88-generic"
+	OSVersion="#98~20.04.1-Ubuntu SMP Mon Oct 9 16:43:45 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="142"
+	ProcessorCacheSize="8192"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="15798"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1470.28"
+	>
+	<Testing>
+		<StartDateTime>Nov 18 12:58 CET</StartDateTime>
+		<StartTestTime>1700308716</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 18 12:58 CET</EndDateTime>
+		<EndTestTime>1700308716</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

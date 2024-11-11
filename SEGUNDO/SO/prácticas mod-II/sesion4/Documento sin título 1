@@ -1,0 +1,35 @@
+#include<sys/types.h>
+#include<fcntl.h>
+#include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<errno.h>
+
+int main(int argc, char*argv[]) {
+	if (argc!=3) {
+		printf("Error en el numero de argumentos");
+		exit(-1);
+	}
+	minA = strtol(argv[1], NULL, 10);
+	maxA = strtol(argv[2], NULL, 10); 
+	
+	int fdE1, fdE2, fdM;
+	
+	pipe(fdE1);
+	pipe(fdE2);
+	pipe(fdM); 
+	
+	pid_t PID1, PID2;
+	int valor;
+	
+	if ((PID1 = fork()) == 0) {
+		close(fdE2[0]);
+		close(fdE2[1]);
+		
+		close(fdE1[1]);
+		close(fdM[0]);
+		
+		du
+	}
+	
+}

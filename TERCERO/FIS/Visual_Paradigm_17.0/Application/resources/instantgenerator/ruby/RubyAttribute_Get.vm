@@ -1,0 +1,4 @@
+$operation.getReference().prepare()##
+## ===== Output =====
+${baseIndentation}${indentation}${indentation}return $operation.getReference().getRefObject().t_getAttributeNamePrefix()$operation.getReference().getAttributeName()
+

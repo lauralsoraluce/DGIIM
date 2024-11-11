@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ej20.dir/ej20.cpp.o -o ej20 

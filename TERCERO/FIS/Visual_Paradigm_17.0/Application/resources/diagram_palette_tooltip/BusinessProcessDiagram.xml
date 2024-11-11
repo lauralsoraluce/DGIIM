@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="shows the dividing into or joining of multiple sequence flows" type="ANDBPGateway"/>
+	<Element description="used to link information and Artifacts with BPMN graphical elements" type="BPAssociation"/>
+	<Element description="identifies a point in the Process where a global Process or a Global Task is used" type="BPCallActivity"/>
+	<Element description="identifies a point in the Process where a global Choreography or a Global Choreography Task is used" type="BPCallChoreographyActivity"/>
+	<Element description="a compound Activity in that it has details defined as a flow of other Activities" type="BPChoreographySubProcess"/>
+	<Element description="an atomic Activity in a Choreography" type="BPChoreographyTask"/>
+	<Element description="a directed flow of data within a process" type="BPCompensationAssociation"/>
+	<Element description="flow of data within a process" type="BPDataAssociation"/>
+	<Element description="data required for Activities and Processes to execute" type="BPDataInput"/>
+	<Element description="provides information about what Activities require to be performed and/or what they produce" type="BPDataObject"/>
+	<Element description="data produced as a result of execution of Activities and Processes" type="BPDataOutput"/>
+	<Element description="provides a mechanism for Activities to retrieve or update stored information" type="BPDataStore"/>
+	<Element description="indicates where a Process will end" type="BPEndEvent"/>
+	<Element description="controls how sequence flows interact as they converge and diverge within a Process" type="BPGateway"/>
+	<Element description="a grouping of graphical elements that are within the same Category" type="BPGroup"/>
+	<Element description="indicates where something happens (an Event) somewhere between the start and end of a Process" type="BPIntermediateEvent"/>
+	<Element description="shows the flow of Messages between two Participants that are prepared to send and receive them" type="BPMessageFlow"/>
+	<Element description="a sub-partition within a Process, sometimes within a Pool" type="BPPoolLane"/>
+	<Element description="shows the order that Activities will be performed in a Process" type="BPSequenceFlow"/>
+	<Element description="indicates where a particular Process will start" type="BPStartEvent"/>
+	<Element description="an Activity whose internal details have been modeled using Activities, Gateways, Events, and Sequence Flow" type="BPSubProcess"/>
+	<Element description="an atomic Activity within a Process flow" type="BPTask"/>
+	<Element description="for a modeler to provide additional text information for the diagram reader" type="BPTextAnnotation"/>
+	<Element description="provides a mechanism for the Process to provide input to a Business Rules Engine and to get the output" type="BusinessRuleBPTask"/>
+	<Element description="will indicate the Transaction should be cancelled" type="CancelBPEndEvent"/>
+	<Element description="triggered if a TransactionProtocol \u201cCancel\u201d Message has been received; used within a Transaction Sub-Process" type="CancelBPIntermediateEvent"/>
+	<Element description="indicates that compensation is necessary" type="CompensationBPEndEvent"/>
+	<Element description="triggered by a thrown compensation and the associated Activity will be performed" type="CompensationBPIntermediateEvent"/>
+	<Element description="only one EventDefinition associated with the Start Event and of the subclass CompensationEventDefinition" type="CompensationBPStartEvent"/>
+	<Element description="can be used to model complex synchronization behavior" type="ComplexBPGateway"/>
+	<Element description="model alternative paths within a flow which is where the diversion takes place" type="DataBasedXORBPGateway"/>
+	<Element description="a flow that is taken only if all the other outgoing Sequence Flows from the Activity or Gateway are not valid" type="DefaultBPSequenceFlow"/>
+	<Element description="can be in a collapsed view that hides details or in an expanded view that shows details" type="EmbeddedBPSubProcess"/>
+	<Element description="a named Error generated to terminate all currently active threads in the particular Sub-Process" type="ErrorBPEndEvent"/>
+	<Element description="interrupts the Activity to which it is attached, with a predefined error" type="ErrorBPIntermediateEvent"/>
+	<Element description="an error set to trigger the start of the process" type="ErrorBPStartEvent"/>
+	<Element description="indicates that an Escalation should be triggered; Other active threads are not affected by this" type="EscalationBPEndEvent"/>
+	<Element description="used for handling a named Escalation" type="EscalationBPIntermediateEvent"/>
+	<Element description="only one EventDefinition associated with the Start Event and of the subclass EscalationEventDefinition" type="EscalationBPStartEvent"/>
+	<Element description="a Sub-Process whose triggeredByEvent attribute is set to true" type="EventBPSubProcess"/>
+	<Element description="model the alternative paths that follow the gateway based on events that occur instead of the expression of flow" type="EventBasedXORBPGateway"/>
+	<Element description="a flow that is taken only when certain condition expression is true" type="ExpressionBPSequenceFlow"/>
+	<Element description="a horizontal graphical container for partitioning a set of Activities from other Pools" type="HorizontalBPPool"/>
+	<Element description="identifies a point in the Process where a global Process or a Global Task is used" type="IndependentBPSubProcess"/>
+	<Element description="can be used to create looping situations or to avoid long Sequence Flow lines" type="LinkBPIntermediateEvent"/>
+	<Element description="a Task that is expected to be performed without the aid of any business process execution engine or any application" type="ManualBPTask"/>
+	<Element description="a Message is sent to a Participant at the conclusion of the Process" type="MessageBPEndEvent"/>
+	<Element description="can be used to either send a Message or receive a Message" type="MessageBPIntermediateEvent"/>
+	<Element description="a Message that arrives from a Participant and triggers the start of the Process" type="MessageBPStartEvent"/>
+	<Element description="there are multiple consequences of ending the Process and all of them will occur" type="MultipleBPEndEvent"/>
+	<Element description="indicates that there are multiple triggers assigned to the Event but only requires one of them" type="MultipleBPIntermediateEvent"/>
+	<Element description="multiple ways of triggering the Process but only one of them is required" type="MultipleBPStartEvent"/>
+	<Element description="can be used to create alternative but also parallel paths within a Process flow" type="ORBPGateway"/>
+	<Element description="multiple triggers that are assigned to the Event all take place" type="ParallelMultipleBPIntermediateEvent"/>
+	<Element description="multiple ways of triggering the Process and all of them are required for the instantiation" type="ParallelMultipleBPStartEvent"/>
+	<Element description="a simple Task designed to wait for a Message to arrive from an external Participant (relative to the Process)" type="ReceiveBPTask"/>
+	<Element description="a Sub-Process that refers to another Sub-Process" type="ReferenceBPSubProcess"/>
+	<Element description="a Task that refers to another Task" type="ReferenceBPTask"/>
+	<Element description="triggered when a condition becomes true" type="RuleBPIntermediateEvent"/>
+	<Element description="triggered when a Condition such as &quot;S&amp;P 500 changes by more than 10% since opening\u201d becomes true" type="RuleBPStartEvent"/>
+	<Element description="a Task executed by a business process engine" type="ScriptBPTask"/>
+	<Element description="a simple Task designed to send a Message to an external Participant" type="SendBPTask"/>
+	<Element description="a Task that uses some sort of service, which could be a Web service or an automated application" type="ServiceBPTask"/>
+	<Element description="indicates that a Signal will be broadcasted when the End has been reached" type="SignalBPEndEvent"/>
+	<Element description="defines a more general, non-error condition for interrupting Activities" type="SignalBPIntermediateEvent"/>
+	<Element description="a Signal that has been broadcast from another Process and triggers the start of the Process" type="SignalBPStartEvent"/>
+	<Element description="indicates that all Activities in the Process should be immediately ended" type="TerminateBPEndEvent"/>
+	<Element description="in normal flow, acts as a delay mechanism based on a specific time-date or a specific cycle" type="TimerBPIntermediateEvent"/>
+	<Element description="a specific date/time or cycle set to trigger the start of the Process" type="TimerBPStartEvent"/>
+	<Element description="a typical &quot;workflow&quot; Task where a human performs the Task with the assistance of a software application" type="UserBPTask"/>
+	<Element description="a vertical graphical container for partitioning a set of Activities from other Pools" type="VerticalBPPool"/>
+</Diagram>

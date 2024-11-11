@@ -1,0 +1,17 @@
+Dado un archivo .c, hacemos: gcc archivo.c -o archivo
+			      ./archivo
+
+Ejercicio 1:
+	El programa tarea1.c crea un archivo si el primer argumento (nombre del arhcivo a abrir) dado a la función open no existe. Le da permiso de lectura y escritura al usuario (S_IRUSR, S_IWUSR). Si esta función devuelve un número negativo, es que ha habido problemas al abrir o crear el archivo. 
+	Se escribe el contenido de buf1[] en el archivo creado (utilizando el desciptor que devuelve el open anterior). Esta función devuelve el número de bytes escritos. Si no devuelve un 10 (que es el número de bytes que debería escribir, pues hay diez letras), se muestra error. 
+	Con la función lseek, se cambia la posición del offset del archivo (offset = posición en el archivo). En este caso se cambia a la posición del byte 40 (sabemos que se trata de bytes por SEEK_SET).
+	Ahora que estamos en la posicuón 40 del archivo, se escribe el contenido de buf2[] ahí. 
+	Se cierra el archivo abierto. 
+
+%d se utiliza para indicar que el dato que se mostrará o leerá será un decimal
+
+Ejercicio 3:
+	Para cada argumento dado, muestra los atributos del archivo correspondiente al argumento, con la función lstat (como stat pero si es un enlace simbolico, muestra la información sobre el enlace en lugar de sobre el archivo al que apunta). Si el método devuelve un número negativo, sabemos que ha habido un error. Si se puede hacer correctamente:
+		Si el archivo es un archivo regular (comprobamos con S_ISREG(atributos.st_mode)), guardamos en un string: "Regular". Hacemos lo mismo para el resto de tipos de archivo. Si no se da ninguno de los casos anteriores, decimos que es un tipo de archivo desconocido. 
+		
+		

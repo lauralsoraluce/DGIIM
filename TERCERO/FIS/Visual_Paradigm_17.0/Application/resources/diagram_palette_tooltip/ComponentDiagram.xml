@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a kind of association that has one of its end marked shared as kind of aggregation" type="Aggregation"/>
+	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
+	<Element description="specifies a semantic relationship that can occur between typed instances" type="Association"/>
+	<Element description="represents a modular part of a system that encapsulates its contents" type="Component"/>
+	<Element description="composite aggregation is a strong form of aggregation that requires a part instance be included" type="Composition"/>
+	<Element description="condition under which a behavior will be executed" type="Constraint"/>
+	<Element description="a relationship that represents a 'part-of' relationship between the source and target elements" type="Containment"/>
+	<Element description="a relationship between two model elements where changes in one of them will similarly affect the other" type="Dependency"/>
+	<Element description="exists between two related classes where one is a specialized form of the other" type="Generalization"/>
+	<Element description="extended with the capability of being a deployment target in a deployment relationship" type="InstanceSpecification"/>
+	<Element description="an association declares that there can be links between instances of the associated types" type="Link"/>
+	<Element description="a text area to put in remarks" type="NOTE"/>
+	<Element description="specifies a distinct interaction point between that classifier and its environment" type="Port"/>
+	<Element description="a relationship between two classes where one realizes (implements or executes) the behavior specified by the other" type="Realization"/>
+	<Element description="represents a declaration of a set of coherent public features and obligations" type="StructuredInterface"/>
+	<Element description="a relationship in which one element requires another element (or set of elements) for its full implementation or operation" type="Usage"/>
+</Diagram>

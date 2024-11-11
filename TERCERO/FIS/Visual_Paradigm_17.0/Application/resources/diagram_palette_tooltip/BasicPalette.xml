@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="insert a business rule in diagram for documenting business policy" type="BusinessRule"/>
+	<Element description="relates a business rule to any design artifact" type="BusinessRuleAssociation"/>
+	<Element description="insert a group of business rules" type="BusinessRuleGroup"/>
+	<Element description="add a callout for text input to diagram" type="Callout"/>
+	<Element description="insert a decision table in diagram for documenting business decision" type="DTBDecisionTable"/>
+	<Element description="relates a business decision to any design artifact" type="DTBDecisionTableAssociation"/>
+	<Element description="insert a table in diagram to list diagram information" type="DiagramInfo"/>
+	<Element description="a placeholder of a linked thumbnail of any diagram" type="DiagramOverview"/>
+	<Element description="a widget for querying model information to be visualized as tabular format" type="ETLTable"/>
+	<Element description="add a line to diagram" type="Freehand"/>
+	<Element description="connector for wildcard connection" type="GenericConnector"/>
+	<Element description="add a placeholder on diagram to insert an existing image of your choice" type="ImageShape"/>
+	<Element description="add an oval shape to diagram" type="Oval"/>
+	<Element description="draw package to group elements" type="Package"/>
+	<Element description="add a polygon to diagram" type="Polygon"/>
+	<Element description="add a rectangle to diagram" type="Rectangle"/>
+	<Element description="capture a screenshot and insert it to the current diagram" type="ScreenCapture"/>
+	<Element description="draw a subsystem" type="Subsystem"/>
+	<Element description="add a textbox to diagram for text input" type="TextBox"/>
+	<Element description="add a User Story to record a specific user concern to be addressed" type="UserStory"/>
+</Diagram>

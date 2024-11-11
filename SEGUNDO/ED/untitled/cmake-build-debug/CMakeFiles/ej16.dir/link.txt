@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ej16.dir/ej16.cpp.o -o ej16 

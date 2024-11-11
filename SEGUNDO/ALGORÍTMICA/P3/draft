@@ -1,0 +1,82 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include "matriz_adj.cpp"
+
+using namespace std;
+
+class Nodo {
+	double x;
+	double y;
+	int num;
+	
+	Nodo () {
+		num=-1;
+		x=-1;
+		y=-1;
+	}
+	
+	void set_x (double x) {
+		this.x = x;
+	}
+	
+	void set_y (double y) {
+		this.y = y;
+	}
+	
+	void set_num (int n) {
+		num=n;
+	}
+	
+	double get_x() {
+		return x;
+	}
+	
+	double get_y() {
+		return y;
+	}
+	
+	int get_num() {
+		return num;
+	}
+	
+}
+
+int main(int argc, char*argv[]) {
+
+	ifstream fich("eil76.tsp");
+	if (!fich) {
+		cout << "Error al abrir el fichero" << endl;
+		exit(EXIT_FAILURE);
+	}
+	
+	double valor;
+	vector<Nodo> datos;
+	
+	fich>>valor;
+	fich>>valor;
+	
+	while (fich >> valor) {
+		Nodo nodos();
+		nodos.set_num(valor);
+		fich>>valor;
+		nodos.set_x(valor);
+		fich>>valor;
+		nodos.set_y(valor);
+		datos.push_back(nodos);
+	}
+	Nodo norte();
+	Nodo oeste();
+	Nodo este();
+	
+	for (auto x:v) {
+		if (x.get_x>=0 && x.get_x<oeste.get_x)
+			oeste=y;
+		if (x.get_x>=0 && x.get_x>este.get_x)
+			este=y;
+		if (x.get_y>=0 && x.get_y>norte.get_y)
+			norte=x;
+	}
+	
+	
+}

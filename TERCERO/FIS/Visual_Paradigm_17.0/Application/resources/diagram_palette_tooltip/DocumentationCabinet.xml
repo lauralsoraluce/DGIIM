@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="container of drawer(s)" type="DocumentationCabinetCabinet"/>
+	<Element description="container of files to be shared with your team" type="DocumentationCabinetDrawer"/>
+	<Element description="describes logical relationship between cabinets" type="DocumentationCabinetLink"/>
+</Diagram>

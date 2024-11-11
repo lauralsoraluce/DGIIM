@@ -1,0 +1,7 @@
+Ejercicio 1:
+	El programa tarea3.c abre el archivo1 y si no existe, lo crea dandole los permisos de lectura, escritura y ejecución al group. Si no se puede hacer, se muestra un error. 
+	Se dan los permisos de lectura y escritura para todos. Se abre un segundo archivo si existe, y si no se crea igual que el anterior. 
+	Para el cambio de permisos, con el stat comprobamos el permiso de ejecución del grupo propietario del archivo 1. Si lo tiene se lo asignamos.
+	Para el segundo archivo, le asignamos los tres permisos a los usuarios, el de lectura y escritura al grupo y el de lectura a otros. 
+	
+

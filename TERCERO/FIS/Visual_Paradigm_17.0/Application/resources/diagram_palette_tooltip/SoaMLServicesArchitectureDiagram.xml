@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a mapping between features of the collaboration type and features of the owning classifier" type="RoleBinding"/>
+	<Element description="provides and consumes services to achieve some value in the services architecture" type="SoaMLExternalParticipant"/>
+	<Element description="provides and consumes services to achieve some value in the services architecture" type="SoaMLInternalParticipant"/>
+	<Element description="one particular use of Service Contract" type="SoaMLServiceContractUse"/>
+	<Element description="the high-level view of a Service Oriented Architecture that defines how a set of participants works together for some purpose by providing and using services" type="SoaMLServicesArchitecture"/>
+</Diagram>

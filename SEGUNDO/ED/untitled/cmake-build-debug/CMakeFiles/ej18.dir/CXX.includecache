@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lauralazaro/Escritorio/ED/untitled/ej18.cpp
+stack
+/home/lauralazaro/Escritorio/ED/untitled/stack
+iostream
+-
+

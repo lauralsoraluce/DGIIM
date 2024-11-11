@@ -1,0 +1,4 @@
+$attribute.t_prepare()##
+## ===== Output =====
+$attribute.t_getDocumentation("${indentation}")##
+${indentation}$attribute.getName()$attribute.t_getInitialValue()

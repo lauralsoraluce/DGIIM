@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
+	<Element description="contains subrequirements/child requirements in terms of a requirements hierarchy" type="Composition"/>
+	<Element description="condition under which a behavior will be executed" type="Constraint"/>
+	<Element description="a relationship that represents a 'part-of' relationship between the source and target elements" type="Containment"/>
+	<Element description="a relationship between two model elements where changes in one of them will similarly affect the other" type="Dependency"/>
+	<Element description="a text area to put in remarks" type="NOTE"/>
+	<Element description="further describes a requirement through a model element or set of elements" type="RQRefine"/>
+	<Element description="a relationship between a requirement and any other model element" type="RQTrace"/>
+	<Element description="a system/application function to be satisfied" type="Requirement"/>
+	<Element description="relates a derived requirement to its source requirement" type="RequirementDerive"/>
+	<Element description="acts as a reference to an existing model element in the project (e.g. represents the source element of a satisfy relationship)" type="RequirementModel"/>
+	<Element description="describes how a design or implementation model satisfies one or more requirements" type="Satisfy"/>
+	<Element description="a dependency to specify that the text of a client requirement is a read-only copy of the text of a supplier requirement" type="SysMLCopy"/>
+	<Element description="group various members" type="SysMLElementGroup"/>
+	<Element description="a method for verifying that a requirement is met" type="TestCase"/>
+	<Element description="a dependency between a requirement and a test case/other model element that can ensure a system fulfills the requirement" type="Verify"/>
+</Diagram>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="two-way flows of data from its source to its destination" type="DFBidirectionalDataFlow"/>
+	<Element description="shows the flow of information from its source to its destination" type="DFDataFlow"/>
+	<Element description="a placeholder for storing information" type="DFDataStore"/>
+	<Element description="where data goes to or comes from which is outside the scope of the current study" type="DFExternalEntity"/>
+	<Element description="shows a manipulation of data flows within the system" type="DFProcess"/>
+	<Element description="represent a flow flows from the parent diagarm to content in this sub-diagarm" type="SubLevelInFlow"/>
+	<Element description="represent a flow flows from content in this sub-diagarm to the parent diagarm" type="SubLevelOutFlow"/>
+</Diagram>

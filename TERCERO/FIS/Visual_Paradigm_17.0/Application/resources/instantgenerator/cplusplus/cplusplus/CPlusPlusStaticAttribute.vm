@@ -1,0 +1,5 @@
+$staticAttribute.t_prepare()##
+## ===== Output =====
+$class.t_getGeneric("template", false)##
+$staticAttribute.t_getTypeName()$staticAttribute.t_getGeneric()$staticAttribute.t_getTypePreModifier()##
+$class.t_getFullName()$class.t_getGeneric()::$staticAttribute.t_getTypePostModifier()$staticAttribute.t_getStaticInitialValue();

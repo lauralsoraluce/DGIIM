@@ -1,0 +1,18 @@
+$class.t_prepare()##
+## ===== Output =====
+$indenter.getIndentation()<xs:simpleType name="$class.getName()">##
+$indenter.push($indentation)##
+$class.t_getDocumentation($indenter.getIndentation())
+#if( $class.generalizationClassCount() > 0 )
+	$indenter.getIndentation()<xs:restriction base="$class.t_getGeneralizationPrefix()$class.t_getGeneralizationPrefixPostfix()$class.t_getGeneralization()">
+	$indenter.push($indentation)##
+#end
+#set($node = $class.getTaggedValueContent() )
+#parse("$template-dir/XsdXmlNode.vm")
+#if( $class.generalizationClassCount() > 0 )
+	$indenter.pop()##
+	$indenter.getIndentation()</xs:restriction>
+#end
+$indenter.pop()##
+$indenter.getIndentation()</xs:simpleType>
+

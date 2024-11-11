@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="represents the relationship between terms" type="FactType"/>
+	<Element description="represents a parent and child relationship between terms" type="Generalization"/>
+	<Element description="a meaningful noun or noun phase commonly used in business communications" type="Glossary"/>
+	<Element description="connects two terms to show their relationship" type="GlossaryFactConnector"/>
+	<Element description="represents a u-nary fact-type that provides a simple yes or no answer to business questions" type="GlossaryFactTypeAssociation"/>
+</Diagram>

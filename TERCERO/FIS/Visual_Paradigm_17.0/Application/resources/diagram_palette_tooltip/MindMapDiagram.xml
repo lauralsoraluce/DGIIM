@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a logical relationship between two nodes" type="BidirectionalMindLink"/>
+	<Element description="a directed line between two nodes whose second point (when drawing) becomes the source node" type="FromMindLink"/>
+	<Element description="connects nodes to model nested hierarchy of nodes (i.e. one being the elaboration of another)" type="MindConnector"/>
+	<Element description="a placeholder for you to enter an idea or a concept" type="MindMapNode"/>
+	<Element description="a directed line between two nodes whose second point (when drawing) becomes the target node" type="ToMindLink"/>
+</Diagram>

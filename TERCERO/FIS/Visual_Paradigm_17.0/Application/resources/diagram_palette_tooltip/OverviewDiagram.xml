@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a linked thumbnail of a specific Activity Diagram" type="ActivityDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific ArchiMate Diagram" type="ArchiMateDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Implementation Plan Diagram" type="ArchitectureRoadmapOverview"/>
+	<Element description="a linked thumbnail of a specific Block Definition Diagram" type="BlockDefinitionDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Brainstorm" type="BrainstormOverview"/>
+	<Element description="a linked thumbnail of a specific Breakdown Structure Diagram" type="BreakdownStructureOverview"/>
+	<Element description="a linked thumbnail of a specific Business Motivation Model Diagram" type="BusinessMotivationModelDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Business Process Diagram" type="BusinessProcessDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Basic Diagram" type="BusinessWorkflowDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific CMMN Diagram" type="CMMNDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific CRC Card Diagram" type="CRCCardDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Chart Diagram" type="ChartDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Class Diagram" type="ClassDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Communication Diagram" type="CommunicationDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Component Diagram" type="ComponentDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Composite Structure Diagram" type="CompositeStructureDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Conversation Diagram" type="ConversationDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Decision Table" type="DTBDecisionTableOverview"/>
+	<Element description="a linked thumbnail of a specific Data Flow Diagram" type="DataFlowDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Deployment Diagram" type="DeploymentDiagramOverview"/>
+	<Element description="a placeholder for a linked thumbnail of any diagram type" type="DiagramOverview"/>
+	<Element description="a placeholder of a linked thumbnail of any diagram" type="DiagramOverview"/>
+	<Element description="a relationship that shows sequence of design, as presented by the diagram" type="DirectionalGenericConnector"/>
+	<Element description="a linked thumbnail of a specific File Cabinet" type="DocumentationCabinetOverview"/>
+	<Element description="a linked thumbnail of a specific EPC Diagram" type="EPCDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Entity Relationship Diagram" type="EntityRelationshipDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Fact Model" type="FactDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Cause and Effect Diagram" type="FishboneDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Business Concept Diagram" type="FreehandDiagram2Overview"/>
+	<Element description="a linked thumbnail of a specific Interaction Overview Diagram" type="InteractionOverviewDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Internal Block Diagram" type="InternalBlockDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Matrix Diagram" type="MatrixDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Radar Chart" type="MaturityAnalysisOverview"/>
+	<Element description="a linked thumbnail of a specific Migration Roadmap" type="MigrationRoadmapOverview"/>
+	<Element description="a linked thumbnail of a specific Mind Mapping Diagram" type="MindMapDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific ORM Diagram" type="ORMDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Object Diagram" type="ObjectDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Organization Chart" type="OrganizationChartOverview"/>
+	<Element description="a linked thumbnail of a specific Overview Diagram" type="OverviewDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Enhanced PERT Chart" type="PERTChartOverview"/>
+	<Element description="a linked thumbnail of a specific Package Diagram" type="PackageDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Parametric Diagram" type="ParametricDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Process Overview Diagram" type="ProcessMapDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Requirement Diagram" type="RequirementDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Sequence Diagram" type="SequenceDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Service Categorization Diagram" type="SoaMLServiceCategorizationDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Service Contract Diagram" type="SoaMLServiceContractDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Service Interface Diagram" type="SoaMLServiceInterfaceDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Service Participant Diagram" type="SoaMLServiceParticipantDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Services Architecture Diagram" type="SoaMLServicesArchitectureDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific State Machine Diagram" type="StateDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Textual Analysis" type="TextualAnalysisOverview"/>
+	<Element description="a linked thumbnail of a specific Timing Diagram" type="TimingDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Use Case Diagram" type="UseCaseDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific User Interface" type="UserInterfaceOverview"/>
+	<Element description="a linked thumbnail of a specific WSDL Diagram" type="WSDLDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Wireflow Diagram" type="WireflowDiagramOverview"/>
+	<Element description="a linked thumbnail of a specific Zachman Framework" type="ZachmanDiagramOverview"/>
+	<Element description="a relationship that shows a design, as presented by the diagram, is part of another" type="diagramContainment"/>
+</Diagram>

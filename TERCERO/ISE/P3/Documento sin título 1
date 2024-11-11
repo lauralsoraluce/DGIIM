@@ -1,0 +1,22 @@
+cron ISE PRACTICA 3
+
+Cron es una utilidad de todos los equipos uniix para ejecutar tareas periódicas. 
+nano -w crontab: describe muy bien el formato del archivo. El primer número hace mención al minuto en el que queremos ejecutar algo, el segundo a la hora, el tercero al día del mes, el cuarto al mes del año y el quinto al dia d la semana, siendo el 0 el domingo. Un asterisco significa TODOS.
+
+crontab -e: comando que permite editar crontab sin ser superusuario. Se va a almacenar con un fichero oculto .crobtab en nuestro directorio home. Aquí no podemos ejecutarlo como otro usuario q no sea el nuestro?? (no estoy segura de esto porq se lió).
+
+echo "Hola clase" | logger -t "pracise": envia al sistema de docs el mensaje (syslog??)
+
+*procede a enseñar 398274 mensajes de errores y a reiniciar las máquinas por 282732 vez*
+
+echo "Hola clase" | logger -t "pracise"
+
+
+zabbix 
+configurar host
+monitorizar variables (metricas de cpu, memoria)
+cron
+saber programar tareas
+PREGUNTA PARA EXPLICAR USO DE MEMORIA?
+ansible
+

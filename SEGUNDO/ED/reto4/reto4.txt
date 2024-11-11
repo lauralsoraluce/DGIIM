@@ -1,0 +1,154 @@
+// RETO 4 ED
+
+/////////////////// VERSIÓN 1 (MÁS DIFÍCIL - MENOS CENTINELAS) ///////////////////
+
+class ArbolBinario {
+private:
+	struct nodo {
+		Tbase etiqueta;
+		struct nodo *izqda;
+		struct nodo *dcha;
+		struct nodo *padre;
+		}
+	struct nodo *laraiz;
+
+/**
+* @brief Dado un árbol binario, escribe su preorden usando centinelas
+* @param os Ruta del archivo donde se va a escribir el preorden del árbol
+* @param nod Nodo del que cuelga el subárbol que se va a escribir
+* @post El árbol no se ve modificado
+*/
+void WriteBinTree (ostream &os, nodo *nod) const {
+	if (nod != 0 ) {
+	
+		if (nod.padre == 0)
+			os << 'n' << nod.etiqueta;
+		else if (nod.padre.izqda == nod) {
+			os << 'l' << nod.etiqueta;
+		}
+		else if (nod.padre.dcha == nod) {
+			os << 'r' << nod.etiqueta;
+		}
+		
+		if (nod.izqda == nod.dcha == 0) {
+			os << 'B';
+		}
+		WriteBinTree(os, nod.izqda);
+		WriteBinTree(os, nod.dcha);
+	}
+	else {
+		if(nod.padre.izqd != 0) 
+			os << 'x'
+	}
+}
+
+/**
+* @brief Dado un preorden, construye el árbol que representa
+* @param is Ruta del archivo del que se va a leer el preorden del árbol
+* @param nod Nodo del que va a colgar el subárbol que se va a escribir
+* @post El árbol se ve modificado
+*/
+void ReadBinTree (istream &is, nodo *nod) const {
+	char c;
+	is >> c;
+	if (c=='n' || isdigit(c) || c=='l' || c=='r') {
+		nod = new nodo;
+		if (c=='n'||c=='r'||c=='l')
+			is >> nod.etiqueta;
+		else if (isdigit(c))
+			nod.etiqueta=c;
+		is >> c;
+		if (c == 'B') {
+			nod.izqda = 0;
+			nod.dcha = 0;
+		}
+		else if (c=='r') {
+			nod.izqda = 0;
+			ReadBinTree(in, nod.dcha);
+			if (nod.dcha != 0) 
+				nod.dcha.padre = nod;
+		}
+		else {
+			ReadBinTree(in, nod.izqda);
+			ReadBinTree(in, nod.dcha);
+			if (nod.izqda !=0)
+				nod.izqda.padre = nod;
+			if (nod.dcha != 0)
+				nod.dcha.padre = nod;
+		}	
+	}
+	else nod =0;
+}
+
+
+/* ¿Cómo funciona? 
+- La raíz, lleva una n delante de su etiqueta, pues no está a la derecha ni a la izquierda de su padre. A partir de ahí, todos los nodos llevan delante de su etiqueta: una l si están a la izquierda de su padre; una r si están a la derecha de su padre.
+- Una B después de un nodo representa que dicho nodo es una hoja, es decir, no tiene hijos.
+- Si un nodo n tiene un hijo a la izquierda pero no a la derecha, escribimos la información que sea de los hijos del hijo izquierdo, pero cuando llegue el turno de la rama derecha del nodo n, escribimos una x, que indica que ese nodo es nulo, y el siguiente valor r deberá ser escrito, no en esa posición, sino en la siguiente posición derecha disponible. 
+- Si un nodo n tiene un hijo a la derecha pero no a la izquierda, simplemente escribimos el nodo derecho, pues ya se interpreta que al no haberse escrito la l (que debería escribirse antes de la r pues estamos trabajando con preorden) ese nodo es nulo y se pasa a la rama derecha. */
+
+
+
+/////////////////// VERSIÓN 2 (MÁS FÁCIL - MÁS CENTINELAS) ///////////////////
+///////////// Poniendo una B después de las hojas en lugar de xx /////////////
+
+
+class ArbolBinario {
+private:
+	struct nodo {
+		Tbase etiqueta;
+		struct nodo *izqda;
+		struct nodo *dcha;
+		struct nodo *padre;
+		}
+	struct nodo *laraiz;
+public:
+void WriteBinTree (ostream &os, nodo *nod) const {
+	if (nod != 0) {
+		os << "n" << nod.etiqueta;
+		if (nod.izqda == nod.dcha == 0)
+			os << "B";
+		else {
+			WriteBinTree(os, nodo.izqda);
+			WriteBinTree(os, nodo.dcha);
+		}
+	}
+	else if (nod == 0) {
+		os << "x";
+	}
+}
+void ReadBinTree (istream &is, nodo *nod) const {
+	char c;
+	is >> c;
+	if (c=='n' || isdigit(c)) {
+		nod = new nodo;
+		if (c=='n')
+			is >> nod.etiqueta;
+		else if (isdigit(c))
+			nod.etiqueta=c;
+		is >> c;
+		if (c == 'B') {
+			nod.izqda = 0;
+			nod.dcha = 0;
+		}
+		else if (c=='x') {
+			nod.izqda =0;
+			ReadBinTree(in, nod.dcha);
+			if (nod.dcha != 0)
+				nod.dcha.padre = nod;
+		}
+		else {
+			ReadBinTree(in, nod.izqda);
+			ReadBinTree(in, nod.dcha);
+			if (nod.izqda !=0)
+				nod.izqda.padre = nod;
+			if (nod.dcha != 0)
+				nod.dcha.padre = nod;
+		}	
+	}
+	else nod =0;
+	
+}
+
+
+

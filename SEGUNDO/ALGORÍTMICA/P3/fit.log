@@ -1,0 +1,375 @@
+
+
+*******************************************************************************
+Thu May 19 12:06:41 2022
+
+
+FIT:    data read from 'vecino_hibrida.tsp'
+        format = z
+BREAK: bad data on line 1 of datafile
+
+*******************************************************************************
+Thu May 19 12:06:54 2022
+
+
+FIT:    data read from 'vecino_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*x*x*x+b*x*x*x+c*x*x+d*x+e
+fitted parameters initialized with current variable values
+
+BREAK: Number of data points smaller than number of parameters
+
+*******************************************************************************
+Thu May 19 12:07:21 2022
+
+
+FIT:    data read from 'vecino_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*x*x*x+b*x*x*x+c*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 1.1434498350e+15   0.00e+00  1.11e+07    1.000000e+00   1.000000e+00   1.000000e+00
+  13 9.6390536767e-36   0.00e+00  1.11e+04    4.417484e-09  -4.031973e-07   1.157809e-05
+
+After 13 iterations the fit converged.
+final sum of squares of residuals : 9.63905e-36
+abs. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a               = 4.41748e-09    
+b               = -4.03197e-07   
+c               = 1.15781e-05    
+
+
+*******************************************************************************
+Thu May 19 12:11:36 2022
+
+
+FIT:    data read from 'vecino_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=(a*x*x*x-b*x*x)/2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 1.2439355263e-03   0.00e+00  5.09e-04    4.417484e-09  -4.031973e-07   1.157809e-05
+BREAK: Singular matrix in Invert_RtR
+
+*******************************************************************************
+Thu May 19 12:11:39 2022
+
+
+FIT:    data read from 'vecino_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=(a*x*x*x-b*x*x)/2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 6.7590348794e-07   0.00e+00  1.11e-02    1.061414e-07  -4.830970e-06
+   1 6.7590348794e-07   0.00e+00  1.11e-01    1.061414e-07  -4.830970e-06
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 6.75903e-07
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000822133
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.75903e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 1.06141e-07      +/- 3.922e-08    (36.95%)
+b               = -4.83097e-06     +/- 2.951e-06    (61.09%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.995  1.000 
+
+
+*******************************************************************************
+Thu May 19 12:12:30 2022
+
+
+FIT:    data read from 'vecino_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=(a*x*x*x+b*x*x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 3.7082489802e-04   0.00e+00  2.23e-02    1.061414e-07  -4.830970e-06
+   5 6.7590348794e-07  -3.17e-07  2.23e-07    5.307070e-08   2.415485e-06
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 6.75903e-07
+rel. change during last iteration : -3.17275e-12
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000822133
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.75903e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 5.30707e-08      +/- 1.961e-08    (36.95%)
+b               = 2.41548e-06      +/- 1.476e-06    (61.09%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.995  1.000 
+
+
+*******************************************************************************
+Thu May 19 12:12:47 2022
+
+
+FIT:    data read from 'vecino_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=(a*x*x*x+b*x*x+c*x+d)
+fitted parameters initialized with current variable values
+
+BREAK: Number of data points smaller than number of parameters
+
+*******************************************************************************
+Thu May 19 12:12:57 2022
+
+
+FIT:    data read from 'vecino_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=(a*x*x*x+b*x*x+c)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 6.6522932761e-07   0.00e+00  9.09e-03    5.307070e-08   2.415485e-06   1.158967e-05
+   9 1.8807909613e-37   0.00e+00  9.09e-04    9.121057e-08  -7.263866e-07   1.414356e-03
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 1.88079e-37
+abs. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a               = 9.12106e-08    
+b               = -7.26387e-07   
+c               = 0.00141436     
+
+
+*******************************************************************************
+Thu May 19 12:14:02 2022
+
+
+FIT:    data read from 'insercion_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*n*n+b*n+c
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Thu May 19 12:14:15 2022
+
+
+FIT:    data read from 'insercion_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*x+b*x+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 1.4075353826e-03   0.00e+00  8.36e-04    9.121057e-08  -7.263866e-07   1.414356e-03
+   9 3.7615819226e-37   0.00e+00  8.36e-06    1.050887e-05  -3.408989e-04   4.555113e-03
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 3.76158e-37
+abs. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a               = 1.05089e-05    
+b               = -0.000340899   
+c               = 0.00455511     
+
+
+*******************************************************************************
+Thu May 19 12:15:57 2022
+
+
+FIT:    data read from 'propio_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x*x*x*x + b*x*x*x + c*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 5.1044640756e+04   0.00e+00  1.27e+02    1.050887e-05  -3.408989e-04   4.555113e-03
+   9 0.0000000000e+00  -inf       1.27e-07    3.161222e-08   4.718993e-07   1.543892e-05
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0
+abs. change during last iteration : -4.81482e-35
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a               = 3.16122e-08    
+b               = 4.71899e-07    
+c               = 1.54389e-05    
+
+
+*******************************************************************************
+Thu May 19 18:04:48 2022
+
+
+FIT:    data read from 'vecino_hibrida.tsp'
+        format = z
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=(a*x*x*x+b*x*x+c)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 4.3119261988e-04   0.00e+00  4.72e-03    3.161222e-08   4.718993e-07   1.543892e-05
+  10 1.8807909613e-37   0.00e+00  4.72e-04    9.121057e-08  -7.263866e-07   1.414356e-03
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 1.88079e-37
+abs. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a               = 9.12106e-08    
+b               = -7.26387e-07   
+c               = 0.00141436     
+
+
+*******************************************************************************
+Thu May 19 18:05:38 2022
+
+
+FIT:    data read from 'insercion_hibrida.tsp'
+        format = z
+        x range restricted to [10.0000 : 80.0000]
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x)=a*x*x+b*x+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 1.4075353826e-03   0.00e+00  8.36e-04    9.121057e-08  -7.263866e-07   1.414356e-03
+  10 3.7615819226e-37   0.00e+00  8.36e-14    1.050887e-05  -3.408989e-04   4.555113e-03
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 3.76158e-37
+abs. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a               = 1.05089e-05    
+b               = -0.000340899   
+c               = 0.00455511     
+
+
+*******************************************************************************
+Thu May 19 18:06:23 2022
+
+
+FIT:    data read from 'propio_hibrida.tsp'
+        format = z
+        x range restricted to [10.0000 : 80.0000]
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+	h(x)=(a*x*x*x+b*x*x+c)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 1.6915323938e+00   0.00e+00  1.68e+00    1.050887e-05  -3.408989e-04   4.555113e-03
+   9 5.1157514148e-35   0.00e+00  1.68e-03    4.009961e-06  -7.261391e-05   1.012136e-02
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 5.11575e-35
+abs. change during last iteration : 0
+
+
+Exactly as many data points as there are parameters.
+In this degenerate case, all errors are zero by definition.
+
+Final set of parameters 
+======================= 
+
+a               = 4.00996e-06    
+b               = -7.26139e-05   
+c               = 0.0101214      

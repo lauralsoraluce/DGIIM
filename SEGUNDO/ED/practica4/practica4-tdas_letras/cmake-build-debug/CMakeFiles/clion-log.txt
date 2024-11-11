@@ -1,0 +1,5 @@
+/snap/clion/178/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lauralazaro/Escritorio/ED/practica4/practica4-tdas_letras
+Doxygen build started
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lauralazaro/Escritorio/ED/practica4/practica4-tdas_letras/cmake-build-debug

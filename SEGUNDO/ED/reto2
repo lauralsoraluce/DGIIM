@@ -1,0 +1,59 @@
+
+class Sudoku {
+private:
+	int numsumas; // número de sumas que contiene el tablero
+	
+	int *** tablero; // vectores en los que se almacena el tablero y las posibilidades que pueden ir en cada celda
+	
+	Suma sumas[numsumas]; // sumas contenidas en el tablero
+	
+	int *** submatriz; // cada uno de los cuadrados principales de 3x3 del tablero
+	
+	const int ROWS = 9; // número de filas del tablero principal
+	const int COLS = 9; // número de columnas del tablero principal
+	const int ROWS_AUX = 3; // número de filas de las submatrices 
+	const int COLS_AUX = 3; // número de columnas de las submatrices
+
+public:
+	Tablero(); // constructor sin parámetros que pone todo el tablero a 0.
+	
+	void generarTablero (); // rellena el tablero con los números iniciales, así como las submatrices.
+	
+	void setNum (int fil, int col, int num); // pone el número dado en la casilla dada.
+	
+	int getNum (int fil, int col); // devuelve el número que hay en la casilla dada, si no hubiese devuelve un 0.
+	
+	bool containedSubmatrix (int i); // devuelve true si un número está contenido en la submatriz indicada. Utiliza el método contained() de la clase Tablero.
+	
+	bool containedRows (int i); // devuelve true si un número está contenido en la fila dada.
+	
+	bool containedCols (int i); // devuelve true si un número está contenido en la columna dada.
+	
+	void posibilities(); // Para cada casilla, busca los números que podrían ir en ella.
+	
+	void search(); /* Verifica si existe una fila/columna/submatriz en la cual todas sus celdas vacías menos una están contenidas en sumas cerradas. Si se da el caso, rellena esa casilla con el 	número correspondiente, que se calcula con: 45 - (suma de las sumas totalmente contenidas en dicha fila/columna/submatriz + casillas ya rellenas (si las hubiese)), y actualiza las posibilidades del resto de casillas de la fila, columna y submatriz. */
+	
+	void complete(); /* Verifica si hay una fila/columna/submatriz en la que sólo hay una casilla vacía y la rellena con el número que corresponda. Se actualizan las posibilidades del resto de casillas de la fila, columna y submatriz. */
+	
+	void solveSums(); /* Verifica si hay una suma de las dadas, en la que sólo hay una casilla vacía, en cuyo caso, la rellena con el valor correspondiente, que se calcula con: suma[i].getValue()
+- (suma de las casillas rellenas de la suma i). */
+
+	void lastPosibility(); /* Verifica si hay una fila/columna/submatriz en la que hay alguna casilla que contenga una posibilidad que no contenga ninguna otra casilla. Rellena esa casilla con esa posibilidad. Actualiza las posibilidades del resto de casillas de la fila, columna y submatriz. */
+	
+	void deletePosibilities(); /* Va número por número comprobando si está puesto en alguna casilla, y si lo encuentra, lo borra de todas las posibilidades de las casillas de esa misma fila, columna y submatriz. */
+	
+	void nPosibilities(); // Si hubiese n celdas en una misma fila/columna/submatriz, que tienen las mismas n posibilidades y sólo esas n, borra esas n de todas las demás celdas. 
+	
+	void solveSudoku(); // Resuelve el sudoku llamando a los métodos anteriores.
+}
+
+class Suma {
+private: 
+	int value; // valor de la suma 
+	Punto2D casillas[MAX]; // casillas donde está contenida la suma
+	
+public:
+	int getSumValue (); // Devuelve el valor de la suma 
+		
+}
+

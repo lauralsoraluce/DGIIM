@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="represents an ability that an active structure element, such as an organization, person, or system, possesses" type="ArchiMateCapability"/>
+	<Element description="an approach or plan for configuring some capabilities and resources of the enterprise, undertaken to achieve a goal" type="ArchiMateCourseOfAction"/>
+	<Element description="represents an asset owned or controlled by an individual or organization" type="ArchiMateResource"/>
+	<Element description="Sequence of activities provide a specific good or service, and along which information, materials, and worth flows" type="ArchiMateValueStream"/>
+</Diagram>

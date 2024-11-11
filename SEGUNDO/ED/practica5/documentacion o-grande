@@ -1,0 +1,87 @@
+El constructor sin parámetros del Solver, tiene complejidad O(1), pues simplemente llama a los constructores sin parámetros del Diccionario y del LetterSet. Ambos llaman al clear del set y del map respectivamente. En este caso, ambos clear tienen complejidad O(1), pues no tienen que recorrer las estructuras, pues ambas están vacías. 
+
+El constructor con parámetros del Solver tiene complejidad O(n) ya que llama al operator= del LettersSet y del Dictionary, que ambos llaman respectivamente al operator= del set y del map. Estos dos métodos tienen complejidad O(n) (en el primer caso O(letters.size()) y en el segundo O(words.size())). Por lo tanto el constructor con parámetros tiene O(2n) que es lo mismo que O(n). 
+
+El método privado getSolsLength tiene complejidad O(n^3):
+	bucle for interior (depende de j):
+		O(Ini(n)) = O(1)
+		O(Con(n)) = O(1)
+		O(Ite(n)) = O(copy.size()) = O(n)
+		O(Cu(n)) = O(1) condicion + O(1) bool + O(1) igualación + O(1) pop_back = O(4) = O(1)
+		O(Inc(n)) = O(1)
+	
+		O(1)+O(1)+O(n)*[O(1)+O(1)+O(1)] = O(n)
+
+	bucle for medio interior (depende de i):
+		O(Ini(n)) = O(1)
+		O(Con(n)) = O(1)
+		O(Ite(n)) = O(words.at(k).size()) = O(n)
+		O(Cu(n)) = O(n)
+		O(Inc(n)) = O(1)
+		
+		O(1)+O(1)+O(n)*[O(n)+O(1)+O(1)] = O(n*n) = O(n^2)
+	
+	bucle for medio exterior (depende de k):
+		O(Ini(n)) = O(1)
+		O(Con(n)) = O(1)
+		O(Ite(n)) = O(words.size()) = O(n)
+		O(Cu(n)) = O(n^2)
+		O(Inc(n)) = O(1)
+		
+		O(1)+O(1)+O(n)*[O(n^2)+O(1)+O(1)] = O(n*n*n) = O(n^3)
+	
+	bucle for exterior:
+		O(Ini(n)) = O(1)
+		O(Con(n)) = O(1)
+		O(Ite(n)) = O(size) = O(n)
+		O(Cu(n)) = O(n*n*n) = O(n^3)
+		O(Inc(n)) = O(1)
+		
+		O(1)+O(1)+O(n)*[O(n^3)+O(1)+O(1)] = O(n*n*n*n) = O(n^4)
+
+	wordsOfLength es un método del TDA Dictionary usado en el bucle for exterior del método getSolsLength y tiene una complejidad de O(words.size()) = O(n).
+
+El método privado getSolsScore tiene complejidad O(n^3):
+	bucle for interior:
+		O(Ini(n)) = O(1)
+		O(Con(n)) = O(1)
+		O(Ite(n)) = O(copy.size()) = O(n)
+		O(Cu(n)) = O(1) condicion + O(1) bool + O(1) igualación + O(1) pop_back = O(4) = O(1)
+		O(Inc(n)) = O(1)
+	
+		O(1)+O(1)+O(n)*[O(1)+O(1)+O(1)] = O(n)
+
+	bucle for medio:
+		O(Ini(n)) = O(1)
+		O(Con(n)) = O(1)
+		O(Ite(n)) = O((*it).size()) = O(n)
+		O(Cu(n)) = O(n)
+		O(Inc(n)) = O(1)
+		
+		O(1)+O(1)+O(n)*[O(n)+O(1)+O(1)] = O(n*n) = O(n^2)
+	
+	bucle for exterior:
+		O(Ini(n)) = O(1)
+		O(Con(n)) = O(1)
+		O(Ite(n)) = O(dict.size()) = O(n)
+		O(Cu(n)) = O(n*n) = O(n^2)
+		O(Inc(n)) = O(1)
+		
+		O(1)+O(1)+O(n)*[O(n^2)+O(1)+O(1)] = O(n*n*n) = O(n^3)
+
+	getScore es un método del TDA LettersSet usado en el bucle for exterior del método getSolsScore y tiene una complejidad de O(n^2), pues se trata de dos bucles for anidados, el interior con un cuerpo de O(1) y n iteraciones, y el exterior con un cuerpo de O(words.length()) = O(n) y n iteraciones. 
+	
+El método público getSolutions tiene una complejidad O(n^3):
+	Tanto el if como el else tienen condición O(1) y cuerpo O(n^3). 
+	
+	
+En el archivo partida_letras.cpp usamos varios métodos de los TDAs de la práctica 4:
+	El exists del Dictionary tiene complejidad O(log(n)), pues llama al find del set words, que tiene O(log(n)).
+	El insert del Dictionary tiene complejidad O(log(n)), pues llama al insert del set words, que tiene O(log(n)).
+	El constructor con parámetros del LettersBag tiene complejidad O(n^2), pues se trata de dos bucles for anidados. El interior con cuerpo O(1) (ya que llama al insertLetter del LettersBag, que a su vez llama al add del Bag, que a su vez llama al push_back del vector, que es O(1)) y (*it).second.repetitions iteraciones, es decir, n iteraciones; y el segundo con cuerpo O(n) y lettersSet.size() iteraciones, es decir, n iteraciones. 
+	El extractLetters del LettersBag tiene complejidad O(n) pues se trata de un bucle for con num iteraciones (es decir, n iteraciones) y cuerpo O(1) (pues llama al extractLetter del Bag, que a su vez llama al get del Bag, que es O(1)).
+	
+	
+	
+	
+

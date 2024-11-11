@@ -1,0 +1,59 @@
+/*! \mainpage María Cribillés y Laura Lázaro
+
+# Introducción
+
+Esta práctica consiste en implementar una cola y una pila. Vamos a explicar un poco como hemos implementado ambas estructuras lineales:
+
+## Cola:
+
+Esta estructura lineal la vamos a implementar con una pila de la STL como dato miembro y con ayuda de un struct donde almacenaremos el valor de cada dato y su correspondiente máximo. Para poder implementarla correctamente hemos tenido que hacer varios métodos:
+1. Colocar un elemento al final de la cola: método push
+2. Consultar el elemento al principio de la cola (sin extraerlo): método front
+3. Extraer el elemento al principio de la cola: método pop
+4. Consultar el tamaño de la cola (número de elementos que la componen): método Size. 
+5. Consultar si la cola está vacía: método empty.
+	Casi todos estos métodos son fáciles de implementar gracias al contenedor de pila de la STL, ya que en algunos simplemente es llamar a métodos ya implementados por la STL.
+
+	Para esta estructura utilizaremos la política FIFO (First In, First Out), donde el primero en entrar será el primero en salir:
+@image html insercion_cola.jpeg "Inserción de valores en la cola"
+@image html extraccion_cola.jpeg "Extracción de valores en la cola"
+
+
+## Pila:
+@image html pila.jpeg
+
+Esta estructura lineal la vamos a implementar con una cola de la STL como dato miembro y con ayuda de un struct donde almacenaremos el valor de cada dato y su correspondiente máximo. Para poder implementarla correctamente hemos tenido que hacer varios métodos: 
+
+1. Colocar un elemento en la parte superior de la pila: método push
+2. Consultar el elemento en la parte superior de la pila (sin extraerlo): método top
+3. Extraer el elemento en la parte superior de la pila: método pop
+4. Consultar el tamaño de la pila (número de elementos que la componen): método size
+5. Consultar si la pila está vacía: método empty
+
+Casi todos estos métodos son fáciles de implementar gracias al contenedor de cola de la STL, ya que en algunos simplemente es llamar a métodos ya implementados por la STL.
+
+Para esta estructura utilizaremos la política LIFO (Last In, First Out), donde el último en entrar será el primero en salir.
+
+# Ejecutables
+
+Tenemos un ejecutable para cada estructura lineal implementada:
+
+## cola_max:
+
+> __cola_max__ \<numeros\> \<"."\>
+@param "<numeros>" numeros a insertar en la cola
+@param <"."> Puntos para sacar elementos de la cola
+
+
+Es un main en el cual creamos una cola de nuestra clase MaxQueue. Vamos metiendo elementos si son números con nuestro método implementado push(), y si son puntos "." sacamos el elemento del frente de la cola con nuestro método pop() e imprimimos por pantalla el valor y el máximo actualizado del frente de la cola. 
+
+## pila_max:
+
+> __pila_max__ \<numeros\> \<"."\>
+@param "<numeros>" numeros a insertar en la pila
+@param <"."> Puntos para sacar elementos de la pila
+
+
+Es un main en el cual creamos una pila de nuestra clase MaxStack. Vamos metiendo elementos si son números con nuestro método implementado push(), y si son puntos "." sacamos el elemento del tope de la pila con nuestro método pop() e imprimimos por pantalla el valor y el máximo actualizado del tope de la pila. 
+
+*/

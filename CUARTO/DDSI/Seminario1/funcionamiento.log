@@ -1,0 +1,103 @@
+DEBUG:__main__:Se establece el cursor de conexión
+DEBUG:__main__:Se establece el cursor de conexión
+DEBUG:__main__:Se crea el punto de guardado inicio
+DEBUG:__main__:Se inserta el pedido 5623
+DEBUG:__main__:Se crea el punto de guardado pedido
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Coge bien la cantidad 2
+DEBUG:__main__:Se inserta el detalle de pedido 5623 6 2
+DEBUG:__main__:Se actualiza el stock del producto 6
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se hace commit
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se ejecuta la consulta PEDIDO
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se establece el cursor de conexión
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se ejecuta la consulta PEDIDO
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se establece el cursor de conexión
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se ejecuta la consulta PEDIDO
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se establece el cursor de conexión
+DEBUG:__main__:Eliminada tabla detallepedido
+DEBUG:__main__:Eliminada tabla stock
+DEBUG:__main__:Eliminada tabla pedido
+DEBUG:__main__:Creada tabla stock e insertados 10 elementos
+DEBUG:__main__:Creada tabla pedido
+DEBUG:__main__:Creada tabla detallepedido
+DEBUG:__main__:Se crea el punto de guardado inicio
+DEBUG:__main__:Se inserta el pedido 123
+DEBUG:__main__:Se crea el punto de guardado pedido
+DEBUG:__main__:Se hace rollback al punto de guardado pedido
+DEBUG:__main__:Se ejecuta la consulta PEDIDO
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se hace rollback al punto de guardado pedido
+DEBUG:__main__:Se ejecuta la consulta PEDIDO
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se establece el cursor de conexión
+DEBUG:__main__:Eliminada tabla detallepedido
+DEBUG:__main__:Eliminada tabla stock
+DEBUG:__main__:Eliminada tabla pedido
+DEBUG:__main__:Creada tabla stock e insertados 10 elementos
+DEBUG:__main__:Creada tabla pedido
+DEBUG:__main__:Creada tabla detallepedido
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se ejecuta la consulta PEDIDO
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se crea el punto de guardado inicio
+DEBUG:__main__:Se inserta el pedido 123
+DEBUG:__main__:Se crea el punto de guardado pedido
+DEBUG:__main__:Se hace rollback al punto de guardado pedido
+DEBUG:__main__:Se ejecuta la consulta PEDIDO
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se establece el cursor de conexión
+DEBUG:__main__:Eliminada tabla detallepedido
+DEBUG:__main__:Eliminada tabla stock
+DEBUG:__main__:Eliminada tabla pedido
+DEBUG:__main__:Creada tabla stock e insertados 10 elementos
+DEBUG:__main__:Creada tabla pedido
+DEBUG:__main__:Creada tabla detallepedido
+DEBUG:__main__:Se crea el punto de guardado inicio
+DEBUG:__main__:Se establece el cursor de conexión
+DEBUG:__main__:Eliminada tabla detallepedido
+DEBUG:__main__:Eliminada tabla stock
+DEBUG:__main__:Eliminada tabla pedido
+DEBUG:__main__:Creada tabla stock e insertados 10 elementos
+DEBUG:__main__:Creada tabla pedido
+DEBUG:__main__:Creada tabla detallepedido
+DEBUG:__main__:Se crea el punto de guardado inicio
+DEBUG:__main__:Se inserta el pedido 123
+DEBUG:__main__:Se crea el punto de guardado pedido
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Coge bien la cantidad 5
+DEBUG:__main__:Se inserta el detalle de pedido 123 5 5
+DEBUG:__main__:Se actualiza el stock del producto 5
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se establece el cursor de conexión
+DEBUG:__main__:Eliminada tabla detallepedido
+DEBUG:__main__:Eliminada tabla stock
+DEBUG:__main__:Eliminada tabla pedido
+DEBUG:__main__:Creada tabla stock e insertados 10 elementos
+DEBUG:__main__:Creada tabla pedido
+DEBUG:__main__:Creada tabla detallepedido
+DEBUG:__main__:Se crea el punto de guardado inicio
+DEBUG:__main__:Se inserta el pedido 123
+DEBUG:__main__:Se crea el punto de guardado pedido
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Coge bien la cantidad 5
+DEBUG:__main__:Se inserta el detalle de pedido 123 3 5
+DEBUG:__main__:Se actualiza el stock del producto 3
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se hace rollback al punto de guardado pedido
+DEBUG:__main__:Se ejecuta la consulta PEDIDO
+DEBUG:__main__:Se ejecuta la consulta DETALLEPEDIDO
+DEBUG:__main__:Se ejecuta la consulta STOCK
+DEBUG:__main__:Se hace rollback al punto de guardado inicio

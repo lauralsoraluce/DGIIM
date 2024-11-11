@@ -1,0 +1,78 @@
+/*! \mainpage María Cribillés y Laura Lázaro
+
+# Introducción
+
+@image html cifrasyletras.jpeg
+
+Esta es la primera de varias prácticas para crear el juego de cifras y letras. Por ahora, nos centraremos en las letras. 
+
+El objetivo del juego es formar la mejor palabra posible (depende de si se juega por longitud o por puntuación). Se extraen varias letras al azar, de las cuales algunas (las más comunes) tienen más probabilidades de salir, pues están más repetidas. Con esas letras deberemos formar la palabra más larga o de mayor puntuación. 
+
+En esta práctica, hemos trabajado en montar las estructuras necesarias para poder jugar, más que en la partida en sí. Para ello, hemos necesitado un fichero con la información sobre las letras (cantidad y puntuación) y otro con un diccionario con todas las palabras válidas. En lo relacionado a estructuras de programación, hemos usado dos de la STL: Set y Map. Además, hemos aprendido a crear y manejar iteradores.
+
+Ejemplo del juego de las letras:
+
+       o r s a p e t
+       
+       
+ La palabra que usaría todas las letras sería: esparto
+
+
+# Ejecutables
+
+## conjunto_letras.cpp
+Este ejecutable está asociado al letters_set.cpp. Es un pequeño programa que recibe dos argumentos:
+
+1. Ruta al archivo con información sobre el conjunto de letras
+2. Palabra de la que calcular la puntuación
+
+Mediante el flujo ifstream podemos abrir el archivo y metemos el conjunto de letras en un objeto de la clase LettersSet ya creada. Junto al conjunto de letras, también metemos la puntuación y la cantidad de cada una.  A continuación, la palabra que nos da la declaramos como un string y llamamos al método de getScore, el cual nos calcula la puntuación de dicha palabra. 
+
+
+El resultado de ejecutar este pequeño programa es imprimir por pantalla la puntuación de la palabra dada como argumento.
+
+## bolsa.cpp
+Necesitamos una colección (bolsa) de caracteres que nos permita extraer aleatoriamente y sin reemplazamiento. Como en la STL no hay nada parecido, hemos creado un contenedor donde utilizamos templates ya que podemos utilizarlo para diferentes tipos de datos. Al usar templates, no podemos separar la declaración de la implementación, por lo que hemos implementado todo en el Bag.h y por eso no tiene cpp asociado. 
+
+Para probar el correcto funcionamiento de este TDA, hemos creado un pequeño programa (bolsa.cpp) que recibe los siguientes argumentos:
+1. Letra C (trabajaremos con bolsa de caracteres) o letra I (trabajaremos con bolsa de enteros).
+2. Lista de enteros o caracteres respectivamente, que deben meterse en la bolsa creada y ser extraído aleatoriamente hasta vaciarla. 
+
+Explicación de los pasos que seguimos en el main correspondiente:
+
+Primero, inicializamos el generador de números aleatorios y comprobamos si el primer argumento es C o I para crear una bolsa de caracteres o de enteros, respectivamente. 
+
+Si es de caractereres, le damos el valor string al template y metemos la lista dada por argumentos en la bolsa creada de string. Los extraemos aleatoriamente con el método creado get() y los vamos imprimiendo por pantalla hasta que la bolsa se quede vacía. 
+
+
+Si es de enteros, le damos el valor entero al template y procedemos igual que en la bolsa de caracteres solo que tratando con numeros enteros. 
+
+
+## bolsa_letras.cpp
+Este ejecutable está asociado al letters_bag.cpp. Es un pequeño programa que recibe un único argumento: el mismo archivo pasado como argumento en el conjunto_letras.cpp, el cual contiene la información sobre el conjunto de letras.
+
+Este programa realiza las siguientes operaciones:
+1. Comprueba el número pasado de argumentos.
+2. Crea una bolsa de letras (LettersBag), y la rellena con la información del archivo del LettersSet anterior
+3. Extrae todas las letras de la LettersBag (aleatoriamente) y las imprime por pantalla.
+
+
+## palabras_longitud.cpp 
+Este ejecutable está asociado al dictionary.cpp. Es un programa que recibe dos argumentos:
+
+1. Un fichero con las palabras de un diccionario
+2. Un entero con la longitud de las palabras que buscamos
+
+Comprueba si es correcto el número de argumentos, construye un Dictionary con el fichero de las palabras dado como argumento, extrae de dicho diccionario las palabras de la longitud que buscamos y las imprime por pantalla.
+
+
+
+## cantidad_letras.cpp
+Este ejecutable está también asociado al dictionary.cpp. Es un programa que recibe dos argumentos:
+
+1. Un fichero con las palabras de un diccionario
+2. Un fichero de letras
+
+Comprueba si es correcto el número de argumentos, construye un Dictionary con el fichero de palabras, un LettersSet con el fichero de letras, e imprime por pantalla, para cada letra en el LettersSet, el número de ocurrencias de la letra en el diccionario y su frecuencia relativa (es decir, el número total de ocurrencias de la letra entre el número total de letras en el diccionario).
+
+*/

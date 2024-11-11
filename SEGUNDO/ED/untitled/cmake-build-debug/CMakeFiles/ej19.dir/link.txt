@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ej19.dir/ej19.cpp.o -o ej19 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+	<Element description="a precisely-defined outcome of a work package" type="ArchiMateDeliverable"/>
+	<Element description="an outcome of a gap analysis between two plateaus" type="ArchiMateGap"/>
+	<Element description="a behavior element that denotes a state change related to implementation or migration" type="ArchiMateImplementationEvent"/>
+	<Element description="a relatively stable state of the architecture that exists during a limited period of time" type="ArchiMatePlateau"/>
+	<Element description="a series of actions designed to accomplish a unique goal within a specified time" type="ArchiMateWorkPackage"/>
+</Diagram>

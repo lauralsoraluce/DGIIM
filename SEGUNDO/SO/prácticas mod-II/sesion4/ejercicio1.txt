@@ -1,0 +1,3 @@
+Se hace un umask(0) que le da permisos 0666 a todos los archivos creados y 0777 a todos los directorios creados. Se crea un archivo FIFO con el nombre ComunicacionFIFO y con permisos 0666. Se abre el cauce (y se muestra un error si no se puede). Mientras haya datos que leer, es decir, mientras no se lea "fin", se copian los mensajes al buffer y se muestran. Si aparece la palabre "fin", se cierra el archivo FIFO. 
+
+En el seundo se comprueba si el número de argumentos dados es correcto. Si no lo es muestra un error. Si lo es, se abre el archivo FIFO y se escribe en él, el mensaje dado como argumento. Se cierra el cauce. 
