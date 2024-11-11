@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Resultados de la búsqueda</h2>
+<ul>
+  {% for producto in productos %}
+    <li>{{ producto.titulo }} - {{ producto.precio }}€</li>
+  {% else %}
+    <li>No se encontraron productos.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

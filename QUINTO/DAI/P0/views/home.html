@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-4">  
+    <div class="row" id="productList">
+        {% if productos.length > 0 %}
+            {% for producto in productos %}
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card producto" data-category="{{ producto.category }}">
+                        <img src="{{ producto.image }}" class="card-img-top" alt="{{ producto.title }}">
+                        <div class="card-body text-center">
+                            <a href="/producto/{{ producto._id }}">
+                                <h5 class="card-title">{{ producto.title }}</h5>
+                            </a>
+                            <p class="card-text">Precio: ${{ producto.price }}</p>
+                            <p class="card-text">Rating: {{ producto.rating.rate }} ({{ producto.rating.count }} reseñas)</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No hay productos disponibles.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

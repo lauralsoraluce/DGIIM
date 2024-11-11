@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-4">
+    <h1 class="mb-4">Carrito</h1>
+    <ul class="list-group">
+        {% for producto in productos %}
+        <li class="list-group-item d-flex align-items-center">
+            <img src="{{ producto.image }}" alt="{{ producto.title }}" class="img-thumbnail" style="width: 50px; height: auto;">
+            <span class="ml-3">{{ producto.title }} - Precio: ${{ producto.price }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/checkout" class="btn btn-success mt-4">Finalizar compra</a>
+</div>
+{% endblock %}

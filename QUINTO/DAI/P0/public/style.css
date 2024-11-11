@@ -1,0 +1,11 @@
+/* Ajuste para las tarjetas de producto */
+.producto {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Asegura que las imágenes se ajusten correctamente */
+.producto img {
+    max-height: 200px;
+    object-fit: cover;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Práctica-DAI-1",
+  "version": "1.0",
+  "author": "Yo",
+  "description": "Para llenar la BD con datos de prueba",
+  "main": "seed.js",
+  "type": "module",
+  "scripts": {
+    "seed": "node  --env-file=.env seed.js",
+    "tienda": "node --watch --env-file=.env tienda.js",
+    "queries": "node queries.js"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "express": "^4.17.1",
+    "express-session": "^1.18.1",
+    "mongodb": "^6.9.0",
+    "mongoose": "^6.9.0",
+    "node-fetch": "^3.3.2",
+    "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4"
+  }
+}
