@@ -1,5 +1,0 @@
-$operation.getReference().prepare()##
-## ===== Output =====
-#set( $tmpArrayPush = 'array_push(' )
-${indentation}${indentation}${tmpArrayPush}$this->$operation.getReference().getAttributeName(), $$operation.getReference().getParameterName());
-

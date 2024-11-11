@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="determines the classifiers that will specify the structure and nature of the information" type="IFRepresented"/>
-	<Element description="describes circulation of information through a system in a general manner" type="InformationFlow"/>
-	<Element description="represents information that can flow from source to target in very abstract ways" type="InformationItem"/>
-</Diagram>

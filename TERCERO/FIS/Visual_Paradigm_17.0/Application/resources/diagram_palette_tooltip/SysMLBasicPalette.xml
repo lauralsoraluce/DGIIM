@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="associates elements of different types at an abstract level and assess user model consistency and direct future design activity" type="SysMLAllocate"/>
-	<Element description="documents a deficiency or limitation of one or more model elements to meet a requirement or need" type="SysMLProblem"/>
-	<Element description="documents what justifies the requirements, design and decisions" type="SysMLRationale"/>
-</Diagram>

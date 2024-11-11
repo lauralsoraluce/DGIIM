@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="a task cannot begin until one or more tasks have occurred, begun, or completed" type="PERTDependency"/>
-	<Element description="organizes and categorizes tasks into a group associated with a concept such as phase or person" type="PERTLane"/>
-	<Element description="a piece of work to be done, which is associated with start, complete time and people who responsible for it" type="PERTTask"/>
-</Diagram>

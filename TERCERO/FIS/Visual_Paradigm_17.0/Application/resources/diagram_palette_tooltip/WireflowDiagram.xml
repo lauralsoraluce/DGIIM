@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="flow" type="WireflowConnector"/>
-	<Element description="decision" type="WireflowDecisionNode"/>
-	<Element description="scene" type="WireflowNode"/>
-</Diagram>

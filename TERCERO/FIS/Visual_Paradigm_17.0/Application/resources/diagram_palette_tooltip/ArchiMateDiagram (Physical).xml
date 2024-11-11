@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="represents a physical network used to transport materials or energy" type="ArchiMateDistributionNetwork"/>
-	<Element description="represents a physical network used to transport materials or energy" type="ArchiMateDistributionNetworkBox"/>
-	<Element description="represents one or more physical machines, tools, or instruments that can create, use, store, move, or transform materials" type="ArchiMateEquipment"/>
-	<Element description="represents a physical structure or environment" type="ArchiMateFacility"/>
-	<Element description="represents tangible physical matter or physical elements" type="ArchiMateMaterial"/>
-</Diagram>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="an action that calls a control operator activity" type="SysMLControlOperatorAction"/>
-	<Element description="a behavior that is intended to represent an arbitrarily complex logical operator that can be used to enable and disable other actions" type="SysMLControlOperatorActivity"/>
-	<Element description="a primitive action used to output a specified value" type="SysMLValueSpecificationAction"/>
-</Diagram>

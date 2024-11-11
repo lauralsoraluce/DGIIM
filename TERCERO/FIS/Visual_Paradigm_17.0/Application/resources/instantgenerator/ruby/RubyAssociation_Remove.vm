@@ -1,5 +1,0 @@
-$operation.getReference().prepare()##
-## ===== Output =====
-#set( $tmpDelete = '.delete(' )
-${baseIndentation}${indentation}${indentation}@_$operation.getReference().getAttributeName()$tmpDelete$operation.getReference().getParameterName())
-

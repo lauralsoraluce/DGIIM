@@ -1,4 +1,0 @@
-$constructorAttribute.t_prepare($clsMode)##
-## ===== Output =====
-${indentation}${indentation}${indentation}$constructorAttribute.t_getConstructorInitialValue();
-

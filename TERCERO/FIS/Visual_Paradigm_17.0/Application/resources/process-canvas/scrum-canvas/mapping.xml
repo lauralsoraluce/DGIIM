@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<EALearning enterpriseArchitectureKind="5" enterpriseArchitectureName="Scrum Process" enterpriseArchitectureSubKind="PC-Scrum-Process" enterpriseArchitectureVersion="0" projectName="Online Supermarket">
-	<Info completed="true" completedIndex="0" detailStepId="" detailStepName="" index="0" nonCompletedIndex="-1" phaseId="" phaseName="" processStepId="" processStepName="" revision="41"/>
-	<Info completed="false" completedIndex="0" detailStepId="" detailStepName="" index="1" nonCompletedIndex="0" phaseId="" phaseName="" processStepId="" processStepName="" revision="41"/>
-	<Info completed="true" completedIndex="1" detailStepId="" detailStepName="" index="2" nonCompletedIndex="0" phaseId="" phaseName="" processStepId="" processStepName="" revision="41"/>
-</EALearning>

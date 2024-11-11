@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="a part of a process flow in achieving a goal" type="PMProcess"/>
-	<Element description="the flow of process" type="PMProcessLink"/>
-	<Element description="result of the process chain" type="PMReceive"/>
-	<Element description="an event that initiates the process chain" type="PMSend"/>
-</Diagram>

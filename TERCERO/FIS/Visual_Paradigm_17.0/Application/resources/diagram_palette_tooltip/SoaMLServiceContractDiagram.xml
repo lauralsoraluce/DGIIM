@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="a relationship between two model elements where changes in one of them will similarly affect the other" type="Dependency"/>
-	<Element description="models the type of a service consumer" type="SoaMLConsumer"/>
-	<Element description="the role each participant plays in the service" type="SoaMLInternalRole"/>
-	<Element description="models the type of a service provider in a consumer/provider relationship" type="SoaMLProvider"/>
-	<Element description="the formalization of a binding exchange of information, goods, or obligations between parties defining a service" type="SoaMLServiceContract"/>
-	<Element description="specifies a link that enables communication between two or more instances" type="StructuredConnector"/>
-</Diagram>

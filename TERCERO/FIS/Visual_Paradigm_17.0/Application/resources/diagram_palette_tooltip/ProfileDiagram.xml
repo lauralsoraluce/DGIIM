@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
-	<Element description="a type of association that represents a part-whole relationship in which one element dies too when the other dies" type="Composition"/>
-	<Element description="exists between two related classes where one is a specialized form of the other" type="Generalization"/>
-	<Element description="a text area to put in remarks" type="NOTE"/>
-	<Element description="enables the use of platform/domain specific terminology in addition to the one used for the extended element" type="Stereotype"/>
-</Diagram>

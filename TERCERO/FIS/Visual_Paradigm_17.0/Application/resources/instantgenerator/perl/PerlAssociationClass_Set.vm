@@ -1,4 +1,0 @@
-$operation.getReference().prepare()##
-## ===== Output =====
-$indentation$$operation.getReference().getAttributeName() = $_[1];
-

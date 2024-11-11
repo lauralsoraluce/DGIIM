@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Diagram>
-	<Element description="a connector that connects to a note shape for attaching additional description of the connected model element" type="Anchor"/>
-	<Element description="condition under which a behavior will be executed" type="Constraint"/>
-	<Element description="a text area to put in remarks" type="NOTE"/>
-	<Element description="models the behaviors of objects (i.e. lifelines) within a given period of time" type="TimingFrame"/>
-</Diagram>
