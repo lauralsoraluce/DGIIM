@@ -1,3 +1,0 @@
-Introducción:
-En la clase Image, el objeto consta de un número de filas y de columnas. En cada posición se guarda el valor del correspondiente píxel (un valor entre 0 y 255), con un dato del tipo puntero a puntero de byte. Se han implementado varios métodos para trabajar y modificar imágenes PMG. Para cada uno de los métodos que editan las imágenes, hay un ejecutable que carga la imagen original sobre la que se va a trabajar, y llama al método pasándole como argumentos los datos necesarios. Finalmente guarda la imagen editada en el fichero correspondiente e indica de cualquier tipo de error que pueda haber sucedido en la función main. 
-

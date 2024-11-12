@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/eficiencia.dir/estudiante/src/eficiencia.cpp.o -o eficiencia  libimage.a 
