@@ -1,0 +1,2 @@
+mpicxx -std=c++11 -o solucion_examen sol_LazaroSoraluceLaura_SCD_P3.cpp
+mpirun -np 4 solucion_examen 

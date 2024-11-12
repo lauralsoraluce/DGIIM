@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-License: Apache-2.0
-Implementation-Version: 5.5
-Specification-Vendor: Apache Software Foundation
-Specification-Title: Apache JMeter
-Implementation-Vendor-Id: org.apache
-Implementation-Vendor: Apache Software Foundation
-Main-Class: org.apache.jmeter.NewDriver
-
