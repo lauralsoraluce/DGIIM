@@ -1,0 +1,9 @@
+/home/lauralazaro/Escritorio/GITHUB/IA/practica1/CMakeFiles/rebuild_cache.dir
+/home/lauralazaro/Escritorio/GITHUB/IA/practica1/CMakeFiles/edit_cache.dir
+/home/lauralazaro/Escritorio/GITHUB/IA/practica1/CMakeFiles/practica1.dir
+/home/lauralazaro/Escritorio/GITHUB/IA/practica1/CMakeFiles/motorLib.dir
+/home/lauralazaro/Escritorio/GITHUB/IA/practica1/CMakeFiles/GLUILib.dir
+/home/lauralazaro/Escritorio/GITHUB/IA/practica1/CMakeFiles/practica1SG.dir
+/home/lauralazaro/Escritorio/GITHUB/IA/practica1/CMakeFiles/comportamientosLib.dir
+/home/lauralazaro/Escritorio/GITHUB/IA/practica1/CMakeFiles/modelosBelkanLib.dir
+/home/lauralazaro/Escritorio/GITHUB/IA/practica1/CMakeFiles/obj3DLib.dir

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ClickableSprite.cpp
+ClickableSprite.h
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ClickableSprite.h
+
+include/ClickableSprite.h
+iostream
+-
+IncludesSFML.h
+include/IncludesSFML.h
+
+include/IncludesSFML.h
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+SFML/System.hpp
+-
+

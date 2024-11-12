@@ -1,0 +1,237 @@
+[
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/Connection.dir/src/Connection.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Connection.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Connection.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/SpriteAnimator.dir/src/SpriteAnimator.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpriteAnimator.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpriteAnimator.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/GUIPlayer.dir/src/GUIPlayer.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/GUIPlayer.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/GUIPlayer.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/Button.dir/src/Button.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Button.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Button.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/Ninja.dir/src/Ninja.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Ninja.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Ninja.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/AIPlayer.dir/src/AIPlayer.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/AIPlayer.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/AIPlayer.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ExplosionSprite.dir/src/ExplosionSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ExplosionSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ExplosionSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/main.dir/src/main.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/main.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/main.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/Piece.dir/src/Piece.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Piece.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Piece.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/AIPlayer.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/AIPlayer.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/AIPlayer.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/Board.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Board.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Board.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/BoardSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/BoardTrap.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrap.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrap.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/BoardTrapSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrapSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrapSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/Button.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Button.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Button.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/ClickableSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ClickableSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ClickableSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/Connection.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Connection.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Connection.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/Dice.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Dice.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Dice.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/DiceSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/DiceSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/DiceSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/ExplosionSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ExplosionSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ExplosionSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/GUIPlayer.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/GUIPlayer.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/GUIPlayer.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/GameSelector.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/GameSelector.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/GameSelector.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/Ninja.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Ninja.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Ninja.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/Parchis.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Parchis.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Parchis.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/ParchisGUI.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ParchisGUI.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ParchisGUI.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/Piece.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Piece.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Piece.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/PieceSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/PieceSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/PieceSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/Player.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Player.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Player.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/RectangularButton.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/RectangularButton.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/RectangularButton.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/RemotePlayer.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/RemotePlayer.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/RemotePlayer.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/SpecialItemSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpecialItemSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpecialItemSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/SpriteAnimator.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpriteAnimator.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpriteAnimator.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGame.dir/src/main.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/main.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/main.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/RemotePlayer.dir/src/RemotePlayer.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/RemotePlayer.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/RemotePlayer.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/Dice.dir/src/Dice.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Dice.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Dice.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/Board.dir/src/Board.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Board.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Board.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ParchisGUI.dir/src/ParchisGUI.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ParchisGUI.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ParchisGUI.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/BoardSprite.dir/src/BoardSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/SpecialItemSprite.dir/src/SpecialItemSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpecialItemSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpecialItemSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/BoardTrapSprite.dir/src/BoardTrapSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrapSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrapSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/BoardTrap.dir/src/BoardTrap.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrap.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrap.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/Parchis.dir/src/Parchis.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Parchis.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Parchis.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/ClickableSprite.dir/src/ClickableSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ClickableSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ClickableSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/GameSelector.dir/src/GameSelector.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/GameSelector.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/GameSelector.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/DiceSprite.dir/src/DiceSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/DiceSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/DiceSprite.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/Player.dir/src/Player.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Player.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Player.cpp"
+},
+{
+  "directory": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/build",
+  "command": "/usr/bin/g++   -I/home/lauralazaro/Escritorio/GITHUB/IA/practica3/include   -pthread -std=c++14 -O2   -std=c++14 -o CMakeFiles/PieceSprite.dir/src/PieceSprite.cpp.o -c /home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/PieceSprite.cpp",
+  "file": "/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/PieceSprite.cpp"
+}
+]

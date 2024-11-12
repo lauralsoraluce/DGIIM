@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/IncludesSFML.h
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+SFML/System.hpp
+-
+
+../include/SpriteAnimator.h
+IncludesSFML.h
+../include/IncludesSFML.h
+iostream
+-
+
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpriteAnimator.cpp
+SpriteAnimator.h
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/SpriteAnimator.h
+

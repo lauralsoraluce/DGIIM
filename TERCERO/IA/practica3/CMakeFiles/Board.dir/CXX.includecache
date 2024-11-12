@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Board.cpp
+Board.h
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Board.h
+
+include/Attributes.h
+vector
+-
+map
+-
+string
+-
+
+include/Board.h
+vector
+-
+map
+-
+Attributes.h
+include/Attributes.h
+Piece.h
+include/Piece.h
+BoardTrap.h
+include/BoardTrap.h
+
+include/BoardTrap.h
+Attributes.h
+include/Attributes.h
+
+include/Piece.h
+vector
+-
+map
+-
+Attributes.h
+include/Attributes.h
+

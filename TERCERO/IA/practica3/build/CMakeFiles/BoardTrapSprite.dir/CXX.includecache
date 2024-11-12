@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Attributes.h
+vector
+-
+map
+-
+string
+-
+
+../include/BoardTrap.h
+Attributes.h
+../include/Attributes.h
+
+../include/BoardTrapSprite.h
+Attributes.h
+../include/Attributes.h
+IncludesSFML.h
+../include/IncludesSFML.h
+BoardTrap.h
+../include/BoardTrap.h
+
+../include/IncludesSFML.h
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+SFML/System.hpp
+-
+
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrapSprite.cpp
+BoardTrapSprite.h
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/BoardTrapSprite.h
+

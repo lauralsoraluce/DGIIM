@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ExplosionSprite.cpp
+ExplosionSprite.h
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/ExplosionSprite.h
+cmath
+-
+
+include/ExplosionSprite.h
+IncludesSFML.h
+include/IncludesSFML.h
+SpriteAnimator.h
+include/SpriteAnimator.h
+
+include/IncludesSFML.h
+SFML/Graphics.hpp
+-
+SFML/Audio.hpp
+-
+SFML/System.hpp
+-
+
+include/SpriteAnimator.h
+IncludesSFML.h
+include/IncludesSFML.h
+iostream
+-
+

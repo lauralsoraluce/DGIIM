@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Attributes.h
+vector
+-
+map
+-
+string
+-
+
+../include/Piece.h
+vector
+-
+map
+-
+Attributes.h
+../include/Attributes.h
+
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Piece.cpp
+Piece.h
+/home/lauralazaro/Escritorio/GITHUB/IA/practica3/src/Piece.h
+
