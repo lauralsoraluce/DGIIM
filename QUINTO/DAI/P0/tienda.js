@@ -1,17 +1,20 @@
-// tienda.js
 import express from "express";
 import nunjucks from "nunjucks";
 import connectDB from "./model/db.js";
 import dotenv from "dotenv";
 import session from 'express-session';
+import cookieParser from "cookie-parser";
+import jwt from "jsonwebtoken";
 
-dotenv.config(); // Cargar las variables de entorno desde .env
-
-connectDB(); // Conectar con la BD MongoDB usando Mongoose
+dotenv.config(); // Cargar variables de entorno desde .env
 
 const app = express();
 const IN = process.env.IN || 'development';
 
+// Conectar a la base de datos
+connectDB();
+
+// Configuración de Nunjucks
 nunjucks.configure('views', {
   autoescape: true,
   noCache: IN === 'development',
@@ -19,8 +22,12 @@ nunjucks.configure('views', {
   express: app
 });
 
-app.set('view engine', 'html'); 
-app.use(express.static('public')); // Archivos estáticos como imágenes desde la carpeta public
+// Middleware globales
+app.set('view engine', 'html');
+app.use(express.static('public')); // Archivos estáticos
+app.use(cookieParser());
+
+app.use(express.urlencoded({ extended: true })); // Procesar formularios POST
 
 app.use(session({
   secret: 'secret',  
@@ -29,13 +36,39 @@ app.use(session({
   cookie: { secure: false }  // Asegúrate de usar true si estás en HTTPS
 }));
 
-app.use(express.urlencoded({ extended: true }));  // Para procesar formularios POST
+// Middleware de autenticación
+const autentificación = (req, res, next) => {
+  const token = req.cookies.access_token;
 
-// Rutas de la tienda
+  if (!token) {
+      req.username = null;  // Usuario no autenticado
+      return next();  // Permite continuar sin bloquear
+  }
+
+  try {
+      const data = jwt.verify(token, process.env.SECRET_KEY);
+      req.username = data.usuario;  // Nombre de usuario en la solicitud
+      next();
+  } catch (error) {
+      console.error('Error al verificar el token:', error.message);
+      res.status(403).send('Token inválido o caducado');
+  }
+};
+app.use(autentificación);
+
+// Ruta base para redirigir a la portada
+app.get('/', (req, res) => {
+  res.redirect('/portada');  // Redirige a /portada cuando acceden a /
+});
+
+// Rutas
 import TiendaRouter from "./routes/router_tienda.js";
-app.use("/", TiendaRouter);
+import UsuariosRouter from "./routes/usuarios.js";
 
-// El servidor escucha en un puerto definido en .env o en el 8000 por defecto
+app.use("/", TiendaRouter);
+app.use("/", UsuariosRouter);
+
+// Puerto del servidor
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Servidor ejecutándose en http://localhost:${PORT}`);

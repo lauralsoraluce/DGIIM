@@ -5,7 +5,7 @@
     <div class="row" id="productList">
         {% if productos.length > 0 %}
             {% for producto in productos %}
-                <div class="col-md-3 col-sm-6 mb-4">
+                <div class="col-md-2 col-sm-6 mb-4">
                     <div class="card producto" data-category="{{ producto.category }}">
                         <img src="{{ producto.image }}" class="card-img-top" alt="{{ producto.title }}">
                         <div class="card-body text-center">

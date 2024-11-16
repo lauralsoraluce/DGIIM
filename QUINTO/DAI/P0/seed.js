@@ -1,4 +1,7 @@
+import mongoose from 'mongoose';
 import { MongoClient } from 'mongodb';
+import Usuarios from './model/usuarios.js';  // Asegúrate de importar el modelo de usuario
+import bcrypt from 'bcrypt';
 
 console.log('🏁 seed.js ----------------->');
 
@@ -13,29 +16,51 @@ const dbName = 'myProject';
 
 // función asíncrona para insertar datos en la colección
 async function Inserta_datos_en_colección(coleccion, apiUrl) {
-  try {
-    // Fetch de los datos desde la API
-    const datos = await fetch(apiUrl).then(res => res.json());
-
-    // Conectarse a la BD
-    await client.connect();
-    console.log(`Conectado a MongoDB para insertar en la colección ${coleccion}`);
-
-    const db = client.db(dbName);
-    const collection = db.collection(coleccion);
-
-    // Insertar los datos en la colección
-    const resultado = await collection.insertMany(datos);
-    console.log(`${resultado.insertedCount} documentos insertados en la colección ${coleccion}`);
-
-    return `${datos.length} datos traidos para ${coleccion}`;
-  } catch (err) {
-    err.errorResponse += ` en fetch ${coleccion}`;
-    throw err;
-  } finally {
-    await client.close(); // Cerrar la conexión a MongoDB
+	try {
+	  const response = await fetch(apiUrl);
+	  if (!response.ok) {
+		throw new Error(`Error en la solicitud a ${apiUrl}: ${response.status} ${response.statusText}`);
+	  }
+	  const datos = await response.json();
+  
+	  if (!Array.isArray(datos)) {
+		throw new Error(`Datos obtenidos de ${apiUrl} no son un array.`);
+	  }
+  
+	  await client.connect();
+	  const db = client.db(dbName);
+	  const collection = db.collection(coleccion);
+  
+	  await collection.deleteMany({});  // Vaciar la colección
+  
+	  // Si la colección es 'usuarios', encriptar las contraseñas
+	  if (coleccion === 'usuarios') {
+		const usuarios = await Promise.all(datos.map(async (usuarioData) => {
+		  const nombre = `${usuarioData.name.firstname} ${usuarioData.name.lastname}`;
+		  const salt = await bcrypt.genSalt(8);  // Genera el salt de forma manual
+		  const hashedPassword = await bcrypt.hash(usuarioData.password, salt);  // Encripta la contraseña
+  
+		  return {
+			username: usuarioData.username,
+			password: hashedPassword,
+			email: usuarioData.email,
+			nombre: nombre,
+		  };
+		}));
+  
+		const result = await collection.insertMany(usuarios);
+	  } else {
+		const resultado = await collection.insertMany(datos);
+	  }
+  
+	  return `${datos.length} datos traídos para ${coleccion}`;
+	} catch (err) {
+	  console.error(`Error en Inserta_datos_en_colección: ${err.message}`);
+	  throw err;
+	} finally {
+	  await client.close();  // Cierra la conexión a MongoDB
+	}
   }
-}
 
 // Inserción consecutiva en productos y usuarios
 Inserta_datos_en_colección('productos', 'https://fakestoreapi.com/products')
