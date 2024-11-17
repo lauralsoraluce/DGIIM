@@ -1,6 +1,7 @@
 import express from "express";
 import Productos from "../model/productos.js";
 import { verificarSesion } from './usuarios.js'; // Asegúrate de importar el middleware
+import { verificarAdmin } from './usuarios.js';
 
 const router = express.Router();
 
@@ -80,14 +81,53 @@ router.post('/carrito/agregar', verificarSesion, async (req, res) => {
 });
 
 // Ver detalle de un producto
-router.get('/producto/:id', async (req, res) => {
+router.get('/producto/:id', verificarSesion, async (req, res) => {
   const productoId = req.params.id;
   try {
     const producto = await Productos.findById(productoId);
     if (!producto) return res.status(404).send('Producto no encontrado');
-    res.render('detalle_producto.html', { producto, usuario: req.username });
+
+    // Si el usuario está autenticado, obtenemos su información
+    const usuario = req.usuario ? req.usuario.username : null;
+    const admin = req.usuario ? req.usuario.admin : false;
+
+    // Renderizar el detalle del producto, con la información de usuario y admin si está autenticado
+    res.render('detalle_producto.html', { 
+      producto, 
+      usuario, 
+      admin
+    });
   } catch (err) {
     res.status(500).send({ err });
+  }
+});
+
+// Ruta para editar producto
+router.post('/producto/editar/:id', verificarSesion, verificarAdmin, async (req, res) => {
+  const { id } = req.params;
+  let { title, price } = req.body;
+
+  try {
+    price = parseFloat(price); // Convertir el precio a un número flotante
+
+    if (isNaN(price)) {
+      return res.status(400).send('El precio debe ser un número válido.');
+    }
+    
+    const producto = await Productos.findByIdAndUpdate(
+      id,
+      { title, price },
+      { new: true, runValidators: true } // Ejecutar validaciones
+    );
+
+    if (!producto) {
+      return res.status(404).send('Producto no encontrado');
+    }
+
+    res.status(200).send(`Producto actualizado: ${producto.title}, $${producto.price}`);
+  } catch (error) {
+    console.error('Error al actualizar el producto:', error);
+    res.status(500).send('Error al actualizar el producto');
   }
 });
 

@@ -22,6 +22,11 @@ const usuarioSchema = new mongoose.Schema({
     required: true,
   },
   carrito: [{ type: mongoose.Schema.Types.ObjectId, ref: 'productos' }],
+  admin: {
+    type: Boolean,
+    default: false,
+    required: false,
+  }
 }); 
 
 // Método para encriptar la contraseña antes de guardar un usuario

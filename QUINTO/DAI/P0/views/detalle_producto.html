@@ -13,10 +13,27 @@
                     <p class="card-text">Descripción: {{ producto.description }}</p>
                     <p class="card-text">Precio: ${{ producto.price }}</p>
                     <p class="card-text">Rating: {{ producto.rating.rate }} ({{ producto.rating.count }} reseñas)</p>
+                    {% if admin %}
+                    <div class="admin-edit-form">
+                        <form action="/producto/editar/{{ producto._id }}" method="POST">
+                            <div>
+                                <label for="title">Nuevo Título:</label>
+                                <input type="text" name="title" id="title" value="{{ producto.title }}" required>
+                            </div>
+                            <div>
+                                <label for="price">Nuevo Precio:</label>
+                                <input type="number" step="0.01" name="price" id="price" value="{{ producto.price }}" required min="0">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                        </form>
+                    </div>
+                    {% else %}
                     <form action="/carrito/agregar" method="POST">
                         <input type="hidden" name="productoId" value="{{ producto._id }}">
                         <button type="submit" class="btn btn-success">Añadir al carrito</button>
                     </form>
+                    {% endif %}
+
                 </div>
             </div>
         </div>

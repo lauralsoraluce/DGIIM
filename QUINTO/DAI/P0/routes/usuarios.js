@@ -8,36 +8,48 @@ dotenv.config(); // Cargar variables de entorno
 
 const router = express.Router();
 
+const verificarAdmin = (req, res, next) => {
+  if (!req.usuario.admin) {
+    return res.status(403).send('No tienes permisos para realizar esta acción');
+  }
+  next();
+};
+
 // Middleware para verificar la sesión
 const verificarSesion = async (req, res, next) => {
   try {
     const token = req.cookies.access_token;
     if (!token) {
-      return res.status(401).send('Debes iniciar sesión para realizar esta acción');
+      req.usuario = null; // Si no hay token, no bloqueamos el acceso
+      return next(); // Continuamos con la solicitud
     }
 
     const decoded = jwt.verify(token, process.env.SECRET_KEY); // Aquí puede lanzar un error
     const usuario = await Usuarios.findOne({ username: decoded.usuario });
 
     if (!usuario) {
-      return res.status(401).send('Usuario no autorizado');
+      req.usuario = null; // Si el usuario no existe, lo marcamos como no autenticado
+      return next(); // Continuamos con la solicitud
     }
 
     if (!usuario.carrito) {
       usuario.carrito = [];
       await usuario.save(); // Guarda la inicialización del carrito
-    }    
+    }
 
-    req.usuario = usuario;
+    req.usuario = usuario; // Establecemos la información del usuario autenticado
     next();
   } catch (error) {
     if (error.name === 'TokenExpiredError') {
-      return res.status(401).send('El token ha expirado. Por favor, inicia sesión nuevamente.');
+      req.usuario = null; // Si el token ha expirado, lo marcamos como no autenticado
+      return next(); // Continuamos con la solicitud
     }
     console.error('Error en la autenticación:', error);
-    return res.status(401).send('Error en la autenticación');
+    req.usuario = null; // Si hay algún otro error, lo marcamos como no autenticado
+    return next(); // Continuamos con la solicitud
   }
 };
+
 
 // Ruta para mostrar el formulario de login
 router.get('/login', (req, res) => {
@@ -63,7 +75,7 @@ router.post('/login', async (req, res) => {
         }
 
         // Generar el token JWT
-        const token = jwt.sign({ usuario: username }, process.env.SECRET_KEY, { expiresIn: '1y' });
+        const token = jwt.sign({ usuario: username, admin: usuario.admin }, process.env.SECRET_KEY, { expiresIn: '1y' });
 
         // Establecer el token en una cookie
         res.cookie('access_token', token, { 
@@ -86,4 +98,4 @@ router.get('/logout', (req, res) => {
 });
 
 export default router;
-export {verificarSesion};
+export { verificarSesion, verificarAdmin };
