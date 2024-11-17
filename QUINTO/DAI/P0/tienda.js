@@ -41,19 +41,25 @@ const autentificación = (req, res, next) => {
   const token = req.cookies.access_token;
 
   if (!token) {
-      req.username = null;  // Usuario no autenticado
-      return next();  // Permite continuar sin bloquear
+      req.username = null;
+      return next(); // Permitir continuar sin autenticación
   }
 
   try {
       const data = jwt.verify(token, process.env.SECRET_KEY);
-      req.username = data.usuario;  // Nombre de usuario en la solicitud
+      req.username = data.usuario; // Adjuntar el nombre de usuario
       next();
   } catch (error) {
+      if (error.name === 'TokenExpiredError') {
+          console.error('El token ha expirado.');
+          res.clearCookie('access_token'); // Opcional: limpiar el token expirado
+          return res.status(403).send('El token ha expirado. Por favor, inicia sesión de nuevo.');
+      }
       console.error('Error al verificar el token:', error.message);
-      res.status(403).send('Token inválido o caducado');
+      res.status(403).send('Token inválido o no autorizado');
   }
 };
+
 app.use(autentificación);
 
 // Ruta base para redirigir a la portada

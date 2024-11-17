@@ -21,6 +21,7 @@ const usuarioSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  carrito: [{ type: mongoose.Schema.Types.ObjectId, ref: 'productos' }],
 }); 
 
 // Método para encriptar la contraseña antes de guardar un usuario

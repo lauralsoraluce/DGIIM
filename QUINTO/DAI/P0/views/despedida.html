@@ -1,2 +1,9 @@
-<p>Hasta luego, {{ usuario }}. ¡Esperamos verte pronto!</p>
-<a href="/">Volver a la página principal</a>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-5 text-danger">Hasta luego, {{ usuario }}!</h1>
+    <p class="lead text-muted">¡Esperamos verte pronto!</p>
+    <a href="/" class="btn btn-outline-primary btn-lg mt-3">Volver a la página principal</a>
+</div>
+{% endblock %}

@@ -1,5 +1,6 @@
 import express from "express";
 import Productos from "../model/productos.js";
+import { verificarSesion } from './usuarios.js'; // Asegúrate de importar el middleware
 
 const router = express.Router();
 
@@ -34,31 +35,48 @@ router.post('/buscar', async (req, res) => {
   }
 });
 
-// Agregar productos al carrito
-router.post('/carrito/agregar', (req, res) => {
-  const productoId = req.body.productoId;
-  if (!req.session.carrito) req.session.carrito = [];
-  req.session.carrito.push(productoId);
-  res.redirect('/carrito');
-});
-
 // Mostrar productos del carrito
-router.get('/carrito', async (req, res) => {
-  if (!req.session.carrito || req.session.carrito.length === 0) {
-    return res.render('carrito_vacio.html');
-  }
+router.get('/carrito', verificarSesion, async (req, res) => {
   try {
-    const productosEnCarrito = await Productos.find({ _id: { $in: req.session.carrito } });
-    res.render('carrito.html', { productos: productosEnCarrito, usuario: req.username });
-  } catch (err) {
-    res.status(500).send({ err });
+    const usuario = req.usuario;
+
+    // Poblar el carrito para obtener los detalles de los productos
+    await usuario.populate('carrito');  // Esto cargará los detalles de los productos
+
+    // Verificar si el carrito está vacío
+    if (usuario.carrito.length === 0) {
+      return res.render('carrito_vacio.html');
+    }
+
+    res.render('carrito.html', { productos: usuario.carrito });  // Renderizar los productos en el carrito
+  } catch (error) {
+    console.error('Error al obtener el carrito:', error);
+    res.status(500).send('Error al obtener el carrito');
   }
 });
 
-// API para verificar estado del carrito
-router.get('/api/estado_carrito', (req, res) => {
-  const carritoVacio = !req.session.carrito || req.session.carrito.length === 0;
-  res.json({ carritoVacio });
+// Ruta protegida para agregar productos al carrito
+router.post('/carrito/agregar', verificarSesion, async (req, res) => {
+  const { productoId } = req.body;
+
+  try {
+    const producto = await Productos.findById(productoId);
+    if (!producto) {
+      return res.status(404).send('Producto no encontrado');
+    }
+
+    const usuario = req.usuario;
+
+    if (!usuario.carrito.includes(producto._id)) {
+      usuario.carrito.push(producto._id);
+      await usuario.save();
+    }
+
+    res.redirect('/carrito'); // Redirige al carrito actualizado
+  } catch (error) {
+    console.error('Error al añadir producto al carrito:', error);
+    res.status(500).send('Error interno al añadir producto al carrito');
+  }
 });
 
 // Ver detalle de un producto

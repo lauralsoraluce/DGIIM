@@ -1,2 +1,8 @@
-<h1>¡Bienvenido, {{ usuario }}!</h1>
-<a href="/portada" class="btn btn-primary">Ir a la tienda</a>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-4 text-primary">¡Bienvenido, {{ usuario }}!</h1>
+    <a href="/portada" class="btn btn-primary btn-lg mt-3">Ir a la tienda</a>
+</div>
+{% endblock %}
