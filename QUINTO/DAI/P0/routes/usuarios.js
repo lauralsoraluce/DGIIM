@@ -8,6 +8,7 @@ dotenv.config(); // Cargar variables de entorno
 
 const router = express.Router();
 
+// Middleware para verificar si el usuario es Admin
 const verificarAdmin = (req, res, next) => {
   if (!req.usuario.admin) {
     return res.status(403).send('No tienes permisos para realizar esta acción');
@@ -49,7 +50,6 @@ const verificarSesion = async (req, res, next) => {
     return next(); // Continuamos con la solicitud
   }
 };
-
 
 // Ruta para mostrar el formulario de login
 router.get('/login', (req, res) => {
