@@ -2,6 +2,7 @@ import express from "express";
 import Productos from "../model/productos.js";
 import { verificarSesion } from './usuarios.js'; // Asegúrate de importar el middleware
 import { verificarAdmin } from './usuarios.js';
+import logger from '../utils/logger.js';
 
 const router = express.Router();
 
@@ -13,9 +14,11 @@ router.get('/', (req, res) => {
 // Mostrar la portada con todos los productos
 router.get('/portada', async (req, res) => {
   try {
+    logger.info('GET /portada - Solicitud recibida');
     const productos = await Productos.find({});
     res.render('home.html', { productos, usuario: req.username });
   } catch (err) {
+    logger.error(`Error al obtener portada: ${err.message}`);
     res.status(500).send({ err });
   }
 });
@@ -24,6 +27,7 @@ router.get('/portada', async (req, res) => {
 router.post('/buscar', async (req, res) => {
   const { search } = req.body;
   try {
+    logger.info(`POST /buscar - Búsqueda con término: ${search}`);
     const productos = await Productos.find({
       $or: [
         { title: { $regex: search, $options: 'i' } },
@@ -32,6 +36,7 @@ router.post('/buscar', async (req, res) => {
     });
     res.render('home.html', { productos, usuario: req.username });
   } catch (err) {
+    logger.error(`Error en búsqueda: ${err.message}`);
     res.status(500).send({ err });
   }
 });
@@ -39,19 +44,19 @@ router.post('/buscar', async (req, res) => {
 // Mostrar productos del carrito
 router.get('/carrito', verificarSesion, async (req, res) => {
   try {
+    logger.info(`GET /carrito - Usuario: ${req.usuario?.username || "Desconocido"}`);
     const usuario = req.usuario;
 
-    // Poblar el carrito para obtener los detalles de los productos
-    await usuario.populate('carrito');  // Esto cargará los detalles de los productos
+    await usuario.populate('carrito'); // Poblar detalles de productos
 
-    // Verificar si el carrito está vacío
     if (usuario.carrito.length === 0) {
+      logger.warn('Carrito vacío para el usuario');
       return res.render('carrito_vacio.html');
     }
 
-    res.render('carrito.html', { productos: usuario.carrito });  // Renderizar los productos en el carrito
+    res.render('carrito.html', { productos: usuario.carrito });
   } catch (error) {
-    console.error('Error al obtener el carrito:', error);
+    logger.error(`Error al obtener el carrito: ${error.message}`);
     res.status(500).send('Error al obtener el carrito');
   }
 });
@@ -61,8 +66,10 @@ router.post('/carrito/agregar', verificarSesion, async (req, res) => {
   const { productoId } = req.body;
 
   try {
+    logger.info(`POST /carrito/agregar - Agregando producto: ${productoId}`);
     const producto = await Productos.findById(productoId);
     if (!producto) {
+      logger.warn(`Producto no encontrado: ${productoId}`);
       return res.status(404).send('Producto no encontrado');
     }
 
@@ -73,9 +80,9 @@ router.post('/carrito/agregar', verificarSesion, async (req, res) => {
       await usuario.save();
     }
 
-    res.redirect('/carrito'); // Redirige al carrito actualizado
+    res.redirect('/carrito');
   } catch (error) {
-    console.error('Error al añadir producto al carrito:', error);
+    logger.error(`Error al añadir producto al carrito: ${error.message}`);
     res.status(500).send('Error interno al añadir producto al carrito');
   }
 });
@@ -84,20 +91,19 @@ router.post('/carrito/agregar', verificarSesion, async (req, res) => {
 router.get('/producto/:id', verificarSesion, async (req, res) => {
   const productoId = req.params.id;
   try {
+    logger.info(`GET /producto/${productoId} - Solicitud de detalle de producto`);
     const producto = await Productos.findById(productoId);
-    if (!producto) return res.status(404).send('Producto no encontrado');
+    if (!producto) {
+      logger.warn(`Producto no encontrado: ${productoId}`);
+      return res.status(404).send('Producto no encontrado');
+    }
 
-    // Si el usuario está autenticado, obtenemos su información
     const usuario = req.usuario ? req.usuario.username : null;
     const admin = req.usuario ? req.usuario.admin : false;
 
-    // Renderizar el detalle del producto, con la información de usuario y admin si está autenticado
-    res.render('detalle_producto.html', { 
-      producto, 
-      usuario, 
-      admin
-    });
+    res.render('detalle_producto.html', { producto, usuario, admin });
   } catch (err) {
+    logger.error(`Error al obtener detalle del producto: ${err.message}`);
     res.status(500).send({ err });
   }
 });
@@ -108,25 +114,28 @@ router.post('/producto/editar/:id', verificarSesion, verificarAdmin, async (req,
   let { title, price } = req.body;
 
   try {
-    price = parseFloat(price); // Convertir el precio a un número flotante
+    logger.info(`POST /producto/editar/${id} - Edición del producto`);
+    price = parseFloat(price);
 
     if (isNaN(price)) {
+      logger.warn(`Precio inválido proporcionado: ${price}`);
       return res.status(400).send('El precio debe ser un número válido.');
     }
-    
+
     const producto = await Productos.findByIdAndUpdate(
       id,
       { title, price },
-      { new: true, runValidators: true } // Ejecutar validaciones
+      { new: true, runValidators: true }
     );
 
     if (!producto) {
+      logger.warn(`Producto no encontrado: ${id}`);
       return res.status(404).send('Producto no encontrado');
     }
 
     res.status(200).send(`Producto actualizado: ${producto.title}, $${producto.price}`);
   } catch (error) {
-    console.error('Error al actualizar el producto:', error);
+    logger.error(`Error al actualizar el producto: ${error.message}`);
     res.status(500).send('Error al actualizar el producto');
   }
 });

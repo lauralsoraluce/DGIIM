@@ -25,10 +25,11 @@ const ProductosSchema = new mongoose.Schema({
   category: { type: String },
   image: { type: String },
   rating: {
-    rate: { type: Number },
-    count: { type: Number }
+    rate: { type: Number, default: null },
+    count: { type: Number, default: 0 }
   }
 });
 
 const Productos = mongoose.model("productos", ProductosSchema);
 export default Productos;
+

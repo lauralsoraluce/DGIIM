@@ -1,0 +1,18 @@
+# Obtener todos los ratings (con paginación)
+GET http://localhost:8000/api/ratings?desde=0&hasta=4
+
+###
+
+# Obtener el rating de un producto por ID
+GET http://localhost:8000/api/ratings/67436faa8925e0c2d0f8e369
+
+###
+
+# Actualizar el rating de un producto
+PUT http://localhost:8000/api/ratings/67436faa8925e0c2d0f8e369
+Content-Type: application/json
+
+{
+  "rate": 4.5,
+  "count": 150
+}

@@ -1,0 +1,245 @@
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T17:55:16.722Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T17:55:39.885Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T17:55:45.959Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T17:57:21.338Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T17:58:43.639Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T17:58:47.873Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T17:59:57.647Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T17:59:59.469Z"}
+{"level":"info","message":"GET /api/ratings/64a5b5c3e53b4a5b5c3e53b4","timestamp":"2024-11-24T18:00:02.980Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:02:10.308Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:02:12.380Z"}
+{"level":"info","message":"GET /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:02:17.012Z"}
+{"level":"info","message":"PUT /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:02:24.190Z"}
+{"level":"info","message":"PUT /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:02:28.021Z"}
+{"level":"info","message":"PUT /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:02:31.711Z"}
+{"level":"info","message":"GET /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:03:17.414Z"}
+{"level":"info","message":"PUT /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:03:18.772Z"}
+{"level":"info","message":"GET /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:03:20.438Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:06:01.325Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:06:47.634Z"}
+{"level":"info","message":"GET /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:06:53.657Z"}
+{"level":"info","message":"PUT /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:06:55.423Z"}
+{"level":"info","message":"GET /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:07:02.427Z"}
+{"level":"info","message":"PUT /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:07:05.715Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:07:58.299Z"}
+{"level":"info","message":"GET /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:08:08.875Z"}
+{"level":"info","message":"PUT /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:08:10.706Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:10:23.407Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:10:27.938Z"}
+{"level":"info","message":"GET /api/ratings/673895bdf07a353e1fa60f18","timestamp":"2024-11-24T18:10:29.969Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:11:05.696Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:11:10.481Z"}
+{"level":"info","message":"GET /api/ratings/67436bf8df5791a21b71017f","timestamp":"2024-11-24T18:11:12.029Z"}
+{"level":"info","message":"PUT /api/ratings/67436bf8df5791a21b71017f","timestamp":"2024-11-24T18:11:13.905Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:12:14.044Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:12:25.614Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:12:28.788Z"}
+{"level":"info","message":"GET /api/ratings/67436bf8df5791a21b71017f","timestamp":"2024-11-24T18:12:30.569Z"}
+{"level":"info","message":"PUT /api/ratings/67436bf8df5791a21b71017f","timestamp":"2024-11-24T18:12:31.916Z"}
+{"level":"info","message":"GET /api/ratings/67436bf8df5791a21b71017f","timestamp":"2024-11-24T18:12:44.818Z"}
+{"level":"info","message":"PUT /api/ratings/67436bf8df5791a21b71017f","timestamp":"2024-11-24T18:12:49.871Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:13:12.940Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:15:19.564Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:15:21.270Z"}
+{"level":"info","message":"GET /api/ratings/67436d1d2aee479acba6ab4d","timestamp":"2024-11-24T18:15:22.532Z"}
+{"level":"info","message":"PUT /api/ratings/67436d1d2aee479acba6ab4d","timestamp":"2024-11-24T18:15:23.702Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:16:02.860Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:16:40.662Z"}
+{"level":"info","message":"GET /api/ratings/67436d72f32507c1e3b484e1","timestamp":"2024-11-24T18:16:43.956Z"}
+{"level":"info","message":"PUT /api/ratings/67436d72f32507c1e3b484e1","timestamp":"2024-11-24T18:16:46.280Z"}
+{"level":"info","message":"GET /api/ratings/67436d72f32507c1e3b484e1","timestamp":"2024-11-24T18:16:56.213Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:18:03.184Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:18:32.521Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:18:35.632Z"}
+{"level":"info","message":"GET /api/ratings/67436de41780f05998a64641","timestamp":"2024-11-24T18:18:40.717Z"}
+{"level":"info","message":"PUT /api/ratings/67436de41780f05998a64641","timestamp":"2024-11-24T18:18:41.995Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:18:54.708Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:19:09.667Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:19:38.860Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:19:42.656Z"}
+{"level":"info","message":"GET /api/ratings/67436e2172812c9c46093a35","timestamp":"2024-11-24T18:19:44.612Z"}
+{"level":"info","message":"PUT /api/ratings/67436e2172812c9c46093a35","timestamp":"2024-11-24T18:19:45.789Z"}
+{"level":"info","message":"GET /api/ratings/67436e2172812c9c46093a35","timestamp":"2024-11-24T18:19:54.666Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:24:38.334Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:24:40.787Z"}
+{"level":"info","message":"GET /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:24:42.137Z"}
+{"level":"info","message":"PUT /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:24:43.462Z"}
+{"level":"info","message":"GET /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:24:49.194Z"}
+{"level":"info","message":"GET /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:24:51.291Z"}
+{"level":"info","message":"PUT /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:24:52.287Z"}
+{"level":"info","message":"PUT /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:24:52.905Z"}
+{"level":"info","message":"PUT /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:24:59.641Z"}
+{"level":"info","message":"PUT /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:25:00.398Z"}
+{"level":"info","message":"PUT /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:25:00.742Z"}
+{"level":"info","message":"PUT /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:25:00.925Z"}
+{"level":"info","message":"GET /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:25:02.660Z"}
+{"level":"info","message":"PUT /api/ratings/67436f5327085e2c5743c1e5","timestamp":"2024-11-24T18:25:05.407Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:25:36.686Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:26:08.063Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:26:12.608Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:26:13.650Z"}
+{"level":"info","message":"PUT /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:26:15.128Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:26:18.877Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:27:22.681Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:27:41.325Z"}
+{"level":"info","message":"PUT /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:27:43.599Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:27:47.505Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:28:18.349Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:28:21.927Z"}
+{"level":"info","message":"PUT /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:28:23.383Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:29:39.667Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:29:41.186Z"}
+{"level":"info","message":"PUT /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:29:43.023Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:31:28.161Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:31:30.316Z"}
+{"level":"info","message":"PUT /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:31:32.137Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:31:40.739Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:32:38.213Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:32:47.698Z"}
+{"level":"info","message":"PUT /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:32:49.954Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:47:51.990Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:48:53.950Z"}
+{"level":"info","message":"GET /api/ratings?desde=0&hasta=4","timestamp":"2024-11-24T18:49:04.345Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:49:27.216Z"}
+{"level":"info","message":"PUT /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:49:37.528Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:49:39.081Z"}
+{"level":"info","message":"GET /api/ratings/67436faa8925e0c2d0f8e369","timestamp":"2024-11-24T18:49:48.127Z"}
+{"level":"info","message":"GET /login","timestamp":"2024-11-24T18:50:05.960Z"}
+{"level":"info","message":"GET /login - Mostrar formulario de login","timestamp":"2024-11-24T18:50:05.961Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:05.999Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:50:07.392Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:50:07.393Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:07.451Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e357","timestamp":"2024-11-24T18:50:08.304Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e357 - Solicitud de detalle de producto","timestamp":"2024-11-24T18:50:08.305Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:08.340Z"}
+{"level":"info","message":"POST /carrito/agregar","timestamp":"2024-11-24T18:50:09.172Z"}
+{"level":"info","message":"POST /carrito/agregar - Agregando producto: 67436faa8925e0c2d0f8e357","timestamp":"2024-11-24T18:50:09.173Z"}
+{"level":"error","message":"Error al añadir producto al carrito: Cannot read properties of null (reading 'carrito')","timestamp":"2024-11-24T18:50:09.178Z"}
+{"level":"info","message":"GET /login","timestamp":"2024-11-24T18:50:13.274Z"}
+{"level":"info","message":"GET /login - Mostrar formulario de login","timestamp":"2024-11-24T18:50:13.275Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:13.307Z"}
+{"level":"info","message":"POST /login","timestamp":"2024-11-24T18:50:14.228Z"}
+{"level":"info","message":"Usuario logueado correctamente: jimmie_k","timestamp":"2024-11-24T18:50:14.263Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:14.278Z"}
+{"level":"info","message":"GET /logout","timestamp":"2024-11-24T18:50:15.068Z"}
+{"level":"info","message":"Usuario jimmie_k ha cerrado sesión.","timestamp":"2024-11-24T18:50:15.070Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:15.095Z"}
+{"level":"info","message":"GET /","timestamp":"2024-11-24T18:50:15.715Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:50:15.727Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:50:15.727Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:15.762Z"}
+{"level":"info","message":"GET /carrito","timestamp":"2024-11-24T18:50:17.142Z"}
+{"level":"info","message":"GET /carrito - Usuario: Desconocido","timestamp":"2024-11-24T18:50:17.144Z"}
+{"level":"error","message":"Error al obtener el carrito: Cannot read properties of null (reading 'populate')","timestamp":"2024-11-24T18:50:17.144Z"}
+{"level":"info","message":"GET /login","timestamp":"2024-11-24T18:50:19.540Z"}
+{"level":"info","message":"GET /login - Mostrar formulario de login","timestamp":"2024-11-24T18:50:19.541Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:19.576Z"}
+{"level":"info","message":"POST /login","timestamp":"2024-11-24T18:50:20.586Z"}
+{"level":"info","message":"Usuario logueado correctamente: jimmie_k","timestamp":"2024-11-24T18:50:20.620Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:20.641Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:50:21.849Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:50:21.850Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:21.903Z"}
+{"level":"info","message":"GET /carrito","timestamp":"2024-11-24T18:50:22.790Z"}
+{"level":"info","message":"GET /carrito - Usuario: jimmie_k","timestamp":"2024-11-24T18:50:22.795Z"}
+{"level":"warn","message":"Carrito vacío para el usuario","timestamp":"2024-11-24T18:50:22.806Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:22.861Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:50:23.976Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:50:23.980Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:24.019Z"}
+{"level":"info","message":"GET /carrito","timestamp":"2024-11-24T18:50:25.249Z"}
+{"level":"info","message":"GET /carrito - Usuario: jimmie_k","timestamp":"2024-11-24T18:50:25.254Z"}
+{"level":"warn","message":"Carrito vacío para el usuario","timestamp":"2024-11-24T18:50:25.255Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:25.300Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:50:28.706Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:50:28.707Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:28.748Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e358","timestamp":"2024-11-24T18:50:30.908Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e358 - Solicitud de detalle de producto","timestamp":"2024-11-24T18:50:30.920Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:30.960Z"}
+{"level":"info","message":"POST /carrito/agregar","timestamp":"2024-11-24T18:50:31.787Z"}
+{"level":"info","message":"POST /carrito/agregar - Agregando producto: 67436faa8925e0c2d0f8e358","timestamp":"2024-11-24T18:50:31.795Z"}
+{"level":"info","message":"GET /carrito","timestamp":"2024-11-24T18:50:31.820Z"}
+{"level":"info","message":"GET /carrito - Usuario: jimmie_k","timestamp":"2024-11-24T18:50:31.826Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:31.856Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:50:57.131Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:50:57.135Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:50:57.186Z"}
+{"level":"info","message":"GET /logout","timestamp":"2024-11-24T18:51:04.484Z"}
+{"level":"info","message":"Usuario jimmie_k ha cerrado sesión.","timestamp":"2024-11-24T18:51:04.487Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:04.530Z"}
+{"level":"info","message":"GET /","timestamp":"2024-11-24T18:51:05.367Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:51:05.380Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:51:05.380Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:05.420Z"}
+{"level":"info","message":"GET /login","timestamp":"2024-11-24T18:51:06.251Z"}
+{"level":"info","message":"GET /login - Mostrar formulario de login","timestamp":"2024-11-24T18:51:06.251Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:06.285Z"}
+{"level":"info","message":"POST /login","timestamp":"2024-11-24T18:51:08.473Z"}
+{"level":"info","message":"Usuario logueado correctamente: johnd","timestamp":"2024-11-24T18:51:08.503Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:08.524Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:51:10.077Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:51:10.081Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:10.120Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e358","timestamp":"2024-11-24T18:51:11.084Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e358 - Solicitud de detalle de producto","timestamp":"2024-11-24T18:51:11.094Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:11.131Z"}
+{"level":"info","message":"GET /carrito","timestamp":"2024-11-24T18:51:14.748Z"}
+{"level":"info","message":"GET /carrito - Usuario: johnd","timestamp":"2024-11-24T18:51:14.756Z"}
+{"level":"warn","message":"Carrito vacío para el usuario","timestamp":"2024-11-24T18:51:14.758Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:14.785Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:51:44.465Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:51:44.467Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:44.513Z"}
+{"level":"info","message":"GET /carrito","timestamp":"2024-11-24T18:51:45.460Z"}
+{"level":"info","message":"GET /carrito - Usuario: johnd","timestamp":"2024-11-24T18:51:45.469Z"}
+{"level":"warn","message":"Carrito vacío para el usuario","timestamp":"2024-11-24T18:51:45.471Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:45.498Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:51:46.362Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:51:46.364Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:46.398Z"}
+{"level":"info","message":"GET /logout","timestamp":"2024-11-24T18:51:46.900Z"}
+{"level":"info","message":"Usuario johnd ha cerrado sesión.","timestamp":"2024-11-24T18:51:46.902Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:46.931Z"}
+{"level":"info","message":"GET /","timestamp":"2024-11-24T18:51:49.202Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:51:49.211Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:51:49.212Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:49.251Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e356","timestamp":"2024-11-24T18:51:50.910Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e356 - Solicitud de detalle de producto","timestamp":"2024-11-24T18:51:50.911Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:51:50.954Z"}
+{"level":"info","message":"Servidor ejecutándose en http://localhost:8000","timestamp":"2024-11-24T18:54:47.094Z"}
+{"level":"info","message":"GET /login","timestamp":"2024-11-24T18:54:48.743Z"}
+{"level":"info","message":"GET /login - Mostrar formulario de login","timestamp":"2024-11-24T18:54:48.745Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:54:48.784Z"}
+{"level":"info","message":"POST /login","timestamp":"2024-11-24T18:54:49.941Z"}
+{"level":"info","message":"Usuario logueado correctamente: johnd","timestamp":"2024-11-24T18:54:49.974Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:54:50.000Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:54:51.691Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:54:51.696Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:54:51.744Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e356","timestamp":"2024-11-24T18:54:52.609Z"}
+{"level":"info","message":"GET /producto/67436faa8925e0c2d0f8e356 - Solicitud de detalle de producto","timestamp":"2024-11-24T18:54:52.623Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:54:52.663Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:54:54.746Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:54:54.749Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:54:54.786Z"}
+{"level":"info","message":"GET /carrito","timestamp":"2024-11-24T18:54:55.357Z"}
+{"level":"info","message":"GET /carrito - Usuario: johnd","timestamp":"2024-11-24T18:54:55.364Z"}
+{"level":"warn","message":"Carrito vacío para el usuario","timestamp":"2024-11-24T18:54:55.369Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:54:55.395Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:54:56.395Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:54:56.398Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:54:56.441Z"}
+{"level":"info","message":"GET /logout","timestamp":"2024-11-24T18:54:58.130Z"}
+{"level":"info","message":"Usuario johnd ha cerrado sesión.","timestamp":"2024-11-24T18:54:58.133Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:54:58.197Z"}
+{"level":"info","message":"GET /","timestamp":"2024-11-24T18:55:00.442Z"}
+{"level":"info","message":"GET /portada","timestamp":"2024-11-24T18:55:00.454Z"}
+{"level":"info","message":"GET /portada - Solicitud recibida","timestamp":"2024-11-24T18:55:00.454Z"}
+{"level":"info","message":"GET /api/estado_carrito","timestamp":"2024-11-24T18:55:00.492Z"}
+{"level":"info","message":"GET /carrito","timestamp":"2024-11-24T18:55:01.602Z"}
+{"level":"info","message":"GET /carrito - Usuario: Desconocido","timestamp":"2024-11-24T18:55:01.603Z"}
+{"level":"error","message":"Error al obtener el carrito: Cannot read properties of null (reading 'populate')","timestamp":"2024-11-24T18:55:01.604Z"}
