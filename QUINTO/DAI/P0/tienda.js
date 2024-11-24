@@ -36,13 +36,13 @@ app.use(
     secret: process.env.SESSION_SECRET || "default_secret", // Mejora: usa una variable de entorno para el secreto
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: IN === "production" }, // Seguro en producción con HTTPS
+    cookie: { secure: IN === "production" }, // Solo usar HTTPS en producción
   })
 );
 
 // Middleware para logs de cada solicitud
 app.use((req, res, next) => {
-  logger.info(`${req.method} ${req.url}`);
+  logger.info(`${req.method} ${req.url} - User: ${req.username || 'guest'} - IP: ${req.ip} - Agent: ${req.get('User-Agent')}`);
   next();
 });
 
@@ -51,15 +51,16 @@ const autentificación = (req, res, next) => {
   const token = req.cookies.access_token;
 
   if (!token) {
-    req.username = null;
-    return next(); // Permitir continuar sin autenticación
+    req.username = null;  // Usuario no autenticado
+    return next();  // Permite continuar sin bloquear
   }
 
   try {
     const data = jwt.verify(token, process.env.SECRET_KEY);
-    req.username = data.usuario; // Adjuntar el nombre de usuario
+    req.username = data.usuario;  // Nombre de usuario en la solicitud
     next();
   } catch (error) {
+    // Manejo de errores de forma detallada
     if (error.name === "TokenExpiredError") {
       logger.warn("El token ha expirado.");
       res.clearCookie("access_token"); // Limpiar el token expirado

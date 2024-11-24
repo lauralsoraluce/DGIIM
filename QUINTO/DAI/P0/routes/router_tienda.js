@@ -42,48 +42,37 @@ router.post('/buscar', async (req, res) => {
 });
 
 // Mostrar productos del carrito
-router.get('/carrito', verificarSesion, async (req, res) => {
+router.get('/carrito', async (req, res) => {
   try {
-    logger.info(`GET /carrito - Usuario: ${req.usuario?.username || "Desconocido"}`);
-    const usuario = req.usuario;
-
-    await usuario.populate('carrito'); // Poblar detalles de productos
-
-    if (usuario.carrito.length === 0) {
-      logger.warn('Carrito vacío para el usuario');
+    const productos = req.session.carrito || [];
+    if (productos.length === 0) {
       return res.render('carrito_vacio.html');
     }
-
-    res.render('carrito.html', { productos: usuario.carrito });
+    res.render('carrito.html', { productos });
   } catch (error) {
-    logger.error(`Error al obtener el carrito: ${error.message}`);
+    console.error('Error al obtener el carrito:', error);
     res.status(500).send('Error al obtener el carrito');
   }
 });
 
 // Ruta protegida para agregar productos al carrito
-router.post('/carrito/agregar', verificarSesion, async (req, res) => {
+router.post('/carrito/agregar', async (req, res) => {
   const { productoId } = req.body;
-
   try {
-    logger.info(`POST /carrito/agregar - Agregando producto: ${productoId}`);
     const producto = await Productos.findById(productoId);
     if (!producto) {
-      logger.warn(`Producto no encontrado: ${productoId}`);
       return res.status(404).send('Producto no encontrado');
     }
-
-    const usuario = req.usuario;
-
-    if (!usuario.carrito.includes(producto._id)) {
-      usuario.carrito.push(producto._id);
-      await usuario.save();
+    if (!req.session.carrito) {
+      req.session.carrito = [];
     }
-
+    if (!req.session.carrito.some(item => item._id.toString() === producto._id.toString())) {
+      req.session.carrito.push(producto);
+    }
     res.redirect('/carrito');
   } catch (error) {
-    logger.error(`Error al añadir producto al carrito: ${error.message}`);
-    res.status(500).send('Error interno al añadir producto al carrito');
+    console.error('Error al agregar producto al carrito:', error);
+    res.status(500).send('Error al agregar producto al carrito');
   }
 });
 
@@ -97,10 +86,8 @@ router.get('/producto/:id', verificarSesion, async (req, res) => {
       logger.warn(`Producto no encontrado: ${productoId}`);
       return res.status(404).send('Producto no encontrado');
     }
-
     const usuario = req.usuario ? req.usuario.username : null;
     const admin = req.usuario ? req.usuario.admin : false;
-
     res.render('detalle_producto.html', { producto, usuario, admin });
   } catch (err) {
     logger.error(`Error al obtener detalle del producto: ${err.message}`);
@@ -112,27 +99,18 @@ router.get('/producto/:id', verificarSesion, async (req, res) => {
 router.post('/producto/editar/:id', verificarSesion, verificarAdmin, async (req, res) => {
   const { id } = req.params;
   let { title, price } = req.body;
-
   try {
     logger.info(`POST /producto/editar/${id} - Edición del producto`);
     price = parseFloat(price);
-
     if (isNaN(price)) {
       logger.warn(`Precio inválido proporcionado: ${price}`);
       return res.status(400).send('El precio debe ser un número válido.');
     }
-
-    const producto = await Productos.findByIdAndUpdate(
-      id,
-      { title, price },
-      { new: true, runValidators: true }
-    );
-
+    const producto = await Productos.findByIdAndUpdate(id, { title, price }, { new: true, runValidators: true });
     if (!producto) {
       logger.warn(`Producto no encontrado: ${id}`);
       return res.status(404).send('Producto no encontrado');
     }
-
     res.status(200).send(`Producto actualizado: ${producto.title}, $${producto.price}`);
   } catch (error) {
     logger.error(`Error al actualizar el producto: ${error.message}`);

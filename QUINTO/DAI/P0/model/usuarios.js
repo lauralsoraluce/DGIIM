@@ -21,7 +21,6 @@ const usuarioSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  carrito: [{ type: mongoose.Schema.Types.ObjectId, ref: 'productos' }],
   admin: {
     type: Boolean,
     default: false,
