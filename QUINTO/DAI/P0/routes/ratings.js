@@ -29,39 +29,42 @@ router.get('/:id', async (req, res) => {
 
 // Modifica el rating de un producto por ID
 router.put('/:id', async (req, res) => {
-  const { rate, count } = req.body;
+  const { rate } = req.body;
 
   try {
-    // Verificar que los valores rate y count estén definidos y sean correctos
-    if (rate === undefined || count === undefined) {
-      return res.status(400).json({ error: 'Faltan datos para actualizar el rating (rate y count son necesarios)' });
+    if (rate === undefined || rate < 1 || rate > 5) {
+      return res.status(400).json({ error: 'Calificación inválida' });
     }
 
-    // Buscar el producto por su ID
     const producto = await Productos.findById(req.params.id);
 
     if (!producto) {
       return res.status(404).json({ error: 'Producto no encontrado' });
     }
 
-    // Actualizar los valores de rating.rate y rating.count
-    producto.rating.rate = rate;
-    producto.rating.count = count;
+    // Calcular nuevos valores
+    console.log(`Nuevo rating calculado: ${producto.rating.rate}`);
+    const totalVotes = producto.rating.count + 1;
+    console.log(`Votos totales: ${totalVotes}`);
+    const newRate = ((producto.rating.rate * producto.rating.count) + rate) / totalVotes;
+    console.log(`Nuevo rating: ${rate}`);
+    producto.rating.rate = parseFloat(newRate.toFixed(4));
+    producto.rating.count = totalVotes;
+    console.log(`Nuevo rating calculado: ${producto.rating.rate}`);
 
-    // Guardar el producto con el rating actualizado
     const productoActualizado = await producto.save();
 
-    // Devolver el producto actualizado
     res.json({
       id: productoActualizado._id,
       title: productoActualizado.title,
-      rating: productoActualizado.rating
+      rating: productoActualizado.rating,
     });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Error al actualizar el rating' });
   }
 });
+
 
 export default router;
 
