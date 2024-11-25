@@ -104,3 +104,28 @@ h2 {
     background-color: #007bff;
     color: white;
 }
+
+/* Estrellas P5 */
+/* Estilo para estrellas */
+.fa {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.fa-star {
+    font-size: 20px;
+    color: #d3d3d3; /* Color de las estrellas vacías */
+}
+
+.checked {
+    color: #ffcc00; /* Color de las estrellas llenas */
+}
+
+.stars {
+    color: gold;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  
+  
+  
