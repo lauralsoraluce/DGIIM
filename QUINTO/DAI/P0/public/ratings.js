@@ -63,7 +63,7 @@ function renderStars(ele, rate, count) {
     }
 
     // Mostrar el conteo de votos junto a las estrellas
-    starsHTML += `<span class="votos">(${count} votos)</span>`;
+    starsHTML += `<span class="votos">(${count})</span>`;
 
     // Asigna el HTML al contenedor y añade eventos
     ele.innerHTML = starsHTML;
