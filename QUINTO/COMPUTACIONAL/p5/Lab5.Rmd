@@ -1,0 +1,188 @@
+---
+title: "Lab5"
+author: "Laura Lázaro Soraluce"
+date: "2025-03-26"
+output: html_document
+---
+
+### Implementation in R: The case of known derivative
+```{r}
+f<-function(x) x^2-5
+curve(f,0,10)
+abline(h=0, col=2)
+
+df<-function(x) 2*x
+x0<-2
+x1<-x0-f(x0)/df(x0); x1 #First iteration
+x2<-x1-f(x1)/df(x1); x2 #Second iteration
+x3<-x2-f(x2)/df(x2); x3 #Third iteration
+x4<-x3-f(x3)/df(x3); x4 #Fourth iteration
+x5<-x4-f(x4)/df(x4); x5 #Fifth iteration
+
+# Function that computes the desired n values
+newton_r<-function(x0, f, df, n) {
+  x<-numeric(n)
+  x<-x0
+  for(i in 2:(n+1)) {
+    x[i]<-x[i-1]-f(x[i-1])/df(x[i-1])
+  }
+  return (x)
+}
+
+#f(x)=x^3-2x-5
+f2<-function(x) x^3-2*x-5
+curve(f2,-5,5)
+abline(h=0,col=2)
+```
+
+##### We can see in the curve that the root is close to 2, so we use that as the initial value
+
+```{r}
+# We compute a few iterations
+df2<-function(x) 3*x^2-2
+newton_r(2, f2, df2, 5)
+```
+
+##### Once again, we can see that it reaches the root by the third iteration
+
+```{r}
+# We try with a poor initial value
+newton_r(0, f2, df2, 5)
+
+# Let's add a few more iterations
+newton_r(0, f2, df2, 10)
+```
+
+##### Even if we add a few more iterations, it diverges, as the values move up and down, but nowhere around the real value
+
+```{r}
+# Let's try a different initial value
+newton_r(-3, f2, df2, 7)
+newton_r(4, f2, df2, 7)
+```
+
+##### In both of these cases, it does converge by the 7th and 6th iteration respectivelly. This suggests that it doesn't converge when then initial values are in the flat region of the function, since we're using the derivative and it's very close to zero, causing big flunctuations.
+
+
+##### I had already implemented a function, so I'll adapt it to what the worksheet says
+```{r}
+NR<-function(x0, f, df, nmax=50, tol=1e-3) {
+  x<-x0
+  i<-0
+  
+  while(i<nmax){
+    
+    if (df(x)==0){
+      stop("Derivative is 0")
+    }
+    xnew<-x-f(x)/df(x)
+    
+    final.diff = abs(xnew - x)
+    if(final.diff<tol){
+      return (list(root = xnew, final.diff, niter=i+1))
+    }
+    
+    x<-xnew
+    i<-i+1
+  }
+  
+  warning("Max number of iterations reached without converging")
+  return (list(root = xnew, final.diff, niter=nmax))
+}
+
+NR(2,f,df)
+NR(2,f2,df2)
+```
+
+##### As we can see, the new function works perfectly
+
+### Implementarion using numerical differentiation
+```{r}
+library(numDeriv)
+
+f<-function(x) x^2-5
+res<-genD(func=f, x=2)
+res$D[1]
+
+x0<-2
+x1<-x0-f(x0)/genD(func=f,x=x0)$D[1]; x1
+```
+
+```{r}
+
+NR2<-function(x0, f, df, nmax=50, tol=1e-5) {
+  x<-x0
+  i<-0
+  
+  while(i<nmax){
+    if(missing(df)){
+      deriv<-genD(func=f, x=x)$D[1]
+      xnew<-x-f(x)/deriv
+    }
+    else {
+      if (df(x)==0){
+        stop("Derivative is 0")
+      }
+      xnew<-x-f(x)/df(x)
+    }
+    final.diff = abs(xnew - x)
+    if(final.diff<tol){
+      return (list(root = xnew, final.diff, niter=i+1))
+    }
+    
+    x<-xnew
+    i<-i+1
+  }
+  
+  warning("Max number of iterations reached without converging")
+  return (list(root = xnew, final.diff, niter=nmax))
+}
+
+NR2(2, f)
+NR2(2, f2)
+f3<-function(x) (exp(2*x)-x-6)
+curve(f3,5,10)
+abline(h=0,col=2)
+NR2(8,f3)
+
+uniroot(f, c(0,4), tol=1e-5)$root
+uniroot(f2, c(0,4), tol=1e-5)$root
+uniroot(f3, c(0,4), tol=1e-5)$root
+
+```
+
+##### We obtain almost the same results, just a tiny difference in the last decimals.
+
+```{r}
+find_root<-function(f, a0, b0, nmax=100, tol=1e-5){
+  i<-1
+  a<-a0
+  b<-b0
+  while (i<nmax){
+    r<-a+((b-a)/2)
+    if (f(r)==0 || ((b-a)/2)<tol ){
+      return(list(root=r, niter=i))
+    }
+    i<-i+1
+    if((f(a)*f(r))>0){
+      a=r
+    }
+    else {
+      b=r
+    }
+  }
+  warning("Max number of iterations reached without converging")
+  return (list(root = r, niter=nmax))
+}
+
+f4<-function(x) x^3+4*x^2-10
+
+# Find_root
+find_root(f4, 1, 2)
+# Uniroot
+uniroot(f4, c(1,2), tol=1e-5)$root
+# NR2
+NR2(1.5, f4)
+```
+
+##### The results we get using these 3 functions are basically the same, they just differ in the last decimal. However, the number of iterations until the root value is obtained, is different for the methods find_root and NR2, being a lot smaller for this last one.

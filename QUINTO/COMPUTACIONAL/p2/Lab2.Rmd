@@ -1,0 +1,147 @@
+---
+title: "Lab2"
+author: "Laura Lázaro Soraluce"
+date: "06-03-2025"
+output: html_document
+---
+## Part 1: Systems of linear equations
+### Exercise 1
+##### Evaluate the following sentences and write down the systems that are solved in each case:
+```{r setup}
+# System 1
+solve(2,2) # It's solving 2x=2
+# System 2
+A<-matrix(c(3,1,4,2),2,2)
+b<-c(12,8)
+solve(A,b)
+# System 3
+solve(A,diag(2)) # This solves for the inverse of A
+```
+
+### Exercise 2
+##### Create objects A (the matrix of coefficients) and b (the vector representing the right-hand side of the system). Then, solve the system using the solve function. 
+```{r}
+x1<-c(10,7,8,7)
+x2<-c(7,5,6,5)
+x3<-c(8,6,10,9)
+x4<-c(7,5,9,10)
+A<-rbind(x1,x2,x3,x4)
+b<-c(32,23,33,31)
+solve(A,b)
+
+# Next, modify the vector b by adding 0.05 to each of its elements and compute the new solution. How similar is it to the previous solution?
+b2<-b+0.05
+solve(A,b2)
+
+# Now, repeat the process by increasing each element of b by 0.1. What conclusions can you draw from these results?
+b3<-b+0.1
+solve(A,b3)
+```
+##### We can see that the answer to these new systems has completely different values compared to the answer of the original system, some of the numbers are not even close to 1. This is caused by just small changes in b. This proves that the system is ill-conditioned, because small changes in the input cause big changes in the output.
+
+### Exercise 3
+##### For the system above, compute the condition number of the matrix of coefficient A for the L2-norm and the reciprocal condition number, using the kappa and rcond functions, respectively. Comment on the results. Then compute the eigenvalues of A and check whether kappa(A) is indeed the ratio between the maximum and minimum of the singular values of A (in absolute value). You might need to look at the documentation of the function to understand the results.
+```{r}
+kappa(A)
+rcond(A)
+svdA<-svd(A)$d
+sigma_min<-min(svdA)
+sigma_max<-max(svdA)
+sigma_max/sigma_min
+```
+##### We can see that the value obtained using the kappa function does not match the hand-calculated condition number. This may be because the kappa function has an argument (exact), which specifies whether the condition number should be computed exaclty or as an estimate. We set this atribute to TRUE to check if the result changes.
+```{r}
+kappa(A, exact=TRUE)
+```
+##### Now, we obtain the same value as the hand-calculated condition number.
+##### Now, we can interpret the results. The kappa function gives a fairly high value. However, we don't know the reference range, so it is difficult to see how ill-conditioned the system really is. On the other hand, the rcond function gives us a value between 0 and 1, where values closer to 0 show poorer conditioning. In this case, it is almost 0, which confirms it is a very ill-conditioned system, as we already saw in the previous exercise. 
+
+## Part 2: Linear regression, overdetermined systems and least squares
+### Exercise 1
+##### Execute the code below to examine the data and determine the number of observations (n). Refer to the documentation to learn more about this data set.
+```{r}
+# visualise the first rows
+head(cars)
+# show how many rows has the dataframe (n)
+nrow(cars)
+# look a the documentation
+help(cars)
+```
+
+### Exercise 2
+##### Create a scatterplot of the data to visualise the relationship between the variables running the following code:
+```{r}
+y<-cars$dist
+x<-cars$speed
+plot(x,y,xlab='speed',ylab='dist')
+# other way is: plot(cars), let's try it!
+plot(cars)
+```
+##### We can see that both plotting methods produce the same graph.
+
+### Exercise 3
+##### Using the two vectors x and y that you have created above, do the following: 
+```{r}
+# Create a matrix object consisting of the regression matrix $X$ for the problem.
+X<-cbind(1,x)
+```
+##### We do this because it should be of dimension: n x (1+p), and in this case, the number of predictions (p) is 1.
+```{r}
+# Compute $(X'X)^{−1}$.
+inv<-solve(crossprod(X,X), diag(2))
+```
+##### We use the same method we used in Part 1 Exercise 1. 
+```{r}
+# Finally compute $\hat{\beta}$ from the expression (3) and store the result in an object with name beta. Look at the values you get for the least squares estimators of the regression coefficients (intercept and slope).
+beta<-inv%*% t(X) %*% y
+beta
+```
+##### We obtained the intercept (-17.579095) and the slope (3.932409)
+```{r}
+# On top of the scatterplot of the data you created above, now plot the fitted regression model by writing abline(beta). Describe any potential computational problems with the implementation you have performed.
+plot(cars)
+abline(beta)
+
+rcond(X)
+```
+##### We use rcond and find that it is an ill-conditioned matrix once again. This could result in unstable results when we calculate the inverse. 
+
+### Exercise 4
+##### Using the same data objects you have created before, compute the least squares estimator $\hat{\beta}$ following these steps:
+```{r}
+# Compute the QR factorization of the regression matrix X using the function qr and store the result in an object named X.QR.
+QR<-qr(X)
+```
+```{r}
+# Extract the Q matrix evaluating the function qr.Q in the object X.QR. Note that the result you get is a matrix Q with only 2 columns, this is because only these two are needed in the computations.
+Q<-qr.Q(QR)
+dim(Q) # To see that it has only 2 columns
+```
+```{r}
+# Create the vector Q'y.
+Qy<-t(Q)%*%y
+```
+```{r}
+# Extract the matrix R evaluating the function qr.R in the object X.QR.
+R<-qr.R(QR)
+dim(R)
+```
+```{r}
+# Solve the system (4) using the function backsolve 3. Compare the result with the solution obtained using the direct implementation. They should be “the same”.
+backsolve(R, Qy)
+beta
+```
+##### They are indeed the same. 
+
+### Exercise 5
+##### Compare the results from the two implementations with the solution obtained using the lm function. To do this, simply evaluate lm(y~ x) and examine the result printed in the console, which should display the estimated coefficients $\hat{\beta}$.
+```{r}
+lm(y ~ x)
+```
+
+## Bibliography
+https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/kappa
+
+https://rmarkdown.rstudio.com/authoring_basics.html
+
+https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/crossprod

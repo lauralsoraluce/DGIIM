@@ -1,0 +1,83 @@
+# Exercise 1:
+# Create a vector with name x with a sequence of 50 equally-spaced values between 0 and 1.
+x<-seq(0,1,length.out = 50)
+
+length = length(x)
+
+# a. Put names to the elements of x
+names(x)<-paste("x_",1:length)
+names(x)
+
+# b. Mean and standard deviation of x
+mx<- mean(x)
+sx<-sd(x)
+
+# c. Find how many elements of x are above mx in more than two standard deviations
+
+elements<-x[x>mx+2*sx]
+print(elements)
+
+# Replace them with NA
+x[x > mx + 2 * sx] <- NA
+
+# d. Compute again 
+new_mx <- mean(x, na.rm = TRUE)
+new_varx <- var(x, na.rm = TRUE)
+
+print(new_mx)
+print(new_varx)
+
+#Exercise 2
+a<- -2
+b<- 2
+n<- 1000
+h<- (b-a)/n
+
+values<- seq(a,b,length.out = n+1)
+
+f_x<-(x<(-1))*(1) + (-1<=x & x<0)*(log(x^2)) + (0<=x & x<1)*(log(x^2 + 1)) + (x>=1)*(2) 
+f_x
+f_x[is.nan(f_x)]<-0
+f_x
+
+# Exercise 3
+
+set.seed(1)
+x<-rnorm(100, mean=160, sd=10)
+
+# a. Compute the first and last quartiles using the function quantile. 
+?quantile
+quartiles <- quantile(x, probs = c(0.25, 0.75))
+quartil_1 <- quartiles[1]
+quartil_3 <- quartiles[2]
+
+# b. Create a factor with 3 levels, encoding the values in x 
+x_factor <- cut(x, breaks = c(-Inf, quartil_1, quartil_3, Inf), labels = c("low", "medium", "high"))
+
+# c. Generate a second vector y
+y<-x-100+rnorm(100, mean = 0, sd = 1)
+y
+
+# d. Compute a summary of y for each level of the factor
+summary_by_factor <- tapply(y, x_factor, summary)
+print(summary_by_factor)
+
+# Exercise 4
+# a. Compute the sum of the elements in the vector using sum
+n <- 30
+a1 <- 1
+d <- 1.3
+an <- a1 + (n - 1) * d
+prog_arit <- seq(a1, an, by = d)
+sum <- sum(prog_arit)
+sum_formula <- n * (a1 + an) / 2
+
+# b. Compute the std using sd. 
+std <- sd(prog_arit)
+std_formula <- abs(d) * sqrt(n * (n + 1) / 12)
+
+# c. Compute the product of the elements in the vector using the function prod. 
+product <-prod(prog_arit)
+prod_formula <- d^n * gamma(a1/d + (n-1))/gamma(a1/d)
+print(product)
+print(prod_formula)

@@ -1,0 +1,161 @@
+---
+title: "Lab3"
+author: "Laura Lázaro Soraluce"
+date: "2025-03-13"
+output: html_document
+---
+
+### Exercise 1
+
+##### Create a data frame named data1 with the sample data
+
+```{r}
+x_i <- c(1.5, 1.8, 2.0, 2.2, 1.3, 1.5)
+y_i <- c(10, 10, 12, 12, 14, 14)
+n_i <- c(12, 23, 15, 9, 10, 11)
+
+data <- data.frame(x_i, y_i, n_i)
+data
+```
+
+##### Using the data frame you created, perform the following tasks:
+
+```{r}
+# 1. Compute the sample size n. 
+n<-sum(data$n_i) # We add all the values in the column n_i
+n
+
+# 2. Compute the sample means for x_i and y_i, and the standard deviations, s_x and s_y, of the variables X and Y .
+x_mean <- sum(data$x_i*data$n_i)/n #Mean
+x_mean
+s_x <- sum(data$n_i * (data$x_i - x_mean)^2) / (n) # Variance
+sqrt(s_x) #Standard Deviation
+
+y_mean <- sum(data$y_i*data$n_i)/n #Mean
+y_mean
+s_y <- sum(data$n_i * (data$y_i - y_mean)^2) / (n) # Variance
+sqrt(s_y) #Standard Deviation
+
+# 3. Create a new data frame object with name data1.n with n rows and two columns. The rows should correspond to the n individual observations and the columns to the values of the variables. Note that to get this you need to repeat the rows in the previous data frame the number of times indicated by the frequency (ni).
+
+#The function rep(v1,n1) repeats the value v1, n1 times
+x<-rep(data$x_i, data$n_i)
+y<-rep(data$y_i, data$n_i)
+# Another option would be: data1.n<-data[rep(1:nrow(data), data$n_i),1:2]
+
+data1.n<-data.frame(x,y)
+head(data1.n, 15)
+
+# 4. From the data frame data1.n compute again the sample means and standard deviations using the mean and sd functions, respectively. You should get the same result you got using the aggregated data above.
+x_mean2 <- with(data1.n, mean(x)) #Mean
+x_mean2
+y_mean2 <- with(data1.n, mean(y)) #Mean
+y_mean2
+s_x2 <- sd(data1.n$x)
+s_x2
+s_y2 <- sd(data1.n$y)
+s_y2
+```
+
+##### As we can see, we obtain the exact same values as in point 2 of this exercise
+
+```{r}
+# 5. Some statistical techniques require working with standardized variables. From observations xi, the standardized values are obtained by the simple transformation zi = (xi − x¯)/sx. Hence, the mean of the standardized values is always zero and the standard deviation is one. Add two new columns at the end of the data frame data1.n with the standardized values of the observations xi and yi , respectively. Do it using the within function
+data1.n2 <- within(data1.n, {zy <- (y-y_mean)/s_y2; zx <- (x-x_mean)/s_x2;data1.n})
+head(data1.n2, 13)
+```
+
+### Exercise 2
+
+##### The data file census.csv consists of a sample of n = 500 individuals and several variables. Perform the following tasks:
+
+```{r}
+# 1. Import the data in R creating a data frame object named census. To do it use read.table or read.csv, the function you think it is more convenient in this case. When importing the data, pay attention to the columns cellsource, travel, getlunch and gender, which should be recorded as factors.
+census<-read.csv("Census.csv", stringsAsFactors = TRUE)
+class(census) # To check that it's a dataFrame
+```
+
+##### If we don't set stringAsFactors to TRUE, we can see that the values of those columns remains as chr.
+
+```{r}
+# 2. Show the structure of the data frame census using the str function
+str(census)
+
+# 3. Display the first five rows and the last three rows of the data frame in the console. To do it, use the head and tail functions, respectively.
+head(census, 5)
+tail(census, 3)
+
+# 4. Notice that there are several missing values (NA) in the data set. Find out how many there are in each column. 
+head(as.data.frame(lapply(census, is.na)), 40)
+colSums(is.na(census)) 
+# Another option would be: sapply(lapply(census.is.na),sum)
+```
+
+##### If we do a regular sum, it doesn't add by columns, it tells us the total.
+
+```{r}
+# 5.  Find how many rows are complete (without NA’s) in the data frame, using the complete.cases function. 
+complete.cases(census)
+sum(complete.cases(census))
+
+# 6. Create a new data frame object named census.2 having only the complete rows in census. You can do it in at least two possible ways: using the complete.cases function, or using the na.omit function.
+# OPTION 1: Using complete.cases
+census.2<-subset(census, subset=complete.cases(census))
+head(census.2, 5)
+# OPTION 2: Using na.omit
+census.2<-na.omit(census)
+head(census.2, 5)
+
+# 7. Write the content of the data frame census.2 in a text file with name census2.txt, using the function write.table. The names of the columns should appear in the first line of the file, individual data should be separated by tabulations (sep='\t'), and it should not print row names.
+write.table(census.2, "census2.txt", sep="\t", row.names=FALSE)
+```
+
+### Exercise 3
+
+##### In this exercise, you will perform several operations on the ChickWeight data frame, which is provided in the datasets package. Start by typing help(ChickWeight) to learn more about these data. Then, proceed to perform the following tasks:
+
+```{r}
+data("ChickWeight")
+help("ChickWeight")
+
+# 1. Show the structure of the ChickWeight data frame using the str function.
+class(ChickWeight)
+str(ChickWeight)
+
+# 2. Compute a basic summary of the data frame using the summary function.
+summary(ChickWeight)
+
+# 3. Compute the same kind of summary as above but now considering only the variable weight, and providing the results for each level of the diet factor (you can use the function tapply). The result should be an object named weight.diet. Find out what type of object weight.diet is.
+weight.diet<-tapply(ChickWeight$weight, ChickWeight$Diet, summary)
+weight.diet
+class(weight.diet)
+```
+
+##### The function tapply needs the object we want to modify, the factor by which we do the division, and the function we apply.
+
+##### Weight.diet is an array.
+
+```{r}
+# 4. The aggregate function provides summaries of the columns of a data frame, for the different levels of a given factor. Use this function to obtain the same kind of summary you have computed above. The result should be an object named weight.diet.2. Find out what type of object weight.diet.2 is.
+weight.diet.2 <- aggregate(ChickWeight$weight, by=list(ChickWeight$Diet), summary)
+weight.diet.2 
+class(weight.diet.2)
+```
+
+##### We obtain the same summary as in the previous section of this same exercise.
+
+```{r}
+# 5. Create a data frame named Chick50 with a sub-sample of the ChickWeight data frame. It should be obtained by randomly selecting (without replacement) 50 rows.
+set.seed(1234567) # We set a random seed
+Chick50 <- ChickWeight[sample(nrow(ChickWeight), 50, replace=FALSE), ]
+head(Chick50, 5)
+
+# 6. From the Chick50 data frame, create another one named Chick50.p by randomly permuting the columns. 
+set.seed(1234567)
+Chick50.p<-Chick50[, sample(ncol(Chick50))]
+head(Chick50.p, 5)
+
+# 7. Sort the data frame Chick50 by column Diet using the function order. Look at the way this function is dealing with the existing ties in the data. Repeat the task but now breaking the ties with the Weight column.
+Chick50[order(Chick50$Diet), ]
+Chick50[order(Chick50$Diet, Chick50$weight), ]
+```

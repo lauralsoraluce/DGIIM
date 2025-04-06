@@ -1,0 +1,111 @@
+\documentclass{article}
+
+\title{Training Exercises}
+\author{Laura Lázaro Soraluce}
+
+\begin{document}
+
+\maketitle
+\section{Exercise 1}
+\subsection{Import the data from R and print its structure}
+<<>>=
+hatco<-read.table("hatco.txt", header=TRUE)
+str(hatco)
+@
+
+\subsection{Using the function within do the following: }
+\subsubsection{(i) convert the last column of the data frame to a factor with two levels: 0 (small) and 1 (large);}
+<<>>=
+hatco<-within(hatco, {x8<-factor(x8, level=c(0,1), labels=c("small", "large"))})
+@
+\subsubsection{and (ii) convert the first column of the data frame to a character variable.}
+<<>>=
+hatco <- within(hatco, {client <- as.character(client)})
+str(hatco)
+@
+
+\subsection{Compute the number of small and large companies in the data.}
+<<>>=
+table(hatco$x8)
+@
+
+\subsection{The variable y is an indicator of the client loyalty to the supplier. Compute a summary of this variable consisting only of the mean and the median. Do it first for all clients, and then separate for small and large clients.}
+<<>>=
+# Columns 3 & 4 show the Median & Mean
+summary(hatco$y)[3:4]
+summary(hatco$y[hatco$x8=="small"])[3:4]
+summary(hatco$y[hatco$x8=="large"])[3:4]
+@
+
+\subsection{Create two new data frames separating small and large clients.}
+<<>>=
+hatco_small<-subset(hatco, x8=="small")
+hatco_large<-subset(hatco, x8=="large")
+@
+
+\subsection{Print the data for one client of each type randomly selected (use the function sample).}
+<<>>=
+hatco_small[sample(nrow(hatco_small),1),]
+hatco_large[sample(nrow(hatco_large),1),]
+@
+
+\section{Exercise 2}
+\subsection{Create a function with name p.arith} 
+It computes the n first terms of an arithmetic progression of the type: $a_{n+1} = a_1 + d \cdot n$. 
+The function should have three arguments: $n$, $a_1$ and $d$ and the returned value should be a list with the following components:
+\begin{itemize}
+  \item {The vector v with the n terms.}
+  \item {The sum of the elements in v.}
+  \item {The product of the elements in v.}
+\end{itemize}
+<<>>=
+p.arith<-function(n, a1, d){
+  a<-numeric(n)
+  a[1]<-a1
+  i=2
+  while (i<=n){
+    a[i]=a[i-1]+d*i
+    i<-i+1
+  } 
+  sum_els<-sum(a)
+  prod_els<-prod(a)
+  return (list(a, sum(a), prod(a)))
+}
+@
+
+\subsection{Create a second version of the function above with name p.arith.explict, including the logical argument explicit that is FALSE by default. When this argument is TRUE then the computation of the sum and the product of the n elements will be performed using the following explicit expressions:}
+\[\sum_{i=1}^{n}a_i = n\frac{a_1+a_n}{2} \prod_{i=1}^{n}a_i = d^n\frac{\Gamma(a_1/d+n)}{\Gamma(a_1/d)}\]
+<<>>=
+sum_els<-function(a){
+  
+}
+p.arith.explict<-function(n, a1, d, explicit=FALSE){
+  if (!explicit){
+    return(p.arith(n,a1,d))
+  }
+  else {
+    a<-numeric(n)
+    a[1]<-a1
+    i=2
+    while (i<=n){
+      a[i]=a[i-1]+d*i
+      i<-i+1
+    } 
+    sum_els<-n*(a[1]+a[n])/2
+    prod_els<-d^n * gamma(a[1]/d +n)/gamma(a1/d)
+    return (list(a, sum(a), prod(a)))
+  }
+}
+@
+
+\subsection{Use the function system.time to measure the computing time of the function p.arith.explicit and find out whether the explicit expression are quicker or not. Evaluate the function for $n = 2e + 6$.}
+<<>>=
+time1<-system.time(p.arith(2e6,1,1))
+time2<-system.time(p.arith.explict(2e6,1,1,TRUE))
+
+time1
+time2
+@
+
+
+\end{document}

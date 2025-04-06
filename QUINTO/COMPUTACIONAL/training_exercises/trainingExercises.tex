@@ -1,0 +1,276 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlsng}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hldef}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+\title{Training Exercises}
+\author{Laura Lázaro Soraluce}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\maketitle
+\section{Exercise 1}
+\subsection{Import the data from R and print its structure}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{hatco}\hlkwb{<-}\hlkwd{read.table}\hldef{(}\hlsng{"hatco.txt"}\hldef{,} \hlkwc{header}\hldef{=}\hlnum{TRUE}\hldef{)}
+\hlkwd{str}\hldef{(hatco)}
+\end{alltt}
+\begin{verbatim}
+## 'data.frame':	100 obs. of  10 variables:
+##  $ client: int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ x1    : num  4.1 1.8 3.4 2.7 6 1.9 4.6 1.3 5.5 4 ...
+##  $ x2    : num  0.6 3 5.2 1 0.9 3.3 2.4 4.2 1.6 3.5 ...
+##  $ x3    : num  6.9 6.3 5.7 7.1 9.6 7.9 9.5 6.2 9.4 6.5 ...
+##  $ x4    : num  4.7 6.6 6 5.9 7.8 4.8 6.6 5.1 4.7 6 ...
+##  $ x5    : num  2.4 2.5 4.3 1.8 3.4 2.6 3.5 2.8 3.5 3.7 ...
+##  $ x6    : num  2.3 4 2.7 2.3 4.6 1.9 4.5 2.2 3 3.2 ...
+##  $ x7    : num  5.2 8.4 8.2 7.8 4.5 9.7 7.6 6.9 7.6 8.7 ...
+##  $ y     : int  32 43 48 32 58 45 46 44 63 54 ...
+##  $ x8    : int  0 1 1 1 0 1 0 1 0 1 ...
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Using the function within do the following: }
+\subsubsection{(i) convert the last column of the data frame to a factor with two levels: 0 (small) and 1 (large);}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{hatco}\hlkwb{<-}\hlkwd{within}\hldef{(hatco, \{x8}\hlkwb{<-}\hlkwd{factor}\hldef{(x8,} \hlkwc{level}\hldef{=}\hlkwd{c}\hldef{(}\hlnum{0}\hldef{,}\hlnum{1}\hldef{),} \hlkwc{labels}\hldef{=}\hlkwd{c}\hldef{(}\hlsng{"small"}\hldef{,} \hlsng{"large"}\hldef{))\})}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\subsubsection{and (ii) convert the first column of the data frame to a character variable.}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{hatco} \hlkwb{<-} \hlkwd{within}\hldef{(hatco, \{client} \hlkwb{<-} \hlkwd{as.character}\hldef{(client)\})}
+\hlkwd{str}\hldef{(hatco)}
+\end{alltt}
+\begin{verbatim}
+## 'data.frame':	100 obs. of  10 variables:
+##  $ client: chr  "1" "2" "3" "4" ...
+##  $ x1    : num  4.1 1.8 3.4 2.7 6 1.9 4.6 1.3 5.5 4 ...
+##  $ x2    : num  0.6 3 5.2 1 0.9 3.3 2.4 4.2 1.6 3.5 ...
+##  $ x3    : num  6.9 6.3 5.7 7.1 9.6 7.9 9.5 6.2 9.4 6.5 ...
+##  $ x4    : num  4.7 6.6 6 5.9 7.8 4.8 6.6 5.1 4.7 6 ...
+##  $ x5    : num  2.4 2.5 4.3 1.8 3.4 2.6 3.5 2.8 3.5 3.7 ...
+##  $ x6    : num  2.3 4 2.7 2.3 4.6 1.9 4.5 2.2 3 3.2 ...
+##  $ x7    : num  5.2 8.4 8.2 7.8 4.5 9.7 7.6 6.9 7.6 8.7 ...
+##  $ y     : int  32 43 48 32 58 45 46 44 63 54 ...
+##  $ x8    : Factor w/ 2 levels "small","large": 1 2 2 2 1 2 1 2 1 2 ...
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Compute the number of small and large companies in the data.}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{table}\hldef{(hatco}\hlopt{$}\hldef{x8)}
+\end{alltt}
+\begin{verbatim}
+## 
+## small large 
+##    60    40
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\subsection{The variable y is an indicator of the client loyalty to the supplier. Compute a summary of this variable consisting only of the mean and the median. Do it first for all clients, and then separate for small and large clients.}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{# Columns 3 & 4 show the Median & Mean}
+\hlkwd{summary}\hldef{(hatco}\hlopt{$}\hldef{y)[}\hlnum{3}\hlopt{:}\hlnum{4}\hldef{]}
+\end{alltt}
+\begin{verbatim}
+## Median   Mean 
+##   46.5   46.1
+\end{verbatim}
+\begin{alltt}
+\hlkwd{summary}\hldef{(hatco}\hlopt{$}\hldef{y[hatco}\hlopt{$}\hldef{x8}\hlopt{==}\hlsng{"small"}\hldef{])[}\hlnum{3}\hlopt{:}\hlnum{4}\hldef{]}
+\end{alltt}
+\begin{verbatim}
+##   Median     Mean 
+## 49.00000 48.76667
+\end{verbatim}
+\begin{alltt}
+\hlkwd{summary}\hldef{(hatco}\hlopt{$}\hldef{y[hatco}\hlopt{$}\hldef{x8}\hlopt{==}\hlsng{"large"}\hldef{])[}\hlnum{3}\hlopt{:}\hlnum{4}\hldef{]}
+\end{alltt}
+\begin{verbatim}
+## Median   Mean 
+##   42.5   42.1
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Create two new data frames separating small and large clients.}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{hatco_small}\hlkwb{<-}\hlkwd{subset}\hldef{(hatco, x8}\hlopt{==}\hlsng{"small"}\hldef{)}
+\hldef{hatco_large}\hlkwb{<-}\hlkwd{subset}\hldef{(hatco, x8}\hlopt{==}\hlsng{"large"}\hldef{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Print the data for one client of each type randomly selected (use the function sample).}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{hatco_small[}\hlkwd{sample}\hldef{(}\hlkwd{nrow}\hldef{(hatco_small),}\hlnum{1}\hldef{),]}
+\end{alltt}
+\begin{verbatim}
+##    client  x1  x2  x3  x4  x5  x6  x7  y    x8
+## 17     17 3.2 4.1 5.7 5.1 3.6 2.9 6.2 38 small
+\end{verbatim}
+\begin{alltt}
+\hldef{hatco_large[}\hlkwd{sample}\hldef{(}\hlkwd{nrow}\hldef{(hatco_large),}\hlnum{1}\hldef{),]}
+\end{alltt}
+\begin{verbatim}
+##    client  x1  x2  x3  x4 x5  x6  x7  y    x8
+## 70     70 2.3 3.7 8.3 5.2  3 2.3 9.1 49 large
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\section{Exercise 2}
+\subsection{Create a function with name p.arith} 
+It computes the n first terms of an arithmetic progression of the type: $a_{n+1} = a_1 + d \cdot n$. 
+The function should have three arguments: $n$, $a_1$ and $d$ and the returned value should be a list with the following components:
+\begin{itemize}
+  \item {The vector v with the n terms.}
+  \item {The sum of the elements in v.}
+  \item {The product of the elements in v.}
+\end{itemize}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{p.arith}\hlkwb{<-}\hlkwa{function}\hldef{(}\hlkwc{n}\hldef{,} \hlkwc{a1}\hldef{,} \hlkwc{d}\hldef{)\{}
+  \hldef{a}\hlkwb{<-}\hlkwd{numeric}\hldef{(n)}
+  \hldef{a[}\hlnum{1}\hldef{]}\hlkwb{<-}\hldef{a1}
+  \hldef{i}\hlkwb{=}\hlnum{2}
+  \hlkwa{while} \hldef{(i}\hlopt{<=}\hldef{n)\{}
+    \hldef{a[i]}\hlkwb{=}\hldef{a[i}\hlopt{-}\hlnum{1}\hldef{]}\hlopt{+}\hldef{d}\hlopt{*}\hldef{i}
+    \hldef{i}\hlkwb{<-}\hldef{i}\hlopt{+}\hlnum{1}
+  \hldef{\}}
+  \hldef{sum_els}\hlkwb{<-}\hlkwd{sum}\hldef{(a)}
+  \hldef{prod_els}\hlkwb{<-}\hlkwd{prod}\hldef{(a)}
+  \hlkwd{return} \hldef{(}\hlkwd{list}\hldef{(a,} \hlkwd{sum}\hldef{(a),} \hlkwd{prod}\hldef{(a)))}
+\hldef{\}}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Create a second version of the function above with name p.arith.explict, including the logical argument explicit that is FALSE by default. When this argument is TRUE then the computation of the sum and the product of the n elements will be performed using the following explicit expressions:}
+\[\sum_{i=1}^{n}a_i = n\frac{a_1+a_n}{2} \prod_{i=1}^{n}a_i = d^n\frac{\Gamma(a_1/d+n)}{\Gamma(a_1/d)}\]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{sum_els}\hlkwb{<-}\hlkwa{function}\hldef{(}\hlkwc{a}\hldef{)\{}
+
+\hldef{\}}
+\hldef{p.arith.explict}\hlkwb{<-}\hlkwa{function}\hldef{(}\hlkwc{n}\hldef{,} \hlkwc{a1}\hldef{,} \hlkwc{d}\hldef{,} \hlkwc{explicit}\hldef{=}\hlnum{FALSE}\hldef{)\{}
+  \hlkwa{if} \hldef{(}\hlopt{!}\hldef{explicit)\{}
+    \hlkwd{return}\hldef{(}\hlkwd{p.arith}\hldef{(n,a1,d))}
+  \hldef{\}}
+  \hlkwa{else} \hldef{\{}
+    \hldef{a}\hlkwb{<-}\hlkwd{numeric}\hldef{(n)}
+    \hldef{a[}\hlnum{1}\hldef{]}\hlkwb{<-}\hldef{a1}
+    \hldef{i}\hlkwb{=}\hlnum{2}
+    \hlkwa{while} \hldef{(i}\hlopt{<=}\hldef{n)\{}
+      \hldef{a[i]}\hlkwb{=}\hldef{a[i}\hlopt{-}\hlnum{1}\hldef{]}\hlopt{+}\hldef{d}\hlopt{*}\hldef{i}
+      \hldef{i}\hlkwb{<-}\hldef{i}\hlopt{+}\hlnum{1}
+    \hldef{\}}
+    \hldef{sum_els}\hlkwb{<-}\hldef{n}\hlopt{*}\hldef{(a[}\hlnum{1}\hldef{]}\hlopt{+}\hldef{a[n])}\hlopt{/}\hlnum{2}
+    \hldef{prod_els}\hlkwb{<-}\hldef{d}\hlopt{^}\hldef{n} \hlopt{*} \hlkwd{gamma}\hldef{(a[}\hlnum{1}\hldef{]}\hlopt{/}\hldef{d} \hlopt{+}\hldef{n)}\hlopt{/}\hlkwd{gamma}\hldef{(a1}\hlopt{/}\hldef{d)}
+    \hlkwd{return} \hldef{(}\hlkwd{list}\hldef{(a,} \hlkwd{sum}\hldef{(a),} \hlkwd{prod}\hldef{(a)))}
+  \hldef{\}}
+\hldef{\}}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\subsection{Use the function system.time to measure the computing time of the function p.arith.explicit and find out whether the explicit expression are quicker or not. Evaluate the function for $n = 2e + 6$.}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{time1}\hlkwb{<-}\hlkwd{system.time}\hldef{(}\hlkwd{p.arith}\hldef{(}\hlnum{2e6}\hldef{,}\hlnum{1}\hldef{,}\hlnum{1}\hldef{))}
+\hldef{time2}\hlkwb{<-}\hlkwd{system.time}\hldef{(}\hlkwd{p.arith.explict}\hldef{(}\hlnum{2e6}\hldef{,}\hlnum{1}\hldef{,}\hlnum{1}\hldef{,}\hlnum{TRUE}\hldef{))}
+\hldef{time3}\hlkwb{<-}\hlkwd{system.time}\hldef{(}\hlkwd{p.arith.explict}\hldef{(}\hlnum{2e6}\hldef{,}\hlnum{1}\hldef{,}\hlnum{1}\hldef{,}\hlnum{FALSE}\hldef{))}
+
+\hldef{time1}
+\end{alltt}
+\begin{verbatim}
+##    user  system elapsed 
+##   0.543   0.008   0.550
+\end{verbatim}
+\begin{alltt}
+\hldef{time2}
+\end{alltt}
+\begin{verbatim}
+##    user  system elapsed 
+##   2.495   0.008   2.503
+\end{verbatim}
+\begin{alltt}
+\hldef{time3}
+\end{alltt}
+\begin{verbatim}
+##    user  system elapsed 
+##   0.536   0.000   0.536
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+\end{document}
